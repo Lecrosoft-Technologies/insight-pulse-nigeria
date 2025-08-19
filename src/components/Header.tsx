@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Phone, MessageCircle } from "lucide-react";
 import {
@@ -10,6 +11,8 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -80,12 +83,9 @@ const Header = () => {
             <NavigationMenu>
               <NavigationMenuList className="space-x-6">
                 <NavigationMenuItem>
-                  <NavigationMenuLink 
-                    className="font-medium text-foreground hover:text-primary transition-smooth"
-                    href="/"
-                  >
+                  <Link to="/" className="font-medium text-foreground hover:text-primary transition-smooth">
                     Home
-                  </NavigationMenuLink>
+                  </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
@@ -94,13 +94,13 @@ const Header = () => {
                     <div className="w-96 p-4">
                       <div className="grid gap-3">
                         {services.map((service) => (
-                          <NavigationMenuLink
+                          <Link
                             key={service.name}
-                            href={service.href}
+                            to={service.href}
                             className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth"
                           >
                             {service.name}
-                          </NavigationMenuLink>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -113,13 +113,13 @@ const Header = () => {
                     <div className="w-80 p-4">
                       <div className="grid gap-3">
                         {sectors.map((sector) => (
-                          <NavigationMenuLink
+                          <Link
                             key={sector.name}
-                            href={sector.href}
+                            to={sector.href}
                             className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth"
                           >
                             {sector.name}
-                          </NavigationMenuLink>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -132,13 +132,13 @@ const Header = () => {
                     <div className="w-80 p-4">
                       <div className="grid gap-3">
                         {methods.map((method) => (
-                          <NavigationMenuLink
+                          <Link
                             key={method.name}
-                            href={method.href}
+                            to={method.href}
                             className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth"
                           >
                             {method.name}
-                          </NavigationMenuLink>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -146,37 +146,29 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink 
-                    className="font-medium text-foreground hover:text-primary transition-smooth"
-                    href="/about"
-                  >
+                  <Link to="/about" className="font-medium text-foreground hover:text-primary transition-smooth">
                     About
-                  </NavigationMenuLink>
+                  </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink 
-                    className="font-medium text-foreground hover:text-primary transition-smooth"
-                    href="/insights"
-                  >
+                  <Link to="/insights" className="font-medium text-foreground hover:text-primary transition-smooth">
                     Insights
-                  </NavigationMenuLink>
+                  </Link>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink 
-                    className="font-medium text-foreground hover:text-primary transition-smooth"
-                    href="/contact"
-                  >
+                  <Link to="/contact" className="font-medium text-foreground hover:text-primary transition-smooth">
                     Contact
-                  </NavigationMenuLink>
+                  </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
 
-          {/* CTA Button & Mobile Menu */}
+          {/* CTA Button, Theme Toggle & Mobile Menu */}
           <div className="flex items-center space-x-4">
+            <ThemeToggle />
             <Button variant="cta" size="lg" className="hidden md:flex">
               Request Proposal
             </Button>
@@ -193,11 +185,17 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 space-y-4 animate-fade-in-up">
+          <motion.div 
+            className="lg:hidden mt-4 space-y-4"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+          >
             <div className="space-y-2">
-              <a href="/" className="block py-2 text-foreground hover:text-primary transition-smooth">
+              <Link to="/" className="block py-2 text-foreground hover:text-primary transition-smooth">
                 Home
-              </a>
+              </Link>
               
               <details className="group">
                 <summary className="py-2 cursor-pointer text-foreground hover:text-primary transition-smooth flex items-center justify-between">
@@ -206,13 +204,13 @@ const Header = () => {
                 </summary>
                 <div className="pl-4 space-y-1">
                   {services.map((service) => (
-                    <a
+                    <Link
                       key={service.name}
-                      href={service.href}
+                      to={service.href}
                       className="block py-1 text-muted-foreground hover:text-primary transition-smooth"
                     >
                       {service.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </details>
@@ -224,13 +222,13 @@ const Header = () => {
                 </summary>
                 <div className="pl-4 space-y-1">
                   {sectors.map((sector) => (
-                    <a
+                    <Link
                       key={sector.name}
-                      href={sector.href}
+                      to={sector.href}
                       className="block py-1 text-muted-foreground hover:text-primary transition-smooth"
                     >
                       {sector.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </details>
@@ -242,32 +240,32 @@ const Header = () => {
                 </summary>
                 <div className="pl-4 space-y-1">
                   {methods.map((method) => (
-                    <a
+                    <Link
                       key={method.name}
-                      href={method.href}
+                      to={method.href}
                       className="block py-1 text-muted-foreground hover:text-primary transition-smooth"
                     >
                       {method.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </details>
 
-              <a href="/about" className="block py-2 text-foreground hover:text-primary transition-smooth">
+              <Link to="/about" className="block py-2 text-foreground hover:text-primary transition-smooth">
                 About
-              </a>
-              <a href="/insights" className="block py-2 text-foreground hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/insights" className="block py-2 text-foreground hover:text-primary transition-smooth">
                 Insights
-              </a>
-              <a href="/contact" className="block py-2 text-foreground hover:text-primary transition-smooth">
+              </Link>
+              <Link to="/contact" className="block py-2 text-foreground hover:text-primary transition-smooth">
                 Contact
-              </a>
+              </Link>
             </div>
 
             <Button variant="cta" size="lg" className="w-full">
               Request Proposal
             </Button>
-          </div>
+          </motion.div>
         )}
       </nav>
     </header>
