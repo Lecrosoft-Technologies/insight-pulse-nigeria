@@ -12,8 +12,12 @@ import {
   Shield,
   Clock
 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import RequestProposalModal from "./RequestProposalModal";
 
 const Services = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const services = [
     {
       icon: BarChart3,
@@ -78,7 +82,9 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-background">
+    <>
+      <RequestProposalModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <section className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -123,9 +129,11 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline-primary" className="w-full group">
-                  Learn More
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <Button variant="outline-primary" className="w-full group" asChild>
+                  <Link to={service.href}>
+                    Learn More
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -159,7 +167,7 @@ const Services = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="cta" size="xl" className="group">
+            <Button variant="cta" size="xl" onClick={() => setIsModalOpen(true)} className="group">
               Request a Custom Proposal
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -167,6 +175,7 @@ const Services = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

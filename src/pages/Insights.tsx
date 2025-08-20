@@ -6,10 +6,12 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { motion } from "framer-motion"
 import { Search, Calendar, Clock, ArrowRight, TrendingUp, Users, BarChart3 } from "lucide-react"
-import { useState } from "react"
+import { useState, useMemo } from "react"
+import { Link } from "react-router-dom"
 
 const Insights = () => {
   const [searchTerm, setSearchTerm] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("All Articles")
 
   const featuredArticles = [
     {
@@ -21,7 +23,8 @@ const Insights = () => {
       date: "2024-08-15",
       author: "PSI Research Team",
       image: "/assets/insights/consumer-trends-2024.jpg",
-      featured: true
+      featured: true,
+      slug: "nigeria-consumer-behavior-trends-2024"
     },
     {
       id: 2,
@@ -32,7 +35,8 @@ const Insights = () => {
       date: "2024-08-10",
       author: "Dr. Adebayo Oladele",
       image: "/assets/insights/digital-payments-africa.jpg",
-      featured: true
+      featured: true,
+      slug: "west-africa-digital-payment-adoption"
     },
     {
       id: 3,
@@ -43,7 +47,8 @@ const Insights = () => {
       date: "2024-08-05",
       author: "PSI Urban Research Unit",
       image: "/assets/insights/lagos-abuja-comparison.jpg",
-      featured: true
+      featured: true,
+      slug: "lagos-vs-abuja-urban-consumer-preferences"
     }
   ]
 
@@ -55,7 +60,8 @@ const Insights = () => {
       category: "Industry Guide",
       readTime: "6 min read",
       date: "2024-08-01",
-      author: "PSI Strategy Team"
+      author: "PSI Strategy Team",
+      slug: "how-to-choose-market-research-company-nigeria"
     },
     {
       id: 5,
@@ -64,7 +70,8 @@ const Insights = () => {
       category: "Methodology",
       readTime: "7 min read",
       date: "2024-07-28",
-      author: "PSI Methodology Team"
+      author: "PSI Methodology Team",
+      slug: "cati-vs-capi-vs-cawi-nigeria-when-to-use-each-method"
     },
     {
       id: 6,
@@ -73,7 +80,8 @@ const Insights = () => {
       category: "Retail Research",
       readTime: "9 min read",
       date: "2024-07-25",
-      author: "PSI Field Operations"
+      author: "PSI Field Operations",
+      slug: "retail-audit-best-practices-nigeria-500-store-visits"
     },
     {
       id: 7,
@@ -82,7 +90,8 @@ const Insights = () => {
       category: "Opinion Research",
       readTime: "11 min read",
       date: "2024-07-20",
-      author: "Dr. Funmi Adeyemi"
+      author: "Dr. Funmi Adeyemi",
+      slug: "opinion-polling-nigeria-representative-samples"
     },
     {
       id: 8,
@@ -91,7 +100,8 @@ const Insights = () => {
       category: "Customer Experience",
       readTime: "8 min read",
       date: "2024-07-15",
-      author: "PSI CX Team"
+      author: "PSI CX Team",
+      slug: "customer-satisfaction-benchmarks-west-africa"
     }
   ]
 
@@ -100,8 +110,38 @@ const Insights = () => {
     { name: "Consumer Insights", count: 12, icon: <Users className="h-4 w-4" /> },
     { name: "Methodology", count: 8, icon: <TrendingUp className="h-4 w-4" /> },
     { name: "Industry Guide", count: 15, icon: <BarChart3 className="h-4 w-4" /> },
-    { name: "Market Trends", count: 10, icon: <TrendingUp className="h-4 w-4" /> }
+    { name: "Market Trends", count: 10, icon: <TrendingUp className="h-4 w-4" /> },
+    { name: "Financial Services", count: 6, icon: <BarChart3 className="h-4 w-4" /> },
+    { name: "Urban Studies", count: 4, icon: <Users className="h-4 w-4" /> },
+    { name: "Retail Research", count: 7, icon: <TrendingUp className="h-4 w-4" /> },
+    { name: "Opinion Research", count: 5, icon: <Users className="h-4 w-4" /> },
+    { name: "Customer Experience", count: 9, icon: <BarChart3 className="h-4 w-4" /> }
   ]
+
+  // Combine all articles for filtering
+  const allArticles = [...featuredArticles, ...recentArticles]
+
+  // Filter articles based on search term and category
+  const filteredArticles = useMemo(() => {
+    let filtered = allArticles
+
+    // Filter by category
+    if (selectedCategory !== "All Articles") {
+      filtered = filtered.filter(article => article.category === selectedCategory)
+    }
+
+    // Filter by search term
+    if (searchTerm) {
+      filtered = filtered.filter(article =>
+        article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        article.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        article.author.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    }
+
+    return filtered
+  }, [searchTerm, selectedCategory, allArticles])
 
   return (
     <>
@@ -151,14 +191,19 @@ const Insights = () => {
                 {categories.map((category, index) => (
                   <motion.button
                     key={category.name}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-background border border-border hover:border-primary hover:text-primary transition-smooth"
+                    onClick={() => setSelectedCategory(category.name)}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-smooth ${
+                      selectedCategory === category.name
+                        ? 'bg-primary text-primary-foreground border-primary'
+                        : 'bg-background border-border hover:border-primary hover:text-primary'
+                    }`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * index, duration: 0.5 }}
                   >
                     {category.icon}
                     <span className="font-medium">{category.name}</span>
-                    <Badge variant="secondary" className="text-xs">
+                    <Badge variant={selectedCategory === category.name ? "secondary" : "secondary"} className="text-xs">
                       {category.count}
                     </Badge>
                   </motion.button>
@@ -168,129 +213,93 @@ const Insights = () => {
           </div>
         </section>
 
-        {/* Featured Articles */}
+        {/* Search Results */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                  Featured Insights
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Our most comprehensive and impactful research findings.
-                </p>
-              </div>
-            </ScrollReveal>
+            {(searchTerm || selectedCategory !== "All Articles") && (
+              <ScrollReveal>
+                <div className="text-center mb-8">
+                  <p className="text-muted-foreground">
+                    {searchTerm && selectedCategory !== "All Articles" 
+                      ? `Showing results for "${searchTerm}" in ${selectedCategory}`
+                      : searchTerm 
+                      ? `Search results for "${searchTerm}"`
+                      : `Articles in ${selectedCategory}`
+                    } • {filteredArticles.length} articles found
+                  </p>
+                </div>
+              </ScrollReveal>
+            )}
 
-            <StaggerContainer>
-              <div className="grid lg:grid-cols-3 gap-8">
-                {featuredArticles.map((article, index) => (
-                  <StaggerItem key={article.id}>
-                    <Card className="h-full hover-lift group cursor-pointer">
-                      <div className="relative overflow-hidden rounded-t-lg">
-                        <div className="h-48 bg-gradient-primary flex items-center justify-center">
-                          <span className="text-white font-bold text-xl">PSI Research</span>
-                        </div>
-                        <Badge 
-                          className="absolute top-4 left-4 bg-primary text-primary-foreground"
-                        >
-                          Featured
-                        </Badge>
-                      </div>
-                      <CardContent className="p-6">
-                        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                          <Badge variant="outline">{article.category}</Badge>
-                          <div className="flex items-center gap-1">
-                            <Clock className="h-4 w-4" />
-                            {article.readTime}
+            {filteredArticles.length === 0 ? (
+              <ScrollReveal>
+                <div className="text-center py-16">
+                  <h3 className="text-2xl font-bold mb-4">No articles found</h3>
+                  <p className="text-muted-foreground mb-8">
+                    Try adjusting your search or browse all articles
+                  </p>
+                  <Button 
+                    variant="outline-primary" 
+                    onClick={() => {
+                      setSearchTerm("")
+                      setSelectedCategory("All Articles")
+                    }}
+                  >
+                    Clear Filters
+                  </Button>
+                </div>
+              </ScrollReveal>
+            ) : (
+              <StaggerContainer>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {filteredArticles.map((article, index) => (
+                    <StaggerItem key={article.id || article.slug}>
+                      <Link to={`/insights/${article.slug}`}>
+                        <Card className="h-full hover-lift group cursor-pointer">
+                          <div className="relative overflow-hidden rounded-t-lg">
+                            <div className="h-48 bg-gradient-primary flex items-center justify-center">
+                              <span className="text-white font-bold text-xl">PSI Research</span>
+                            </div>
+                            {article.featured !== undefined && article.featured && (
+                              <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
+                                Featured
+                              </Badge>
+                            )}
                           </div>
-                          <div className="flex items-center gap-1">
-                            <Calendar className="h-4 w-4" />
-                            {article.date}
-                          </div>
-                        </div>
-                        <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-smooth">
-                          {article.title}
-                        </h3>
-                        <p className="text-muted-foreground mb-4 line-clamp-3">
-                          {article.excerpt}
-                        </p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm text-muted-foreground font-medium">
-                            {article.author}
-                          </span>
-                          <Button variant="ghost" size="sm" className="group-hover:text-primary">
-                            Read More <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </StaggerItem>
-                ))}
-              </div>
-            </StaggerContainer>
-          </div>
-        </section>
-
-        {/* Recent Articles */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <ScrollReveal>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                  Latest Insights
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Fresh research findings and industry analysis.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <StaggerContainer>
-              <div className="grid md:grid-cols-2 gap-8">
-                {recentArticles.map((article, index) => (
-                  <StaggerItem key={article.id}>
-                    <Card className="hover-lift group cursor-pointer">
-                      <CardContent className="p-6">
-                        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                          <Badge variant="outline">{article.category}</Badge>
-                          <div className="flex items-center gap-1">
-                            <Clock className="h-4 w-4" />
-                            {article.readTime}
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Calendar className="h-4 w-4" />
-                            {article.date}
-                          </div>
-                        </div>
-                        <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-smooth">
-                          {article.title}
-                        </h3>
-                        <p className="text-muted-foreground mb-4">
-                          {article.excerpt}
-                        </p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm text-muted-foreground font-medium">
-                            {article.author}
-                          </span>
-                          <Button variant="ghost" size="sm" className="group-hover:text-primary">
-                            Read More <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </StaggerItem>
-                ))}
-              </div>
-            </StaggerContainer>
-
-            <ScrollReveal delay={0.4}>
-              <div className="text-center mt-16">
-                <Button variant="outline-primary" size="lg">
-                  Load More Articles
-                </Button>
-              </div>
-            </ScrollReveal>
+                          <CardContent className="p-6">
+                            <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                              <Badge variant="outline">{article.category}</Badge>
+                              <div className="flex items-center gap-1">
+                                <Clock className="h-4 w-4" />
+                                {article.readTime}
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <Calendar className="h-4 w-4" />
+                                {article.date}
+                              </div>
+                            </div>
+                            <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-smooth">
+                              {article.title}
+                            </h3>
+                            <p className="text-muted-foreground mb-4 line-clamp-3">
+                              {article.excerpt}
+                            </p>
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm text-muted-foreground font-medium">
+                                {article.author}
+                              </span>
+                              <Button variant="ghost" size="sm" className="group-hover:text-primary">
+                                Read More <ArrowRight className="ml-2 h-4 w-4" />
+                              </Button>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </Link>
+                    </StaggerItem>
+                  ))}
+                </div>
+              </StaggerContainer>
+            )}
           </div>
         </section>
 

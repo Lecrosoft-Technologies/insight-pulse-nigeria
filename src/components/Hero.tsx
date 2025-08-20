@@ -1,9 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, MapPin, Award, Calendar } from "lucide-react";
 import heroImage from "@/assets/hero-research-team.jpg";
+import { useState } from "react";
+import RequestProposalModal from "./RequestProposalModal";
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   return (
+    <>
+      <RequestProposalModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     <section className="relative overflow-hidden bg-gradient-subtle">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(30deg,transparent_12%,hsl(var(--primary)/0.05)_12.5%,hsl(var(--primary)/0.05)_87%,transparent_87.5%,transparent)]"></div>
@@ -49,7 +55,7 @@ const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="cta" size="xl" className="group">
+              <Button variant="cta" size="xl" onClick={() => setIsModalOpen(true)} className="group">
                 Request Proposal
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -99,6 +105,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

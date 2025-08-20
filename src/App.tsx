@@ -10,6 +10,8 @@ import About from "./pages/About";
 import Insights from "./pages/Insights";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ServiceDetail from "./pages/ServiceDetail";
+import BlogPost from "./pages/BlogPost";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
@@ -31,7 +33,9 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/insights" element={<Insights />} />
+                <Route path="/insights/:slug" element={<BlogPost />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/services/:serviceSlug" element={<ServiceDetail />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
