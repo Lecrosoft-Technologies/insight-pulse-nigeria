@@ -13,9 +13,11 @@ import {
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { motion } from "framer-motion";
+import RequestProposalModal from "./RequestProposalModal";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const services = [
     { name: "Market Research", href: "/services/market-research" },
@@ -44,7 +46,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <>
+      <RequestProposalModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       {/* Utility Header */}
       <div className="bg-primary text-primary-foreground py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
@@ -146,9 +150,37 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/about" className="font-medium text-foreground hover:text-primary transition-smooth">
-                    About
-                  </Link>
+                  <NavigationMenuTrigger className="font-medium">About</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="w-80 p-4">
+                      <div className="grid gap-3">
+                        <Link
+                          to="/about"
+                          className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth"
+                        >
+                          Company Overview
+                        </Link>
+                        <Link
+                          to="/team"
+                          className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth"
+                        >
+                          Management Team
+                        </Link>
+                        <Link
+                          to="/clients"
+                          className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth"
+                        >
+                          Our Clients
+                        </Link>
+                        <Link
+                          to="/coverage"
+                          className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth"
+                        >
+                          Coverage & Offices
+                        </Link>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
@@ -169,7 +201,7 @@ const Header = () => {
           {/* CTA Button, Theme Toggle & Mobile Menu */}
           <div className="flex items-center space-x-4">
             <ThemeToggle />
-            <Button variant="cta" size="lg" className="hidden md:flex">
+            <Button variant="cta" size="lg" className="hidden md:flex" onClick={() => setIsModalOpen(true)}>
               Request Proposal
             </Button>
 
@@ -251,9 +283,26 @@ const Header = () => {
                 </div>
               </details>
 
-              <Link to="/about" className="block py-2 text-foreground hover:text-primary transition-smooth">
-                About
-              </Link>
+              <details className="group">
+                <summary className="py-2 cursor-pointer text-foreground hover:text-primary transition-smooth flex items-center justify-between">
+                  About
+                  <ChevronDown className="h-4 w-4 group-open:rotate-180 transition-transform" />
+                </summary>
+                <div className="pl-4 space-y-1">
+                  <Link to="/about" className="block py-1 text-muted-foreground hover:text-primary transition-smooth">
+                    Company Overview
+                  </Link>
+                  <Link to="/team" className="block py-1 text-muted-foreground hover:text-primary transition-smooth">
+                    Management Team
+                  </Link>
+                  <Link to="/clients" className="block py-1 text-muted-foreground hover:text-primary transition-smooth">
+                    Our Clients
+                  </Link>
+                  <Link to="/coverage" className="block py-1 text-muted-foreground hover:text-primary transition-smooth">
+                    Coverage & Offices
+                  </Link>
+                </div>
+              </details>
               <Link to="/insights" className="block py-2 text-foreground hover:text-primary transition-smooth">
                 Insights
               </Link>
@@ -262,13 +311,14 @@ const Header = () => {
               </Link>
             </div>
 
-            <Button variant="cta" size="lg" className="w-full">
+            <Button variant="cta" size="lg" className="w-full" onClick={() => setIsModalOpen(true)}>
               Request Proposal
             </Button>
           </motion.div>
         )}
       </nav>
     </header>
+    </>
   );
 };
 

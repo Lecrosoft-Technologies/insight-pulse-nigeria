@@ -147,9 +147,9 @@ const Coverage = () => {
                       className="text-center animate-count-up"
                       style={{animationDelay: `${index * 0.2}s`}}
                     >
-                      <div className="text-2xl lg:text-3xl font-bold gradient-primary bg-clip-text text-transparent mb-1">
-                        {stat.number}
-                      </div>
+                        <div className="text-2xl lg:text-3xl font-bold text-primary mb-1">
+                          {stat.number}
+                        </div>
                       <div className="font-medium text-foreground text-sm">{stat.label}</div>
                       <div className="text-xs text-muted-foreground">{stat.description}</div>
                     </div>
