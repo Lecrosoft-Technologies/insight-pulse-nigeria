@@ -13,42 +13,39 @@ const Insights = () => {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All Articles")
 
-  const featuredArticles = [
+  const mockArticles = [
     {
       id: 1,
-      title: "Nigeria Consumer Behavior Trends 2024: Post-COVID Market Shifts",
-      excerpt: "Comprehensive analysis of how Nigerian consumers have adapted their purchasing behaviors in the post-pandemic era, with implications for FMCG brands.",
-      category: "Consumer Insights",
-      readTime: "8 min read",
-      date: "2024-08-15",
+      title: "Top 10 Questions to Ask a Market Research Agency in Nigeria",
+      excerpt: "Essential questions to evaluate research agencies and ensure quality insights for your business decisions.",
+      category: "Research Tips",
+      readTime: "5 min read",
+      date: "2024-01-15",
       author: "PSI Research Team",
-      image: "/assets/insights/consumer-trends-2024.jpg",
-      featured: true,
-      slug: "nigeria-consumer-behavior-trends-2024"
+      slug: "questions-research-agency-nigeria",
+      featured: true
     },
     {
       id: 2,
-      title: "West Africa Digital Payment Adoption: Regional Comparison Study",
-      excerpt: "Cross-country analysis of digital payment preferences and barriers across 8 West African markets, revealing key opportunities for fintech expansion.",
-      category: "Financial Services",
-      readTime: "12 min read",
-      date: "2024-08-10",
+      title: "CATI vs CAPI vs CAWI in Nigeria: When to Use Each Method",
+      excerpt: "Comprehensive guide to choosing the right data collection approach for your research objectives and budget constraints.",
+      category: "Methodology",
+      readTime: "7 min read",
+      date: "2024-01-10",
       author: "Dr. Adebayo Oladele",
-      image: "/assets/insights/digital-payments-africa.jpg",
-      featured: true,
-      slug: "west-africa-digital-payment-adoption"
+      slug: "cati-vs-capi-vs-cawi-nigeria-methods",
+      featured: false
     },
     {
       id: 3,
-      title: "Lagos vs Abuja: Urban Consumer Preferences in Nigeria's Major Cities",
-      excerpt: "Detailed comparison of shopping habits, brand preferences, and lifestyle trends between Nigeria's commercial and political capitals.",
-      category: "Urban Studies",
+      title: "West Africa Consumer Panel Management: Best Practices",
+      excerpt: "Insights from managing consumer panels across 8 West African countries with practical tips for panel retention and data quality.",
+      category: "Panel Management",
       readTime: "10 min read",
-      date: "2024-08-05",
-      author: "PSI Urban Research Unit",
-      image: "/assets/insights/lagos-abuja-comparison.jpg",
-      featured: true,
-      slug: "lagos-vs-abuja-urban-consumer-preferences"
+      date: "2024-01-05",
+      author: "PSI Panel Team",
+      slug: "west-africa-consumer-panel-management",
+      featured: true
     }
   ]
 
@@ -61,7 +58,8 @@ const Insights = () => {
       readTime: "6 min read",
       date: "2024-08-01",
       author: "PSI Strategy Team",
-      slug: "how-to-choose-market-research-company-nigeria"
+      slug: "how-to-choose-market-research-company-nigeria",
+      featured: false
     },
     {
       id: 5,
@@ -71,7 +69,8 @@ const Insights = () => {
       readTime: "7 min read",
       date: "2024-07-28",
       author: "PSI Methodology Team",
-      slug: "cati-vs-capi-vs-cawi-nigeria-when-to-use-each-method"
+      slug: "cati-vs-capi-vs-cawi-nigeria-when-to-use-each-method",
+      featured: false
     },
     {
       id: 6,
@@ -81,7 +80,8 @@ const Insights = () => {
       readTime: "9 min read",
       date: "2024-07-25",
       author: "PSI Field Operations",
-      slug: "retail-audit-best-practices-nigeria-500-store-visits"
+      slug: "retail-audit-best-practices-nigeria-500-store-visits",
+      featured: false
     },
     {
       id: 7,
@@ -91,7 +91,8 @@ const Insights = () => {
       readTime: "11 min read",
       date: "2024-07-20",
       author: "Dr. Funmi Adeyemi",
-      slug: "opinion-polling-nigeria-representative-samples"
+      slug: "opinion-polling-nigeria-representative-samples",
+      featured: false
     },
     {
       id: 8,
@@ -101,7 +102,8 @@ const Insights = () => {
       readTime: "8 min read",
       date: "2024-07-15",
       author: "PSI CX Team",
-      slug: "customer-satisfaction-benchmarks-west-africa"
+      slug: "customer-satisfaction-benchmarks-west-africa",
+      featured: false
     }
   ]
 
@@ -119,7 +121,7 @@ const Insights = () => {
   ]
 
   // Combine all articles for filtering
-  const allArticles = [...featuredArticles, ...recentArticles]
+  const allArticles = [...mockArticles, ...recentArticles]
 
   // Filter articles based on search term and category
   const filteredArticles = useMemo(() => {

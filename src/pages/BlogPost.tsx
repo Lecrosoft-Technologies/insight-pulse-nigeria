@@ -213,12 +213,10 @@ const BlogPost = () => {
         description={post.metaDescription}
         keywords={post.keywords}
         canonicalUrl={`/insights/${post.slug}`}
-        articleData={{
-          headline: post.title,
-          author: post.author.name,
-          datePublished: post.publishedDate,
-          image: post.image
-        }}
+        article={true}
+        author={post.author.name}
+        publishedTime={post.publishedDate}
+        modifiedTime={post.modifiedDate}
       />
 
       <div className="min-h-screen bg-gradient-subtle">
