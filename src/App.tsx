@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Team from "./pages/Team";
+import TeamMember from "./pages/team/TeamMember";
 import Clients from "./pages/Clients";
 import Coverage from "./pages/Coverage";
 import Insights from "./pages/Insights";
@@ -17,6 +18,13 @@ import ServiceDetail from "./pages/ServiceDetail";
 import BlogPost from "./pages/BlogPost";
 import FMCGRetailAudit from "./pages/services/FMCGRetailAudit";
 import MediaAdvertising from "./pages/services/MediaAdvertising";
+// Sector Pages
+import FMCG from "./pages/sectors/FMCG";
+import Financial from "./pages/sectors/Financial";
+import Health from "./pages/sectors/Health";
+// Method Pages
+import HouseholdSurveys from "./pages/methods/HouseholdSurveys";
+import FocusGroups from "./pages/methods/FocusGroups";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
@@ -38,6 +46,7 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/team" element={<Team />} />
+                <Route path="/team/:memberId" element={<TeamMember />} />
                 <Route path="/clients" element={<Clients />} />
                 <Route path="/coverage" element={<Coverage />} />
                 <Route path="/insights" element={<Insights />} />
@@ -46,6 +55,16 @@ const App = () => (
                 <Route path="/services/:serviceSlug" element={<ServiceDetail />} />
                 <Route path="/services/fmcg-retail-audit" element={<FMCGRetailAudit />} />
                 <Route path="/services/media-advertising" element={<MediaAdvertising />} />
+                
+                {/* Sector Pages */}
+                <Route path="/sectors/fmcg" element={<FMCG />} />
+                <Route path="/sectors/financial" element={<Financial />} />
+                <Route path="/sectors/health" element={<Health />} />
+                
+                {/* Method Pages */}
+                <Route path="/methods/household-surveys" element={<HouseholdSurveys />} />
+                <Route path="/methods/focus-groups" element={<FocusGroups />} />
+                
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

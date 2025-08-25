@@ -17,9 +17,9 @@
     --popover-foreground: 218 15% 20%;
 
     /* PSI Green - Primary Brand Color */
-    --primary: 140 91% 15%; /* #01923f */
+    --primary: 140 86% 22%; /* Lighter green for better contrast */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 140 91% 25%;
+    --primary-glow: 140 91% 35%;
     
     /* Modern Orange - Accent & CTAs */
     --accent: 25 95% 53%; /* Modern orange */
@@ -204,6 +204,12 @@
   /* CTA pulse effect */
   .cta-pulse {
     animation: ctaPulse 2s ease-in-out infinite;
+  }
+  
+  /* Mask fade for infinite scroll */
+  .mask-fade {
+    mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
   }
 }
 

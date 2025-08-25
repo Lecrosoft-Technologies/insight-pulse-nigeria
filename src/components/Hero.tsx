@@ -59,7 +59,7 @@ const Hero = () => {
                 Request Proposal
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline-primary" size="xl">
+              <Button variant="outline-primary" size="xl" onClick={() => window.open('https://calendly.com/psi-market-research', '_blank')}>
                 Book a 15-min Call
               </Button>
             </div>
