@@ -35,6 +35,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 
+// Query client setup
 const queryClient = new QueryClient();
 
 const App = () => (
