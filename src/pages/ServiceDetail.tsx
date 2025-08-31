@@ -422,7 +422,7 @@ const ServiceDetail = () => {
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
                   {service.title.split(' in ')[0]}
-                  <span className="gradient-primary bg-clip-text text-transparent"> in Nigeria </span>
+                  <span className="text-primary"> in Nigeria </span>
                   & West Africa
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">

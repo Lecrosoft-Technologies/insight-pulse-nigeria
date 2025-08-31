@@ -122,7 +122,7 @@ const FMCGRetailAudit = () => {
                     FMCG & Retail Audit
                   </Badge>
                   <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
-                    <span className="gradient-primary bg-clip-text text-transparent">Complete Retail </span>
+                    <span className="text-primary">Complete Retail </span>
                     Market Intelligence
                   </h1>
                   <p className="text-xl text-muted-foreground leading-relaxed mb-8">

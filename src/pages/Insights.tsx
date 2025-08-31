@@ -165,7 +165,7 @@ const Insights = () => {
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
                   Research
-                  <span className="gradient-primary bg-clip-text text-transparent"> Insights </span>
+                  <span className="text-primary"> Insights </span>
                   & Reports
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">

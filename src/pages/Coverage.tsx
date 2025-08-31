@@ -165,7 +165,7 @@ const Coverage = () => {
                     Our Coverage
                   </Badge>
                   <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
-                    <span className="gradient-primary bg-clip-text text-transparent">West Africa</span>
+                    <span className="text-primary">West Africa</span>
                     <br />
                     Research Network
                   </h1>

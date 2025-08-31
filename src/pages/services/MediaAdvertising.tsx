@@ -147,7 +147,7 @@ const MediaAdvertising = () => {
                     Media & Advertising Research
                   </Badge>
                   <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
-                    <span className="gradient-primary bg-clip-text text-transparent">Maximize Your </span>
+                    <span className="text-primary">Maximize Your </span>
                     Advertising Impact
                   </h1>
                   <p className="text-xl text-muted-foreground leading-relaxed mb-8">

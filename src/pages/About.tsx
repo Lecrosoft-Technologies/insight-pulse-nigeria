@@ -70,7 +70,7 @@ const About = () => {
                   </Badge>
                   <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
                     Market Research
-                    <span className="gradient-primary bg-clip-text text-transparent"> Excellence </span>
+                    <span className="text-primary"> Excellence </span>
                     Since 2009
                   </h1>
                   <p className="text-xl text-muted-foreground leading-relaxed">

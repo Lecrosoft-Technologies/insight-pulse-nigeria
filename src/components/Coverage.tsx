@@ -53,7 +53,7 @@ const Coverage = () => {
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
             <span className="text-foreground">West Africa</span>
             <br />
-            <span className="gradient-primary bg-clip-text text-transparent">
+            <span className="text-primary">
               Coverage & Capability
             </span>
           </h2>

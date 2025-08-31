@@ -20,7 +20,7 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight animate-text-reveal">
-                <span className="gradient-primary bg-clip-text text-transparent">
+                <span className="text-primary">
                   Top-tier Market & Social Research
                 </span>
                 <br />

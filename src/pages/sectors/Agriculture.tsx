@@ -109,7 +109,7 @@ const Agriculture = () => {
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
                   Cultivate Success in
-                  <span className="gradient-primary bg-clip-text text-transparent"> Nigeria's </span>
+                  <span className="text-primary"> Nigeria's </span>
                   Agricultural Market
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">

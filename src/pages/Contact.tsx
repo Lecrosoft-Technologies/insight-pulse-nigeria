@@ -94,7 +94,7 @@ const Contact = () => {
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
                   Let's Discuss Your
-                  <span className="gradient-primary bg-clip-text text-transparent"> Research </span>
+                  <span className="text-primary"> Research </span>
                   Needs
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
