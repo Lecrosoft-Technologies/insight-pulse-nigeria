@@ -9,6 +9,13 @@ import { Search, Calendar, Clock, ArrowRight, TrendingUp, Users, BarChart3 } fro
 import { useState, useMemo } from "react"
 import { Link } from "react-router-dom"
 
+// Article images
+import questionsAgencyImage from "@/assets/blog/questions-research-agency-nigeria.jpg"
+import youthDemographicsImage from "@/assets/blog/youth-demographics-west-africa.jpg"
+import electionPollingImage from "@/assets/blog/election-polling-methodology-nigeria.jpg"
+import ruralSurveysImage from "@/assets/blog/rural-household-surveys-africa.jpg"
+import focusGroupImage from "@/assets/blog/focus-group-best-practices.jpg"
+
 const Insights = () => {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All Articles")
@@ -23,28 +30,31 @@ const Insights = () => {
       date: "2024-01-15",
       author: "PSI Research Team",
       slug: "questions-research-agency-nigeria",
+      image: questionsAgencyImage,
       featured: true
     },
     {
       id: 2,
-      title: "CATI vs CAPI vs CAWI in Nigeria: When to Use Each Method",
-      excerpt: "Comprehensive guide to choosing the right data collection approach for your research objectives and budget constraints.",
-      category: "Methodology",
+      title: "Understanding Youth Demographics in West Africa: A 2024 Analysis",
+      excerpt: "Deep dive into the growing youth population across Ghana, Nigeria, and Senegal and their market implications.",
+      category: "Market Trends",
       readTime: "7 min read",
       date: "2024-01-10",
-      author: "Dr. Adebayo Oladele",
-      slug: "cati-vs-capi-vs-cawi-nigeria-methods",
+      author: "Dr. Amina Kone",
+      slug: "youth-demographics-west-africa",
+      image: youthDemographicsImage,
       featured: false
     },
     {
       id: 3,
-      title: "West Africa Consumer Panel Management: Best Practices",
-      excerpt: "Insights from managing consumer panels across 8 West African countries with practical tips for panel retention and data quality.",
-      category: "Panel Management",
-      readTime: "10 min read",
+      title: "Election Polling Methodology: Best Practices from Nigeria's 2023 Elections",
+      excerpt: "Lessons learned from political polling in Nigeria's recent elections and methodology improvements.",
+      category: "Opinion Research",
+      readTime: "6 min read",
       date: "2024-01-05",
-      author: "PSI Panel Team",
-      slug: "west-africa-consumer-panel-management",
+      author: "Samuel Adebayo",
+      slug: "election-polling-methodology-nigeria",
+      image: electionPollingImage,
       featured: true
     }
   ]
@@ -52,24 +62,26 @@ const Insights = () => {
   const recentArticles = [
     {
       id: 4,
-      title: "How to Choose a Market Research Company in Nigeria: Essential Checklist",
-      excerpt: "10 critical factors to evaluate when selecting a research partner for your business in Nigeria.",
-      category: "Industry Guide",
-      readTime: "6 min read",
+      title: "Rural Household Surveys: Overcoming Challenges in Remote African Communities",
+      excerpt: "Practical strategies for conducting high-quality household surveys in rural West African settings.",
+      category: "Research Methods",
+      readTime: "8 min read",
       date: "2024-08-01",
-      author: "PSI Strategy Team",
-      slug: "how-to-choose-market-research-company-nigeria",
+      author: "Field Operations Team",
+      slug: "rural-household-surveys-africa",
+      image: ruralSurveysImage,
       featured: false
     },
     {
       id: 5,
-      title: "CATI vs CAPI vs CAWI in Nigeria: When to Use Each Method",
-      excerpt: "Practical guide to choosing the right data collection approach for your research objectives.",
-      category: "Methodology",
-      readTime: "7 min read",
+      title: "Focus Group Best Practices: Conducting Effective Sessions in West Africa",
+      excerpt: "Cultural considerations and practical tips for running successful focus group discussions across diverse West African markets.",
+      category: "Research Methods",
+      readTime: "6 min read",
       date: "2024-07-28",
-      author: "PSI Methodology Team",
-      slug: "cati-vs-capi-vs-cawi-nigeria-when-to-use-each-method",
+      author: "Qualitative Research Team",
+      slug: "focus-group-best-practices",
+      image: focusGroupImage,
       featured: false
     },
     {
@@ -258,10 +270,18 @@ const Insights = () => {
                     <StaggerItem key={article.id || article.slug}>
                       <Link to={`/insights/${article.slug}`}>
                         <Card className="h-full hover-lift group cursor-pointer">
-                          <div className="relative overflow-hidden rounded-t-lg">
-                            <div className="h-48 bg-gradient-primary flex items-center justify-center">
-                              <span className="text-white font-bold text-xl">PSI Research</span>
-                            </div>
+                           <div className="relative overflow-hidden rounded-t-lg">
+                             {article.image ? (
+                               <img 
+                                 src={article.image} 
+                                 alt={article.title}
+                                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                               />
+                             ) : (
+                               <div className="h-48 bg-gradient-primary flex items-center justify-center">
+                                 <span className="text-white font-bold text-xl">PSI Research</span>
+                               </div>
+                             )}
                             {article.featured !== undefined && article.featured && (
                               <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
                                 Featured

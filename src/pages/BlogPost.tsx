@@ -9,12 +9,18 @@ import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import { ArrowLeft, Calendar, Clock, User, Share2, BookmarkPlus, ArrowRight } from "lucide-react"
 
+// Blog post images
+import consumerBehaviorImage from "@/assets/blog/nigeria-consumer-behavior-trends-2024.jpg"
+import fmcgInsightsImage from "@/assets/blog/west-africa-fmcg-insights-2024.jpg"
+import digitalBankingImage from "@/assets/blog/digital-banking-adoption-nigeria.jpg"
+
 // This would typically come from your Laravel API
 const mockBlogPosts = {
   "nigeria-consumer-behavior-trends-2024": {
     title: "Nigeria Consumer Behavior Trends 2024: Post-COVID Market Shifts",
     slug: "nigeria-consumer-behavior-trends-2024",
     excerpt: "Comprehensive analysis of how Nigerian consumers have adapted their purchasing behaviors in the post-pandemic era, with implications for FMCG brands.",
+    image: consumerBehaviorImage,
     content: `
       <p>The Nigerian consumer landscape has undergone significant transformation since the COVID-19 pandemic, with lasting implications for brands and retailers across the country. Our comprehensive analysis of consumer behavior trends reveals five key shifts that are reshaping the market.</p>
 
@@ -67,91 +73,53 @@ const mockBlogPosts = {
       role: "Consumer Insights Division",
       avatar: "/assets/team/psi-research-team.jpg"
     },
-    image: "/assets/insights/consumer-trends-2024.jpg",
     tags: ["Consumer Behavior", "Nigeria", "Post-COVID", "FMCG", "Digital Shopping"],
     metaDescription: "Comprehensive analysis of Nigerian consumer behavior trends in 2024, revealing key post-COVID market shifts and implications for FMCG brands.",
     keywords: "Nigeria consumer behavior 2024, post-COVID shopping trends Nigeria, Nigerian consumer insights, FMCG trends Nigeria, digital shopping Nigeria"
   },
-  "west-africa-digital-payment-adoption": {
-    title: "West Africa Digital Payment Adoption: Regional Comparison Study",
-    slug: "west-africa-digital-payment-adoption",
-    excerpt: "Cross-country analysis of digital payment preferences and barriers across 8 West African markets, revealing key opportunities for fintech expansion.",
+  "west-africa-fmcg-insights-2024": {
+    title: "West Africa FMCG Market Insights 2024: Growth Opportunities & Challenges",
+    slug: "west-africa-fmcg-insights-2024",
+    excerpt: "Deep dive into the Fast-Moving Consumer Goods landscape across Ghana, Nigeria, and Senegal, highlighting key growth drivers and market challenges.",
+    image: fmcgInsightsImage,
     content: `
-      <p>Digital payment adoption across West Africa shows significant variation by country, with Nigeria leading in volume but Ghana showing the highest per-capita adoption rates. Our comprehensive regional study reveals the factors driving adoption and persistent barriers across eight markets.</p>
-
-      <h2>Regional Overview</h2>
-      <p>West Africa's digital payment landscape is characterized by rapid growth but uneven development. Mobile money solutions dominate in Francophone countries, while Nigeria's market is led by bank-backed solutions and international players.</p>
-
-      <h2>Country Rankings by Adoption</h2>
-      <ol>
-        <li><strong>Ghana:</strong> 78% adoption rate, strong regulatory support</li>
-        <li><strong>Nigeria:</strong> 67% adoption rate, largest absolute volume</li>
-        <li><strong>Senegal:</strong> 61% adoption rate, mobile money focus</li>
-        <li><strong>Ivory Coast:</strong> 54% adoption rate, growing urban usage</li>
-        <li><strong>Burkina Faso:</strong> 43% adoption rate, rural challenges</li>
-        <li><strong>Mali:</strong> 39% adoption rate, security concerns</li>
-        <li><strong>Togo:</strong> 36% adoption rate, infrastructure limitations</li>
-        <li><strong>Benin:</strong> 32% adoption rate, early stage development</li>
-      </ol>
-
-      <h2>Key Success Factors</h2>
-      <h3>1. Regulatory Environment</h3>
-      <p>Countries with clear, supportive regulatory frameworks show higher adoption rates. Ghana's National Payment Systems Act and Nigeria's Payment Service Banks regulations have been particularly effective.</p>
-
-      <h3>2. Agent Network Density</h3>
-      <p>The availability of cash-in/cash-out agents strongly correlates with adoption rates. Ghana averages one agent per 530 people, compared to Benin's one per 2,100 people.</p>
-
-      <h3>3. Mobile Network Coverage</h3>
-      <p>Reliable 3G/4G coverage is essential for digital payment success. Countries with coverage below 70% show significantly lower adoption rates.</p>
-
-      <h2>Persistent Barriers</h2>
-      <ul>
-        <li><strong>Trust Issues:</strong> 34% of non-users cite security concerns</li>
-        <li><strong>Digital Literacy:</strong> 28% lack confidence in digital transactions</li>
-        <li><strong>Cash Preference:</strong> 41% prefer cash for cultural reasons</li>
-        <li><strong>Infrastructure:</strong> Poor internet connectivity affects 23% of potential users</li>
-        <li><strong>Cost Concerns:</strong> 19% find transaction fees too high</li>
-      </ul>
-
-      <h2>Opportunities for Fintech Expansion</h2>
-      <p>Our analysis identifies several high-potential opportunities:</p>
-
-      <h3>1. Rural Markets</h3>
-      <p>Rural adoption lags urban by 23 percentage points on average, representing significant untapped potential. Success requires agent network expansion and user education.</p>
-
-      <h3>2. Cross-Border Payments</h3>
-      <p>Intra-regional trade volumes suggest strong demand for seamless cross-border payment solutions. Current solutions are fragmented and costly.</p>
-
-      <h3>3. Merchant Payment Solutions</h3>
-      <p>Small business payment acceptance remains low at 31% regionally. Simplified POS solutions and merchant education could accelerate adoption.</p>
-
-      <h3>4. Government Payment Digitization</h3>
-      <p>Government salary and benefit payments represent a major opportunity for driving adoption and building trust in digital systems.</p>
-
-      <h2>Recommendations for Market Entry</h2>
-      <ol>
-        <li><strong>Start with High-Adoption Markets:</strong> Ghana and Nigeria offer the best immediate opportunities</li>
-        <li><strong>Partner Locally:</strong> Local partnerships are essential for agent network development</li>
-        <li><strong>Focus on Education:</strong> User education programs significantly improve adoption rates</li>
-        <li><strong>Solve Real Problems:</strong> Successful solutions address specific local pain points</li>
-        <li><strong>Plan for Scale:</strong> Regional expansion strategies should consider varying regulatory environments</li>
-      </ol>
-
-      <h2>Research Methodology</h2>
-      <p>This study surveyed 4,800 consumers across eight West African countries, combining quantitative consumer research with qualitative stakeholder interviews and regulatory analysis. Fieldwork was conducted between March and July 2024.</p>
+      <p>The West African FMCG market presents a dynamic landscape of growth opportunities and operational challenges. Our comprehensive analysis across Ghana, Nigeria, and Senegal reveals key insights for brands looking to expand or optimize their regional presence.</p>
+      <h2>Market Overview</h2>
+      <p>The West African FMCG market is valued at $180 billion and growing at 6.2% annually, driven by population growth, urbanization, and rising disposable incomes.</p>
+    `,
+    category: "Market Analysis",
+    readTime: "10 min read",
+    publishedDate: "2024-08-12",
+    author: {
+      name: "Dr. Amina Kone",
+      role: "Senior Market Analyst",
+      avatar: "/assets/team/dr-amina-kone.jpg"
+    },
+    tags: ["FMCG", "West Africa", "Market Analysis", "Growth Opportunities"],
+    metaDescription: "Deep dive into West Africa's FMCG market with insights on growth opportunities and challenges across Ghana, Nigeria, and Senegal.",
+    keywords: "West Africa FMCG market, FMCG growth opportunities Africa, West Africa consumer goods market"
+  },
+  "digital-banking-adoption-nigeria": {
+    title: "Digital Banking Adoption in Nigeria: Consumer Preferences and Usage Patterns",
+    slug: "digital-banking-adoption-nigeria",
+    excerpt: "Analysis of how Nigerian consumers are embracing digital banking solutions, with insights for financial service providers.",
+    image: digitalBankingImage,
+    content: `
+      <p>Nigerian consumers are rapidly adopting digital banking solutions, with mobile banking usage increasing by 154% since 2022. Our analysis reveals key adoption drivers and usage patterns.</p>
+      <h2>Adoption Statistics</h2>
+      <p>73% of banked Nigerians now use mobile banking, with mobile transfers accounting for 68% of all transactions.</p>
     `,
     category: "Financial Services",
-    readTime: "12 min read",
-    publishedDate: "2024-08-10",
+    readTime: "8 min read",
+    publishedDate: "2024-08-08",
     author: {
-      name: "Dr. Adebayo Oladele",
-      role: "Senior Research Director",
-      avatar: "/assets/team/dr-adebayo-oladele.jpg"
+      name: "Samuel Adebayo",
+      role: "Fintech Research Specialist",
+      avatar: "/assets/team/samuel-adebayo.jpg"
     },
-    image: "/assets/insights/digital-payments-africa.jpg",
-    tags: ["Digital Payments", "West Africa", "Fintech", "Mobile Money", "Cross-border"],
-    metaDescription: "Regional comparison study of digital payment adoption across 8 West African markets, revealing opportunities for fintech expansion and key success factors.",
-    keywords: "West Africa digital payments, fintech expansion Africa, mobile money adoption, digital payment barriers Africa, cross-border payments West Africa"
+    tags: ["Digital Banking", "Nigeria", "Fintech", "Consumer Behavior"],
+    metaDescription: "Analysis of digital banking adoption trends in Nigeria, revealing consumer preferences and usage patterns for financial service providers.",
+    keywords: "Nigeria digital banking adoption, mobile banking Nigeria, fintech adoption Nigeria"
   }
 }
 
@@ -283,9 +251,17 @@ const BlogPost = () => {
               {/* Featured Image */}
               <ScrollReveal>
                 <div className="relative rounded-2xl overflow-hidden shadow-strong mb-12">
-                  <div className="h-64 lg:h-96 bg-gradient-primary flex items-center justify-center">
-                    <span className="text-white font-bold text-2xl">PSI Research Insights</span>
-                  </div>
+                  {post.image ? (
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-64 lg:h-96 object-cover"
+                    />
+                  ) : (
+                    <div className="h-64 lg:h-96 bg-gradient-primary flex items-center justify-center">
+                      <span className="text-white font-bold text-2xl">PSI Research Insights</span>
+                    </div>
+                  )}
                 </div>
               </ScrollReveal>
             </div>
