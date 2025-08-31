@@ -46,11 +46,11 @@ const App = () => (
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <SEOEnhancements />
-          <GoogleAnalytics />
           <Toaster />
           <Sonner />
           <Loader />
           <BrowserRouter>
+            <GoogleAnalytics />
             <Header />
             <main>
               <Routes>
