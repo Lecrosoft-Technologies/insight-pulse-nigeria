@@ -9,7 +9,7 @@ interface ApiConfig {
 
 // Default configuration - update with your Laravel API endpoint
 const defaultConfig: ApiConfig = {
-  baseUrl: process.env.VITE_API_BASE_URL || 'https://your-laravel-api.com/api',
+  baseUrl: import.meta.env.VITE_API_BASE_URL || 'https://your-laravel-api.com/api',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
