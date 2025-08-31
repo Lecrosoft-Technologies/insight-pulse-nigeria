@@ -25,8 +25,6 @@ import Health from "./pages/sectors/Health";
 import Automotive from "./pages/sectors/Automotive";
 import Telecoms from "./pages/sectors/Telecoms";
 import Agriculture from "./pages/sectors/Agriculture";
-import Automotive from "./pages/sectors/Automotive"; 
-import Telecoms from "./pages/sectors/Telecoms";
 // Method Pages
 import HouseholdSurveys from "./pages/methods/HouseholdSurveys";
 import FocusGroups from "./pages/methods/FocusGroups";
