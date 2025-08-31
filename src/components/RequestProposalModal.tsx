@@ -6,6 +6,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { X, Send, User, Mail, Building, Globe, FileText } from "lucide-react"
+import { apiService, ProposalRequest, handleApiError } from "@/lib/api"
+import { analytics } from "@/components/GoogleAnalytics"
+import { useToast } from "@/hooks/use-toast"
 
 interface RequestProposalModalProps {
   isOpen: boolean
@@ -13,6 +16,8 @@ interface RequestProposalModalProps {
 }
 
 const RequestProposalModal = ({ isOpen, onClose }: RequestProposalModalProps) => {
+  const { toast } = useToast()
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,23 +30,60 @@ const RequestProposalModal = ({ isOpen, onClose }: RequestProposalModalProps) =>
     description: ""
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would integrate with your Laravel API
-    console.log("Form submitted:", formData)
-    // Reset form and close modal
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      country: "",
-      projectType: "",
-      timeline: "",
-      budget: "",
-      description: ""
-    })
-    onClose()
+    setIsSubmitting(true)
+
+    try {
+      const proposalData: ProposalRequest = {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        phone: formData.phone,
+        country: formData.country,
+        projectType: formData.projectType,
+        timeline: formData.timeline,
+        budget: formData.budget,
+        description: formData.description
+      }
+
+      await apiService.submitProposal(proposalData)
+      
+      // Track successful submission
+      analytics.trackProposalRequest({
+        projectType: formData.projectType,
+        country: formData.country,
+        timeline: formData.timeline
+      })
+
+      toast({
+        title: "Proposal Request Sent!",
+        description: "Thank you! We'll send you a detailed proposal within 24 hours.",
+      })
+
+      // Reset form and close modal
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        country: "",
+        projectType: "",
+        timeline: "",
+        budget: "",
+        description: ""
+      })
+      onClose()
+    } catch (error) {
+      const errorMessage = handleApiError(error)
+      toast({
+        title: "Submission Failed",
+        description: errorMessage,
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (field: string, value: string) => {
@@ -55,7 +97,7 @@ const RequestProposalModal = ({ isOpen, onClose }: RequestProposalModalProps) =>
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4"
           onClick={onClose}
         >
           <motion.div
@@ -251,8 +293,9 @@ const RequestProposalModal = ({ isOpen, onClose }: RequestProposalModalProps) =>
                       type="submit"
                       variant="cta"
                       className="flex-1 group"
+                      disabled={isSubmitting}
                     >
-                      Send Proposal Request
+                      {isSubmitting ? "Sending..." : "Send Proposal Request"}
                       <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>

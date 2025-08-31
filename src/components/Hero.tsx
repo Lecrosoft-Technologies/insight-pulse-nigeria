@@ -3,9 +3,51 @@ import { ArrowRight, Users, MapPin, Award, Calendar } from "lucide-react";
 import heroImage from "@/assets/hero-research-team.jpg";
 import { useState } from "react";
 import RequestProposalModal from "./RequestProposalModal";
+import { apiService, handleApiError } from "@/lib/api";
+import { analytics } from "@/components/GoogleAnalytics";
+import { useToast } from "@/hooks/use-toast";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [email, setEmail] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { toast } = useToast()
+
+  const handleNewsletterSignup = async () => {
+    if (!email) {
+      toast({
+        title: "Email Required",
+        description: "Please enter your email address.",
+        variant: "destructive",
+      })
+      return
+    }
+
+    setIsSubmitting(true)
+    try {
+      await apiService.subscribeNewsletter({ email, source: 'hero' })
+      analytics.trackNewsletterSignup('hero')
+      toast({
+        title: "Success!",
+        description: "Thank you! We'll send you a free study plan within 24 hours.",
+      })
+      setEmail("")
+    } catch (error) {
+      const errorMessage = handleApiError(error)
+      toast({
+        title: "Signup Failed",
+        description: errorMessage,
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const handleBookCall = () => {
+    analytics.trackCalendlyClick()
+    window.open('https://calendly.com/psi-market-research', '_blank')
+  }
 
   return (
     <>
@@ -59,7 +101,7 @@ const Hero = () => {
                 Request Proposal
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline-primary" size="xl" onClick={() => window.open('https://calendly.com/psi-market-research', '_blank')}>
+              <Button variant="outline-primary" size="xl" onClick={handleBookCall}>
                 Book a 15-min Call
               </Button>
             </div>
@@ -73,9 +115,13 @@ const Hero = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 px-4 py-2 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 />
-                <Button variant="hero">Get Free Plan</Button>
+                <Button variant="hero" onClick={handleNewsletterSignup} disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : "Get Free Plan"}
+                </Button>
               </div>
             </div>
           </div>

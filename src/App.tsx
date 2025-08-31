@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { SEOEnhancements } from "@/components/SEOEnhancements";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Team from "./pages/Team";
@@ -43,6 +45,8 @@ const App = () => (
     <ThemeProvider defaultTheme="light" storageKey="psi-theme">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
+          <SEOEnhancements />
+          <GoogleAnalytics />
           <Toaster />
           <Sonner />
           <Loader />
