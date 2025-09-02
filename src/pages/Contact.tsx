@@ -1,85 +1,101 @@
-import SEOHead from "@/components/SEOHead"
-import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollEffects"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Badge } from "@/components/ui/badge"
-import { motion } from "framer-motion"
-import { MapPin, Phone, Mail, Clock, MessageCircle, Send, Calendar } from "lucide-react"
+import SEOHead from "@/components/SEOHead";
+import {
+  ScrollReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ScrollEffects";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  MessageCircle,
+  Send,
+  Calendar,
+} from "lucide-react";
 
 const Contact = () => {
   const contactMethods = [
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: "Phone",
-      details: "+234-XXX-XXXXX",
+      details: "+234-802-324-7863",
       subtitle: "Mon-Fri, 8:00 AM - 6:00 PM WAT",
-      action: "Call Now"
+      action: "Call Now",
     },
     {
       icon: <MessageCircle className="h-6 w-6 text-primary" />,
       title: "WhatsApp",
-      details: "+234-XXX-XXXXX",
+      details: "+234-803-834-5509",
       subtitle: "Quick responses, file sharing",
-      action: "Chat Now"
+      action: "Chat Now",
     },
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email",
       details: "hello@psi-research.net",
       subtitle: "Response within 2 hours",
-      action: "Send Email"
+      action: "Send Email",
     },
     {
       icon: <Calendar className="h-6 w-6 text-primary" />,
       title: "Book a Meeting",
       details: "15-min consultation",
       subtitle: "Discuss your research needs",
-      action: "Schedule Now"
-    }
-  ]
+      action: "Schedule Now",
+    },
+  ];
 
   const offices = [
     {
-      city: "Lagos",
-      address: "Plot 123, Victoria Island, Lagos, Nigeria",
-      phone: "+234-XXX-XXXXX",
-      email: "lagos@psi-research.net"
+      city: "Nigeria",
+      address: "118b, Bisi Obadina Street, Omole Phase 1 Lagos, Nigeria",
+      phone: "+234-802-324-7863",
+      email: "lagos@psi-research.net",
     },
     {
-      city: "Abuja",
-      address: "Suite 456, Central Business District, Abuja, Nigeria",
-      phone: "+234-XXX-XXXXX",
-      email: "abuja@psi-research.net"
-    }
-  ]
+      city: "Ghana",
+      address: "33 Troas Street, Osu. Accra Ghana",
+      phone: "+233-273-717-136",
+      email: "ghana@psi-research.net",
+    },
+  ];
 
   const faqs = [
     {
       question: "How quickly can you start a research project?",
-      answer: "Most projects can begin within 1-2 weeks, depending on complexity and sample requirements."
+      answer:
+        "Most projects can begin within 1-2 weeks, depending on complexity and sample requirements.",
     },
     {
       question: "Do you cover rural areas in Nigeria?",
-      answer: "Yes, we have extensive rural coverage across all 36 states and FCT through our field network."
+      answer:
+        "Yes, we have extensive rural coverage across all 36 states and FCT through our field network.",
     },
     {
       question: "What's included in your research proposals?",
-      answer: "Methodology, timeline, sample design, questionnaire, deliverables, and detailed pricing."
+      answer:
+        "Methodology, timeline, sample design, questionnaire, deliverables, and detailed pricing.",
     },
     {
       question: "Can you handle multi-country studies?",
-      answer: "Absolutely. We coordinate studies across West Africa through our regional partners."
-    }
-  ]
+      answer:
+        "Absolutely. We coordinate studies across West Africa through our regional partners.",
+    },
+  ];
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Contact PSI — Get Your Market Research Quote | Nigeria & West Africa"
         description="Contact Practical Sampling International for market research services in Nigeria and West Africa. Request proposal, book consultation, get quotes. Response within 2 hours."
-        keywords="contact PSI Nigeria, market research quote Nigeria, research proposal Nigeria, PSI contact information, market research consultation Nigeria"
+        keywords="contact PSI Nigeria, market research quote Nigeria, research proposal Nigeria, PSI contact information, market research consultation Nigeria, Top market research company in Nigeria, West Africa market research services, PSI research offices, request research quote, book research consultation, market research services Nigeria, West Africa,"
         canonicalUrl="/contact"
       />
 
@@ -89,7 +105,10 @@ const Contact = () => {
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="max-w-4xl mx-auto text-center">
-                <Badge variant="outline" className="mb-4 text-primary border-primary">
+                <Badge
+                  variant="outline"
+                  className="mb-4 text-primary border-primary"
+                >
                   Get In Touch
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
@@ -98,8 +117,8 @@ const Contact = () => {
                   Needs
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  Ready to unlock market insights? Get a free consultation and detailed proposal 
-                  tailored to your research objectives.
+                  Ready to unlock market insights? Get a free consultation and
+                  detailed proposal tailored to your research objectives.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button variant="cta" size="xl">
@@ -123,7 +142,8 @@ const Contact = () => {
                   Multiple Ways to Reach Us
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Choose your preferred communication method. We respond quickly across all channels.
+                  Choose your preferred communication method. We respond quickly
+                  across all channels.
                 </p>
               </div>
             </ScrollReveal>
@@ -148,7 +168,11 @@ const Contact = () => {
                         <p className="text-sm text-muted-foreground mb-4">
                           {method.subtitle}
                         </p>
-                        <Button variant="ghost" size="sm" className="group-hover:text-primary">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="group-hover:text-primary"
+                        >
                           {method.action}
                         </Button>
                       </CardContent>
@@ -171,8 +195,8 @@ const Contact = () => {
                     Send Us a Message
                   </h2>
                   <p className="text-muted-foreground mb-8">
-                    Tell us about your research needs and we'll get back to you within 2 hours 
-                    with a detailed response.
+                    Tell us about your research needs and we'll get back to you
+                    within 2 hours with a detailed response.
                   </p>
 
                   <form className="space-y-6">
@@ -194,7 +218,7 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <Input
@@ -234,7 +258,8 @@ const Contact = () => {
                     </Button>
 
                     <p className="text-sm text-muted-foreground">
-                      * Required fields. We'll respond within 2 hours during business hours.
+                      * Required fields. We'll respond within 2 hours during
+                      business hours.
                     </p>
                   </form>
                 </div>
@@ -246,7 +271,7 @@ const Contact = () => {
                   <h2 className="text-3xl font-bold text-foreground mb-6">
                     Visit Our Offices
                   </h2>
-                  
+
                   <div className="space-y-6 mb-8">
                     {offices.map((office, index) => (
                       <motion.div
@@ -288,11 +313,15 @@ const Contact = () => {
                     <div className="space-y-2 text-muted-foreground">
                       <div className="flex justify-between">
                         <span>Monday - Friday</span>
-                        <span className="font-medium">8:00 AM - 6:00 PM WAT</span>
+                        <span className="font-medium">
+                          8:00 AM - 6:00 PM WAT
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span>Saturday</span>
-                        <span className="font-medium">9:00 AM - 2:00 PM WAT</span>
+                        <span className="font-medium">
+                          9:00 AM - 2:00 PM WAT
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span>Sunday</span>
@@ -329,9 +358,7 @@ const Contact = () => {
                         <h3 className="text-lg font-semibold text-foreground mb-3">
                           {faq.question}
                         </h3>
-                        <p className="text-muted-foreground">
-                          {faq.answer}
-                        </p>
+                        <p className="text-muted-foreground">{faq.answer}</p>
                       </CardContent>
                     </Card>
                   </StaggerItem>
@@ -342,7 +369,7 @@ const Contact = () => {
         </section>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
