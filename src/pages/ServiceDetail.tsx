@@ -15,7 +15,7 @@ const ServiceDetail = () => {
 
   const services = {
     "market-research": {
-      title: "Market Research Services in Nigeria & West Africa",
+      title: "Consumer Research Services in Nigeria & West Africa",
       description: "Comprehensive quantitative and qualitative studies to understand your market, customers, and opportunities across Nigeria and West Africa",
       keywords: "Nigeria market research, West Africa consumer insights, quantitative surveys Nigeria, qualitative research Nigeria, market analysis West Africa",
       hero: {
@@ -24,31 +24,61 @@ const ServiceDetail = () => {
         features: ["CAPI/CATI/CAWI Surveys", "Focus Groups & IDIs", "U&A Studies", "Brand Tracking", "Segmentation Research"]
       },
       overview: {
-        description: "Our market research services provide the actionable insights you need to make informed business decisions. We combine international best practices with deep local knowledge to deliver research that truly understands your market.",
+        description: "Our consumer research services provide the actionable insights you need to make informed business decisions. We combine international best practices with deep local knowledge to deliver research that truly understands your market.",
         timeline: "2-8 weeks",
-        sampleSize: "300-3,000+ respondents",
+        sampleSize: "100-3,000+ respondents",
         methodology: "Mixed methods approach"
       },
       services: [
         {
-          title: "Consumer Research",
-          description: "Understanding consumer behavior, preferences, and decision-making processes",
-          deliverables: ["Consumer profiles", "Purchase journey mapping", "Needs analysis", "Preference drivers"]
+          title: "Customer satisfaction surveys",
+          description: "Assessing the level of satisfaction and loyalty among current customers.",
+          deliverables: ["Survey Questionnaire", "Survey distribution plan", "Response data set", "Insights & Key Findings"]
         },
         {
-          title: "Brand Studies",
-          description: "Brand awareness, perception, and positioning research",
-          deliverables: ["Brand health tracking", "Competitive positioning", "Brand equity measurement", "Communication effectiveness"]
+          title: "Product testing",
+          description: "Assessing consumer preferences and perceptions of products, including packaging, pricing, and features to optimize product offerings.",
+          deliverables: ["Consumer feedback summary", "Perception analysis", "Preference ranking", "Competitive benchmarking"]
         },
         {
-          title: "Product Research",
-          description: "Product development, testing, and optimization studies",
-          deliverables: ["Concept testing", "Product optimization", "Pricing research", "Launch readiness assessment"]
+          title: "Brand perception research",
+          description: "Evaluating how consumers view a brand, its attributes, and its positioning in the market.",
+          deliverables: ["Consumer perception report", "Brand attribute evaluation", "Market positioning analysis", "Audience segmentation insights"]
         },
         {
-          title: "Market Sizing",
-          description: "Market size, growth potential, and opportunity assessment",
-          deliverables: ["Market size estimation", "Growth forecasting", "Opportunity mapping", "Competitive landscape"]
+          title: "Market segmentation studies",
+          description: "Understanding how different consumer groups perceive and use a product or service.",
+          deliverables: ["Segmentation framework", "Consumer Profiles/Personas", "Market potential assessment", "Targeting recommendations"]
+        },
+        {
+          title: "Pricing research",
+          description: "Examining how price affects customer attitudes and behaviors.",
+          deliverables: ["Price sensitivity analysis", "Willingness-to-Pay Insights", "Competitive pricing benchmark", "Strategic pricing recommendations"]
+        },
+        {
+          title: "Product usage studies",
+          description: "Tracking how customers use a product, as well as their motivations and preferences.",
+          deliverables: ["Usage bnehavior analysis", "Motivation & preference insights", "Pain points & improvement areas", "Actionable recommendations"]
+        },
+        {
+          title: "Competitor analysis",
+          description: "Comparing the usage and attitudes towards competing brands or products.",
+          deliverables: ["Competitive landscape overview", "Usage & attitude comparison", "Strengths & weaknesses assessment", "Differentiation strategies"]
+        },
+        {
+          title: "Purchase behavior research",
+          description: "Investigating the factors that influence consumers' decision-making process when buying a product or service.",
+          deliverables: ["Decision-Making analysis", "Influencing factors assessment", "Barriers to Purchase", "Strategic recommendations"]
+        },
+        {
+          title: "Mystery Shopping",
+          description: "Service quality audits, compliance checks, customer experience evaluation.",
+          deliverables: ["Service quality assessment", "Compliance report", "Customer experience insights", "Actionable recommendations"]
+        },
+        {
+          title: "FMCG & Retail Audit",
+          description: "Track availability, share, pricing, and shelf dynamics nationwide.",
+          deliverables: ["Product availability report", "Pricing & share analysis", "Shelf dynamics assessment", "Strategic recommendations"]
         }
       ],
       process: [
@@ -56,7 +86,8 @@ const ServiceDetail = () => {
         { step: "Sampling", description: "Representative sample selection across target markets" },
         { step: "Data Collection", description: "CAPI/CATI/CAWI execution with quality controls" },
         { step: "Analysis", description: "Statistical analysis and insight generation" },
-        { step: "Reporting", description: "Actionable insights with strategic recommendations" }
+        { step: "Reporting", description: "Actionable insights with strategic recommendations" },
+        { step: "Delivery of reports", description: "Supplying clear, evidence-based reports with key insights and recommendations for decision-making." }
       ],
       faqs: [
         {
@@ -89,29 +120,34 @@ const ServiceDetail = () => {
       overview: {
         description: "Our social and opinion research provides accurate insights into public sentiment, political preferences, and social attitudes. We use scientifically rigorous sampling methods to ensure representative results.",
         timeline: "1-6 weeks",
-        sampleSize: "800-5,000+ respondents",
-        methodology: "Probability sampling"
+        sampleSize: "100-3,000+ respondents",
+        // methodology: "Probability sampling"
       },
       services: [
         {
-          title: "Political Polling",
+          title: "Pre & Post Election Survey (Political Polling)",
           description: "Pre-election polls, candidate approval ratings, and political preference tracking",
           deliverables: ["Voting intention analysis", "Candidate performance metrics", "Issue importance ranking", "Demographic breakdowns"]
         },
         {
-          title: "Social Attitudes",
+          title: "Public Perception Surveys (Social Attitudes)",
           description: "Public opinion on social issues, policy preferences, and cultural trends",
           deliverables: ["Attitude measurement", "Social trend analysis", "Policy support assessment", "Cultural insight reports"]
         },
         {
-          title: "Public Opinion",
-          description: "General public sentiment tracking and opinion monitoring",
+          title: "Public Opinion Poll",
+          description: "Measuring public attitudes, opinions, and sentiment on social, political, or market issues.",
           deliverables: ["Opinion trend analysis", "Sentiment tracking", "Issue perception studies", "Public mood assessment"]
         },
         {
-          title: "Exit Polls",
-          description: "Election day polling for media and election monitoring",
-          deliverables: ["Real-time results", "Demographic voting patterns", "Issue-based voting analysis", "Projection models"]
+          title: "Monitoring & Evaluation Study (M&E)",
+          description: "Assessing the performance, outcomes, and impact of programs or initiatives against defined objectives.",
+          deliverables: ["Performance tracking report", "Outcome & impact assessment", "Gap & challenge analysis", "Strategic recommendations"]
+        },
+        {
+          title: "Monitoring, Evaluation & Learning Study (MERL)",
+          description: "Measuring program performance and outcomes while capturing lessons learned to inform continuous improvement and decision-making.",
+          deliverables: ["Performance & outcome report", "Learning insights", "Evaluation Report", "Actionable recommendations"]
         }
       ],
       process: [
@@ -119,7 +155,8 @@ const ServiceDetail = () => {
         { step: "Questionnaire", description: "Unbiased question development and pre-testing" },
         { step: "Field Training", description: "Specialized training for political and social research" },
         { step: "Data Collection", description: "Careful monitoring and quality assurance" },
-        { step: "Analysis", description: "Statistical weighting and margin of error calculation" }
+        { step: "Analysis", description: "Statistical weighting and margin of error calculation" },
+        { step: "Delivery of reports", description: "Supplying clear, evidence-based reports with key insights and recommendations for decision-making." }
       ],
       faqs: [
         {
@@ -140,258 +177,258 @@ const ServiceDetail = () => {
         }
       ]
     },
-    "customer-satisfaction": {
-      title: "Customer Satisfaction & NPS Research in Nigeria",
-      description: "Measure customer loyalty, satisfaction drivers, and churn risk through comprehensive NPS and satisfaction studies across Nigeria and West Africa",
-      keywords: "customer satisfaction research Nigeria, NPS surveys Nigeria, customer loyalty research, satisfaction measurement West Africa",
-      hero: {
-        subtitle: "NPS & Satisfaction Measurement",
-        description: "Measure customer loyalty, identify satisfaction drivers, and predict churn risk through comprehensive satisfaction research and NPS studies.",
-        features: ["NPS Benchmarking", "Satisfaction Tracking", "Driver Analysis", "Churn Prediction", "Journey Mapping"]
-      },
-      overview: {
-        description: "Our customer satisfaction research helps you understand what drives loyalty, satisfaction, and retention. We provide actionable insights to improve customer experience and reduce churn.",
-        timeline: "2-6 weeks",
-        sampleSize: "400-2,000+ customers",
-        methodology: "Customer experience measurement"
-      },
-      services: [
-        {
-          title: "NPS Studies",
-          description: "Net Promoter Score measurement and benchmarking",
-          deliverables: ["NPS scores", "Industry benchmarks", "Promoter/Detractor analysis", "Improvement recommendations"]
-        },
-        {
-          title: "Satisfaction Tracking",
-          description: "Ongoing customer satisfaction measurement and monitoring",
-          deliverables: ["Satisfaction trends", "Performance metrics", "Alert systems", "Dashboard reporting"]
-        },
-        {
-          title: "Driver Analysis",
-          description: "Identifying key drivers of satisfaction and loyalty",
-          deliverables: ["Driver importance ranking", "Impact analysis", "Priority matrix", "Action planning"]
-        },
-        {
-          title: "Journey Mapping",
-          description: "Customer experience mapping across touchpoints",
-          deliverables: ["Journey maps", "Pain point identification", "Moment of truth analysis", "Experience optimization"]
-        }
-      ],
-      process: [
-        { step: "Study Design", description: "Customer touchpoint mapping and survey design" },
-        { step: "Sample Selection", description: "Customer database sampling or intercept methodology" },
-        { step: "Data Collection", description: "Multi-channel survey deployment (phone, online, in-person)" },
-        { step: "Analysis", description: "Statistical driver analysis and segmentation" },
-        { step: "Action Planning", description: "Priority recommendations and improvement roadmap" }
-      ],
-      faqs: [
-        {
-          question: "What's a good NPS score for companies in Nigeria?",
-          answer: "NPS benchmarks vary by industry, but generally scores above 30 are good, above 50 are excellent. We provide industry-specific benchmarks for context."
-        },
-        {
-          question: "How often should we measure customer satisfaction?",
-          answer: "We recommend quarterly tracking for most businesses, with monthly measurement for high-touch industries or during improvement initiatives."
-        },
-        {
-          question: "Can you integrate with our CRM system?",
-          answer: "Yes, we can work with your customer database for sampling and can provide results in formats compatible with most CRM and business intelligence systems."
-        },
-        {
-          question: "Do you offer real-time satisfaction monitoring?",
-          answer: "Yes, we provide dashboard solutions for real-time satisfaction monitoring with automated alerts for significant changes in scores."
-        }
-      ]
-    },
-    "retail-audit": {
-      title: "FMCG & Retail Audit Services in Nigeria",
-      description: "Track product availability, market share, pricing, and shelf dynamics across Nigeria's retail landscape with comprehensive audit services",
-      keywords: "retail audit Nigeria, FMCG research Nigeria, market share tracking, price monitoring Nigeria, distribution audit",
-      hero: {
-        subtitle: "Market Share & Distribution Tracking",
-        description: "Comprehensive retail audit services tracking availability, share, pricing, and promotional activity across Nigeria's diverse retail landscape.",
-        features: ["Retail Panels", "Price Monitoring", "Share Tracking", "Distribution Analysis", "Promotion Tracking"]
-      },
-      overview: {
-        description: "Our retail audit services provide accurate measurement of market performance through systematic tracking of products across retail channels. We cover traditional trade, modern trade, and everything in between.",
-        timeline: "Ongoing monthly",
-        sampleSize: "500-2,000+ outlets",
-        methodology: "Systematic retail measurement"
-      },
-      services: [
-        {
-          title: "Market Share Tracking",
-          description: "Accurate measurement of brand and product market shares",
-          deliverables: ["Share reports", "Trend analysis", "Competitive tracking", "Category insights"]
-        },
-        {
-          title: "Distribution Analysis",
-          description: "Product availability and distribution coverage measurement",
-          deliverables: ["Distribution metrics", "Gap analysis", "Channel performance", "Expansion opportunities"]
-        },
-        {
-          title: "Price Monitoring",
-          description: "Retail price tracking and competitive price analysis",
-          deliverables: ["Price tracking", "Competitive analysis", "Price elasticity", "Pricing recommendations"]
-        },
-        {
-          title: "Promotion Tracking",
-          description: "Promotional activity monitoring and effectiveness measurement",
-          deliverables: ["Promotion analysis", "Effectiveness metrics", "Share impact", "ROI measurement"]
-        }
-      ],
-      process: [
-        { step: "Panel Setup", description: "Representative retailer panel selection" },
-        { step: "Audit Training", description: "Field team training on product identification and measurement" },
-        { step: "Data Collection", description: "Regular store visits and systematic data capture" },
-        { step: "Quality Control", description: "Validation checks and data quality assurance" },
-        { step: "Reporting", description: "Regular reports with insights and recommendations" }
-      ],
-      faqs: [
-        {
-          question: "How often do you conduct retail audits?",
-          answer: "Most clients receive monthly reports, with data collection occurring throughout the month to capture temporal variations in availability and pricing."
-        },
-        {
-          question: "Do you cover both modern and traditional trade?",
-          answer: "Yes, our panels include supermarkets, pharmacies, independent retailers, markets, and other relevant retail channels based on your category."
-        },
-        {
-          question: "Can you track competitor promotional activities?",
-          answer: "Yes, we systematically track promotional activities including discounts, displays, and special offers across all monitored brands."
-        },
-        {
-          question: "How accurate is your market share data?",
-          answer: "Our market share estimates are based on systematic retail measurement with representative panels, providing accuracy typically within ±2-3% of actual market shares."
-        }
-      ]
-    },
-    "product-testing": {
-      title: "Product Testing & CLT Services in Nigeria",
-      description: "Central Location Testing, sensory research, and product validation services in Lagos, Abuja, and across Nigeria for optimal product development",
-      keywords: "product testing Nigeria, CLT Nigeria, sensory testing Lagos, product validation Nigeria, taste testing Lagos Abuja",
-      hero: {
-        subtitle: "Central Location Testing & Validation",
-        description: "Professional product testing facilities in Lagos and Abuja for sensory research, concept validation, and product optimization studies.",
-        features: ["Taste Testing", "Concept Validation", "Package Testing", "Sensory Research", "Usage Testing"]
-      },
-      overview: {
-        description: "Our product testing services help you validate concepts, optimize products, and understand consumer preferences through controlled testing environments and rigorous methodology.",
-        timeline: "1-4 weeks",
-        sampleSize: "100-500+ testers",
-        methodology: "Controlled testing environment"
-      },
-      services: [
-        {
-          title: "Taste Testing",
-          description: "Food and beverage sensory evaluation and preference testing",
-          deliverables: ["Preference scores", "Sensory profiles", "Optimization insights", "Launch readiness"]
-        },
-        {
-          title: "Concept Testing",
-          description: "New product concept validation and optimization",
-          deliverables: ["Concept appeal", "Purchase intent", "Positioning insights", "Concept refinement"]
-        },
-        {
-          title: "Package Testing",
-          description: "Packaging design evaluation and shelf impact testing",
-          deliverables: ["Design appeal", "Shelf standout", "Communication clarity", "Purchase influence"]
-        },
-        {
-          title: "Usage Testing",
-          description: "In-home product usage and satisfaction evaluation",
-          deliverables: ["Usage patterns", "Satisfaction metrics", "Improvement areas", "Repurchase intent"]
-        }
-      ],
-      process: [
-        { step: "Test Design", description: "Methodology selection and protocol development" },
-        { step: "Recruitment", description: "Target consumer recruitment and screening" },
-        { step: "Facility Setup", description: "Controlled environment preparation" },
-        { step: "Testing", description: "Systematic product evaluation with consumers" },
-        { step: "Analysis", description: "Statistical analysis and actionable insights" }
-      ],
-      faqs: [
-        {
-          question: "Where are your testing facilities located?",
-          answer: "We have permanent CLT facilities in Lagos and Abuja, with mobile testing capabilities for other locations across Nigeria."
-        },
-        {
-          question: "What types of products can you test?",
-          answer: "We test FMCG products including food, beverages, personal care, household products, and consumer electronics."
-        },
-        {
-          question: "How do you recruit testers?",
-          answer: "We recruit from our consumer database using specific demographic and usage criteria relevant to your product category."
-        },
-        {
-          question: "Can you conduct blind vs branded testing?",
-          answer: "Yes, we routinely conduct blind, branded, and paired comparison tests to isolate product versus brand effects."
-        }
-      ]
-    },
-    "mystery-shopping": {
-      title: "Mystery Shopping Services in Nigeria & West Africa",
-      description: "Professional mystery shopping and service quality audits across Nigeria and West Africa to evaluate customer experience and operational compliance",
-      keywords: "mystery shopping Nigeria, service quality audit, customer experience evaluation Nigeria, compliance monitoring West Africa",
-      hero: {
-        subtitle: "Service Quality & Compliance Audits",
-        description: "Professional mystery shopping services to evaluate customer experience, service quality, and operational compliance across your business locations.",
-        features: ["Service Audits", "Compliance Monitoring", "Staff Evaluation", "Process Validation", "Competitor Analysis"]
-      },
-      overview: {
-        description: "Our mystery shopping services provide objective evaluation of customer experience and operational performance through trained evaluators posing as regular customers.",
-        timeline: "2-6 weeks",
-        sampleSize: "50-500+ visits",
-        methodology: "Covert evaluation"
-      },
-      services: [
-        {
-          title: "Service Quality Audits",
-          description: "Customer service evaluation and experience measurement",
-          deliverables: ["Service scores", "Performance benchmarks", "Training needs", "Best practices"]
-        },
-        {
-          title: "Compliance Monitoring",
-          description: "Operational compliance and policy adherence checking",
-          deliverables: ["Compliance scores", "Violation reports", "Risk assessment", "Corrective actions"]
-        },
-        {
-          title: "Staff Performance",
-          description: "Individual and team performance evaluation",
-          deliverables: ["Performance ratings", "Skills assessment", "Recognition opportunities", "Development plans"]
-        },
-        {
-          title: "Competitor Analysis",
-          description: "Competitive service benchmarking and analysis",
-          deliverables: ["Competitive comparison", "Best practices", "Advantage areas", "Improvement opportunities"]
-        }
-      ],
-      process: [
-        { step: "Program Design", description: "Evaluation criteria and shopper profile development" },
-        { step: "Shopper Training", description: "Mystery shopper recruitment and training" },
-        { step: "Execution", description: "Systematic visits and data collection" },
-        { step: "Quality Control", description: "Report validation and quality assurance" },
-        { step: "Reporting", description: "Detailed reports with improvement recommendations" }
-      ],
-      faqs: [
-        {
-          question: "How do you ensure mystery shoppers aren't detected?",
-          answer: "We carefully select and train shoppers to match your typical customer profile, with strict protocols to maintain anonymity."
-        },
-        {
-          question: "Can you mystery shop online and phone channels?",
-          answer: "Yes, we evaluate omnichannel experiences including websites, mobile apps, call centers, and social media interactions."
-        },
-        {
-          question: "How quickly can you deploy mystery shoppers?",
-          answer: "We can typically deploy within 1-2 weeks, with faster deployment possible for urgent requirements."
-        },
-        {
-          question: "Do you provide video or audio recordings?",
-          answer: "We can provide recordings where legally permissible and with appropriate consent, though most evaluations rely on detailed written reports."
-        }
-      ]
-    }
+    // "customer-satisfaction": {
+    //   title: "Customer Satisfaction & NPS Research in Nigeria",
+    //   description: "Measure customer loyalty, satisfaction drivers, and churn risk through comprehensive NPS and satisfaction studies across Nigeria and West Africa",
+    //   keywords: "customer satisfaction research Nigeria, NPS surveys Nigeria, customer loyalty research, satisfaction measurement West Africa",
+    //   hero: {
+    //     subtitle: "NPS & Satisfaction Measurement",
+    //     description: "Measure customer loyalty, identify satisfaction drivers, and predict churn risk through comprehensive satisfaction research and NPS studies.",
+    //     features: ["NPS Benchmarking", "Satisfaction Tracking", "Driver Analysis", "Churn Prediction", "Journey Mapping"]
+    //   },
+    //   overview: {
+    //     description: "Our customer satisfaction research helps you understand what drives loyalty, satisfaction, and retention. We provide actionable insights to improve customer experience and reduce churn.",
+    //     timeline: "2-6 weeks",
+    //     sampleSize: "400-2,000+ customers",
+    //     methodology: "Customer experience measurement"
+    //   },
+    //   services: [
+    //     {
+    //       title: "NPS Studies",
+    //       description: "Net Promoter Score measurement and benchmarking",
+    //       deliverables: ["NPS scores", "Industry benchmarks", "Promoter/Detractor analysis", "Improvement recommendations"]
+    //     },
+    //     {
+    //       title: "Satisfaction Tracking",
+    //       description: "Ongoing customer satisfaction measurement and monitoring",
+    //       deliverables: ["Satisfaction trends", "Performance metrics", "Alert systems", "Dashboard reporting"]
+    //     },
+    //     {
+    //       title: "Driver Analysis",
+    //       description: "Identifying key drivers of satisfaction and loyalty",
+    //       deliverables: ["Driver importance ranking", "Impact analysis", "Priority matrix", "Action planning"]
+    //     },
+    //     {
+    //       title: "Journey Mapping",
+    //       description: "Customer experience mapping across touchpoints",
+    //       deliverables: ["Journey maps", "Pain point identification", "Moment of truth analysis", "Experience optimization"]
+    //     }
+    //   ],
+    //   process: [
+    //     { step: "Study Design", description: "Customer touchpoint mapping and survey design" },
+    //     { step: "Sample Selection", description: "Customer database sampling or intercept methodology" },
+    //     { step: "Data Collection", description: "Multi-channel survey deployment (phone, online, in-person)" },
+    //     { step: "Analysis", description: "Statistical driver analysis and segmentation" },
+    //     { step: "Action Planning", description: "Priority recommendations and improvement roadmap" }
+    //   ],
+    //   faqs: [
+    //     {
+    //       question: "What's a good NPS score for companies in Nigeria?",
+    //       answer: "NPS benchmarks vary by industry, but generally scores above 30 are good, above 50 are excellent. We provide industry-specific benchmarks for context."
+    //     },
+    //     {
+    //       question: "How often should we measure customer satisfaction?",
+    //       answer: "We recommend quarterly tracking for most businesses, with monthly measurement for high-touch industries or during improvement initiatives."
+    //     },
+    //     {
+    //       question: "Can you integrate with our CRM system?",
+    //       answer: "Yes, we can work with your customer database for sampling and can provide results in formats compatible with most CRM and business intelligence systems."
+    //     },
+    //     {
+    //       question: "Do you offer real-time satisfaction monitoring?",
+    //       answer: "Yes, we provide dashboard solutions for real-time satisfaction monitoring with automated alerts for significant changes in scores."
+    //     }
+    //   ]
+    // },
+    // "retail-audit": {
+    //   title: "FMCG & Retail Audit Services in Nigeria",
+    //   description: "Track product availability, market share, pricing, and shelf dynamics across Nigeria's retail landscape with comprehensive audit services",
+    //   keywords: "retail audit Nigeria, FMCG research Nigeria, market share tracking, price monitoring Nigeria, distribution audit",
+    //   hero: {
+    //     subtitle: "Market Share & Distribution Tracking",
+    //     description: "Comprehensive retail audit services tracking availability, share, pricing, and promotional activity across Nigeria's diverse retail landscape.",
+    //     features: ["Retail Panels", "Price Monitoring", "Share Tracking", "Distribution Analysis", "Promotion Tracking"]
+    //   },
+    //   overview: {
+    //     description: "Our retail audit services provide accurate measurement of market performance through systematic tracking of products across retail channels. We cover traditional trade, modern trade, and everything in between.",
+    //     timeline: "Ongoing monthly",
+    //     sampleSize: "500-2,000+ outlets",
+    //     methodology: "Systematic retail measurement"
+    //   },
+    //   services: [
+    //     {
+    //       title: "Market Share Tracking",
+    //       description: "Accurate measurement of brand and product market shares",
+    //       deliverables: ["Share reports", "Trend analysis", "Competitive tracking", "Category insights"]
+    //     },
+    //     {
+    //       title: "Distribution Analysis",
+    //       description: "Product availability and distribution coverage measurement",
+    //       deliverables: ["Distribution metrics", "Gap analysis", "Channel performance", "Expansion opportunities"]
+    //     },
+    //     {
+    //       title: "Price Monitoring",
+    //       description: "Retail price tracking and competitive price analysis",
+    //       deliverables: ["Price tracking", "Competitive analysis", "Price elasticity", "Pricing recommendations"]
+    //     },
+    //     {
+    //       title: "Promotion Tracking",
+    //       description: "Promotional activity monitoring and effectiveness measurement",
+    //       deliverables: ["Promotion analysis", "Effectiveness metrics", "Share impact", "ROI measurement"]
+    //     }
+    //   ],
+    //   process: [
+    //     { step: "Panel Setup", description: "Representative retailer panel selection" },
+    //     { step: "Audit Training", description: "Field team training on product identification and measurement" },
+    //     { step: "Data Collection", description: "Regular store visits and systematic data capture" },
+    //     { step: "Quality Control", description: "Validation checks and data quality assurance" },
+    //     { step: "Reporting", description: "Regular reports with insights and recommendations" }
+    //   ],
+    //   faqs: [
+    //     {
+    //       question: "How often do you conduct retail audits?",
+    //       answer: "Most clients receive monthly reports, with data collection occurring throughout the month to capture temporal variations in availability and pricing."
+    //     },
+    //     {
+    //       question: "Do you cover both modern and traditional trade?",
+    //       answer: "Yes, our panels include supermarkets, pharmacies, independent retailers, markets, and other relevant retail channels based on your category."
+    //     },
+    //     {
+    //       question: "Can you track competitor promotional activities?",
+    //       answer: "Yes, we systematically track promotional activities including discounts, displays, and special offers across all monitored brands."
+    //     },
+    //     {
+    //       question: "How accurate is your market share data?",
+    //       answer: "Our market share estimates are based on systematic retail measurement with representative panels, providing accuracy typically within ±2-3% of actual market shares."
+    //     }
+    //   ]
+    // },
+    // "product-testing": {
+    //   title: "Product Testing & CLT Services in Nigeria",
+    //   description: "Central Location Testing, sensory research, and product validation services in Lagos, Abuja, and across Nigeria for optimal product development",
+    //   keywords: "product testing Nigeria, CLT Nigeria, sensory testing Lagos, product validation Nigeria, taste testing Lagos Abuja",
+    //   hero: {
+    //     subtitle: "Central Location Testing & Validation",
+    //     description: "Professional product testing facilities in Lagos and Abuja for sensory research, concept validation, and product optimization studies.",
+    //     features: ["Taste Testing", "Concept Validation", "Package Testing", "Sensory Research", "Usage Testing"]
+    //   },
+    //   overview: {
+    //     description: "Our product testing services help you validate concepts, optimize products, and understand consumer preferences through controlled testing environments and rigorous methodology.",
+    //     timeline: "1-4 weeks",
+    //     sampleSize: "100-500+ testers",
+    //     methodology: "Controlled testing environment"
+    //   },
+    //   services: [
+    //     {
+    //       title: "Taste Testing",
+    //       description: "Food and beverage sensory evaluation and preference testing",
+    //       deliverables: ["Preference scores", "Sensory profiles", "Optimization insights", "Launch readiness"]
+    //     },
+    //     {
+    //       title: "Concept Testing",
+    //       description: "New product concept validation and optimization",
+    //       deliverables: ["Concept appeal", "Purchase intent", "Positioning insights", "Concept refinement"]
+    //     },
+    //     {
+    //       title: "Package Testing",
+    //       description: "Packaging design evaluation and shelf impact testing",
+    //       deliverables: ["Design appeal", "Shelf standout", "Communication clarity", "Purchase influence"]
+    //     },
+    //     {
+    //       title: "Usage Testing",
+    //       description: "In-home product usage and satisfaction evaluation",
+    //       deliverables: ["Usage patterns", "Satisfaction metrics", "Improvement areas", "Repurchase intent"]
+    //     }
+    //   ],
+    //   process: [
+    //     { step: "Test Design", description: "Methodology selection and protocol development" },
+    //     { step: "Recruitment", description: "Target consumer recruitment and screening" },
+    //     { step: "Facility Setup", description: "Controlled environment preparation" },
+    //     { step: "Testing", description: "Systematic product evaluation with consumers" },
+    //     { step: "Analysis", description: "Statistical analysis and actionable insights" }
+    //   ],
+    //   faqs: [
+    //     {
+    //       question: "Where are your testing facilities located?",
+    //       answer: "We have permanent CLT facilities in Lagos and Abuja, with mobile testing capabilities for other locations across Nigeria."
+    //     },
+    //     {
+    //       question: "What types of products can you test?",
+    //       answer: "We test FMCG products including food, beverages, personal care, household products, and consumer electronics."
+    //     },
+    //     {
+    //       question: "How do you recruit testers?",
+    //       answer: "We recruit from our consumer database using specific demographic and usage criteria relevant to your product category."
+    //     },
+    //     {
+    //       question: "Can you conduct blind vs branded testing?",
+    //       answer: "Yes, we routinely conduct blind, branded, and paired comparison tests to isolate product versus brand effects."
+    //     }
+    //   ]
+    // },
+    // "mystery-shopping": {
+    //   title: "Mystery Shopping Services in Nigeria & West Africa",
+    //   description: "Professional mystery shopping and service quality audits across Nigeria and West Africa to evaluate customer experience and operational compliance",
+    //   keywords: "mystery shopping Nigeria, service quality audit, customer experience evaluation Nigeria, compliance monitoring West Africa",
+    //   hero: {
+    //     subtitle: "Service Quality & Compliance Audits",
+    //     description: "Professional mystery shopping services to evaluate customer experience, service quality, and operational compliance across your business locations.",
+    //     features: ["Service Audits", "Compliance Monitoring", "Staff Evaluation", "Process Validation", "Competitor Analysis"]
+    //   },
+    //   overview: {
+    //     description: "Our mystery shopping services provide objective evaluation of customer experience and operational performance through trained evaluators posing as regular customers.",
+    //     timeline: "2-6 weeks",
+    //     sampleSize: "50-500+ visits",
+    //     methodology: "Covert evaluation"
+    //   },
+    //   services: [
+    //     {
+    //       title: "Service Quality Audits",
+    //       description: "Customer service evaluation and experience measurement",
+    //       deliverables: ["Service scores", "Performance benchmarks", "Training needs", "Best practices"]
+    //     },
+    //     {
+    //       title: "Compliance Monitoring",
+    //       description: "Operational compliance and policy adherence checking",
+    //       deliverables: ["Compliance scores", "Violation reports", "Risk assessment", "Corrective actions"]
+    //     },
+    //     {
+    //       title: "Staff Performance",
+    //       description: "Individual and team performance evaluation",
+    //       deliverables: ["Performance ratings", "Skills assessment", "Recognition opportunities", "Development plans"]
+    //     },
+    //     {
+    //       title: "Competitor Analysis",
+    //       description: "Competitive service benchmarking and analysis",
+    //       deliverables: ["Competitive comparison", "Best practices", "Advantage areas", "Improvement opportunities"]
+    //     }
+    //   ],
+    //   process: [
+    //     { step: "Program Design", description: "Evaluation criteria and shopper profile development" },
+    //     { step: "Shopper Training", description: "Mystery shopper recruitment and training" },
+    //     { step: "Execution", description: "Systematic visits and data collection" },
+    //     { step: "Quality Control", description: "Report validation and quality assurance" },
+    //     { step: "Reporting", description: "Detailed reports with improvement recommendations" }
+    //   ],
+    //   faqs: [
+    //     {
+    //       question: "How do you ensure mystery shoppers aren't detected?",
+    //       answer: "We carefully select and train shoppers to match your typical customer profile, with strict protocols to maintain anonymity."
+    //     },
+    //     {
+    //       question: "Can you mystery shop online and phone channels?",
+    //       answer: "Yes, we evaluate omnichannel experiences including websites, mobile apps, call centers, and social media interactions."
+    //     },
+    //     {
+    //       question: "How quickly can you deploy mystery shoppers?",
+    //       answer: "We can typically deploy within 1-2 weeks, with faster deployment possible for urgent requirements."
+    //     },
+    //     {
+    //       question: "Do you provide video or audio recordings?",
+    //       answer: "We can provide recordings where legally permissible and with appropriate consent, though most evaluations rely on detailed written reports."
+    //     }
+    //   ]
+    // }
   }
 
   const service = services[serviceSlug as keyof typeof services]
@@ -455,7 +492,7 @@ const ServiceDetail = () => {
         {/* Service Overview */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid lg:grid-cols-2 gap-8 mb-16">
               <ScrollReveal>
                 <Card className="text-center">
                   <CardContent className="p-6">
@@ -476,7 +513,7 @@ const ServiceDetail = () => {
                 </Card>
               </ScrollReveal>
               
-              <ScrollReveal delay={0.2}>
+              {/* <ScrollReveal delay={0.2}>
                 <Card className="text-center">
                   <CardContent className="p-6">
                     <BarChart3 className="h-8 w-8 text-primary mx-auto mb-4" />
@@ -484,7 +521,7 @@ const ServiceDetail = () => {
                     <p className="text-muted-foreground">{service.overview.methodology}</p>
                   </CardContent>
                 </Card>
-              </ScrollReveal>
+              </ScrollReveal> */}
             </div>
 
             <ScrollReveal>

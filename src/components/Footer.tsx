@@ -28,6 +28,7 @@ const Footer = () => {
     { name: "Automotive", href: "/sectors/automotive" },
     { name: "Telecoms & IT", href: "/sectors/telecoms" },
     { name: "Agriculture", href: "/sectors/agriculture" },
+    { name: "Media & Education", href: "/sectors/#" }
   ];
 
   const company = [
@@ -44,10 +45,15 @@ const Footer = () => {
     "Ghana",
     "Senegal",
     "Ivory Coast",
-    "Burkina Faso",
-    "Mali",
     "Togo",
     "Benin",
+    "Cameroon",
+    "Liberia",
+    "Sierra Leone",
+    "Niger",
+    "Angola",
+    "DRC",
+    "Gabon",
   ];
 
   return (
@@ -69,11 +75,7 @@ const Footer = () => {
                 </div>
               </div>
               <p className="text-primary-foreground/80 leading-relaxed">
-                Practical Sampling International (PSI) is a full-service
-                research agency based in Nigeria with a trusted network across
-                West Africa. We deliver marketing, social and opinion
-                research—from proposal to final insights—so you can act with
-                confidence.
+                Practical Sampling International (PSI) is a full-service research agency based in Nigeria with trusted network across Africa. PSI specializes in marketing, social and opinion researches. We have the capability to manage projects from proposal to delivery of final report/data.
               </p>
             </div>
 
@@ -92,7 +94,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <span className="text-sm">hello@psi-research.net</span>
+                <span className="text-sm"> info@psi-research.net</span>
               </div>
             </div>
 
@@ -255,9 +257,6 @@ const Footer = () => {
               <h5 className="font-semibold mb-1">
                 Ready to commission a study?
               </h5>
-              <p className="text-accent-foreground/90 text-sm">
-                Get a custom proposal in 24 hours
-              </p>
             </div>
             <Button
               variant="outline"

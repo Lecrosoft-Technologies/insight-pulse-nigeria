@@ -32,21 +32,21 @@ const Contact = () => {
     {
       icon: <MessageCircle className="h-6 w-6 text-primary" />,
       title: "WhatsApp",
-      details: "+234-803-834-5509",
+      details: "+234-802-324-7863",
       subtitle: "Quick responses, file sharing",
       action: "Chat Now",
     },
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email",
-      details: "hello@psi-research.net",
+      details: "infoofpsi@yahoo.co.uk, info@psi-reseach.net",
       subtitle: "Response within 2 hours",
       action: "Send Email",
     },
     {
       icon: <Calendar className="h-6 w-6 text-primary" />,
       title: "Book a Meeting",
-      details: "15-min consultation",
+      details: "Consultation",
       subtitle: "Discuss your research needs",
       action: "Schedule Now",
     },
@@ -57,14 +57,8 @@ const Contact = () => {
       city: "Nigeria",
       address: "118b, Bisi Obadina Street, Omole Phase 1 Lagos, Nigeria",
       phone: "+234-802-324-7863",
-      email: "lagos@psi-research.net",
-    },
-    {
-      city: "Ghana",
-      address: "33 Troas Street, Osu. Accra Ghana",
-      phone: "+233-273-717-136",
-      email: "ghana@psi-research.net",
-    },
+      email: "infoofpsi@yahoo.co.uk",
+    }
   ];
 
   const faqs = [
@@ -125,7 +119,7 @@ const Contact = () => {
                     Request Proposal
                   </Button>
                   <Button variant="outline-primary" size="xl">
-                    Book 15-min Call
+                    Book a Call
                   </Button>
                 </div>
               </div>

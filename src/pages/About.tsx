@@ -74,8 +74,10 @@ const About = () => {
                     Since 2009
                   </h1>
                   <p className="text-xl text-muted-foreground leading-relaxed">
-                    Practical Sampling International (PSI) has been Nigeria's trusted market research partner, 
-                    delivering accurate, actionable insights across West Africa for over 15 years.
+                    Practical Sampling International is a full-service research and data collection agency with headquarters in Nigeria and offices in other Eight (8) West African Countries. PSI specializes in marketing, social and opinion researches. We have the capability to manage projects from proposal to delivery of final report/data.
+                  </p>
+                  <p className="text-xl text-muted-foreground leading-relaxed">
+                    PSI is a leading research organization in conducting social research and opinion polls in Nigeria and other West African Countries. Our services cover both qualitative and quantitative studies. We have experience in carrying out research in several sectors including Media, Automotive, Agriculture, Pharmaceutical, Telecommunication, Health, Education, Financial, FMCG etc. We are also experienced in various types of research approach for data collection such as usage, habit and attitude studies, Monitoring and Evaluation Studies, Monitoring, Evaluation and Learning, Diary Placement, Retail Audit, Customer Satisfaction study, Segmentation studies, Mystery Shopping, Opinion Poll, Desk Research, Sponsorship Tracking, Social research, Participatory Methods (River of Life) amongst others. Our Services also covers Executive functions, translations, data processing, moderation, media functions, direct marketing, GIS mapping, transcription, data migration, data portals.
                   </p>
                 </motion.div>
               </div>
@@ -114,17 +116,14 @@ const About = () => {
                   <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
                     Our Mission
                   </h2>
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    To empower businesses and organizations across Nigeria and West Africa with 
-                    precise, actionable market intelligence that drives informed decision-making 
-                    and sustainable growth.
-                  </p>
-                  <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                    Founded in 2009, PSI emerged from a recognition that the West African market 
-                    needed research partners who truly understand local contexts, cultural nuances, 
-                    and business environments. Today, we're proud to be the go-to research agency 
-                    for leading brands across the region.
-                  </p>
+                  <ul className="list-disc text-lg text-muted-foreground mb-8 leading-relaxed">
+                    <li>To provide accurate and scientifically reliable research services</li>
+                    <li>To give professional advice based on research findings</li>
+                    <li>To make sense out of empirical and statistically gathered information.</li>
+                    <li>To collect quality and reliable information that will assist organizations in decision making process.</li>
+                    <li>To provide information relating to solving any marketing, social and opinion research.</li>
+                    <li>To empower businesses and organizations across Nigeria and West Africa with precise, actionable market intelligence that drives informed decision-making and sustainable growth.</li>
+                  </ul>
                   <Button variant="outline-primary" size="lg">
                     Our Story <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>

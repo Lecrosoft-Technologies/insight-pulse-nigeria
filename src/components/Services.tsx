@@ -21,45 +21,17 @@ const Services = () => {
   const services = [
     {
       icon: BarChart3,
-      title: "Market Research",
-      description: "Comprehensive quant & qual studies, segmentation, U&A, brand tracking.",
-      features: ["Consumer & B2B studies", "Representative sampling", "Advanced analytics"],
+      title: "Consumer Research",
+      description: "Comprehensive quantitative and qualitative studies – Brand Penetration & Market Share, Brand Loyalty, Brand Image, Brand Awareness.",
+      features: ["Customer Satisfaction Study", "Product Testing", "Brand Perception Study"],
       href: "/services/market-research"
     },
     {
       icon: Users,
       title: "Social & Opinion Research",
       description: "National & state-level polls, social attitudes, public opinion measurement.",
-      features: ["Political polling", "Social trends", "Public perception"],
+      features: ["Pre & Post Election Survey (Political Polling)", "Public Opinion Poll", "Public Perception Surveys (Social Attitudes)","Monitoring & Evaluation Study (M&E)"],
       href: "/services/social-research"
-    },
-    {
-      icon: ShoppingCart,
-      title: "FMCG & Retail Audit",
-      description: "Track availability, share, pricing, and shelf dynamics nationwide.",
-      features: ["Retail panels", "Price monitoring", "Distribution tracking"],
-      href: "/services/retail-audit"
-    },
-    {
-      icon: Star,
-      title: "Customer Satisfaction & NPS",
-      description: "Measure loyalty, identify drivers, and predict churn risk.",
-      features: ["NPS benchmarking", "Driver analysis", "Churn prediction"],
-      href: "/services/customer-satisfaction"
-    },
-    {
-      icon: TestTube,
-      title: "Product Testing & CLT",
-      description: "Central Location Tests, taste tests, concept validation in Lagos & Abuja.",
-      features: ["Sensory testing", "Concept validation", "Package testing"],
-      href: "/services/product-testing"
-    },
-    {
-      icon: Search,
-      title: "Mystery Shopping",
-      description: "Service quality audits, compliance checks, customer experience evaluation.",
-      features: ["Service audits", "Compliance monitoring", "CX evaluation"],
-      href: "/services/mystery-shopping"
     }
   ];
 
@@ -102,7 +74,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
             <Card 
               key={service.title} 
