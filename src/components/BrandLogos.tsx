@@ -120,7 +120,7 @@ const BrandLogos = () => {
 
         <div className="text-center mt-8">
           <p className="text-sm text-muted-foreground">
-            Join 500+ companies that trust PSI for market insights
+            Join 500+ companies that trust PSI for reliable market insights
           </p>
         </div>
       </div>

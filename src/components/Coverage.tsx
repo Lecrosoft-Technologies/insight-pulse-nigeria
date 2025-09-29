@@ -6,13 +6,13 @@ import mapImage from "@/assets/west-africa-map.jpg";
 const Coverage = () => {
   const countries = [
     { name: "Nigeria", status: "HQ", details: "Complete nationwide coverage" },
-    { name: "Ghana", status: "Active", details: "Urban & rural fieldwork" },
-    { name: "Senegal", status: "Active", details: "Francophone expertise" },
-    { name: "Ivory Coast", status: "Active", details: "FMCG & retail focus" },
-    { name: "Burkina Faso", status: "Partner", details: "Through local network" },
-    { name: "Mali", status: "Partner", details: "Social research specialty" },
-    { name: "Togo", status: "Partner", details: "Cross-border studies" },
-    { name: "Benin", status: "Partner", details: "Regional insights" }
+    { name: "Ghana", status: "", details: "Urban & rural fieldwork" },
+    { name: "Senegal", status: "", details: "Francophone expertise" },
+    { name: "Liberia", status: "", details: "FMCG & retail focus" },
+    { name: "Cameroon", status: "", details: "Through local network" },
+    { name: "Sierra Leone", status: "", details: "Social research specialty" },
+    { name: "Togo", status: "", details: "Cross-border studies" },
+    { name: "Benin", status: "", details: "Regional insights" }
   ];
 
   const capabilities = [
@@ -40,9 +40,8 @@ const Coverage = () => {
 
   const stats = [
     { number: "200M+", label: "Population Reach", description: "Across West Africa" },
-    { number: "15", label: "Countries", description: "Direct & partner coverage" },
-    { number: "50+", label: "Field Teams", description: "Trained & certified" },
-    { number: "8", label: "Languages", description: "Local & international" }
+    // { number: "15", label: "Countries", description: "Direct & partner coverage" },
+    { number: "3,000+", label: "Field Teams", description: "Trained 7 certified" }
   ];
 
   return (

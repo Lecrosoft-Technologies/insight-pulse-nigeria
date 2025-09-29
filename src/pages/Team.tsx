@@ -50,7 +50,7 @@ const Team = () => {
       position: "Director of Operations",
       department: "Executive",
       image: "/api/placeholder/300/400",
-      bio: "Gbenga brings over 20 years of market research experience across Nigeria and West Africa. He founded PSI with a vision to provide world-class research insights that drive business growth in emerging markets.",
+      bio: `A Marketing graduate, Gbenga specializes in the execution and overall co-ordination of quantitative and qualitative studies, from interviews with the general public to special publics, senior executives and professionals. He had gained wide experience from several research agencies, which include Market Surveys of Nigeria (MSN), Public Opinion Poll (POP) and Starealm Research Company (SRC). Prior to joining PSI, Gbenga was the Deputy Field Operations Manager with Research and Marketing Services (RMS) now KANTAR International where he assisted in the management of the agency’s field operations for key clients including – BAT, MTN, Guinness, UNDP, Shell, Coca-Cola, Unilever, Cadbury, US Department of State, Johns Hopkins University, Management System International (MSI) among others. He is a member of Nigerian Marketing Research Association (NiMRA).\nToday, Gbenga heads a pool of professional field force (3,701 across Africa) dedicated to collecting detailed, complete and accurate information on various types of research projects including Surveys, FGDs, KIIs, Census, Mystery Shopping, Usage and Attitude, Monitoring Activities, Education, Health and Opinion Polling. In the last 20 years alone,Gbenga has executed and coordinated more than 495 large respondent surveys ranging from 500 to 540,000 samples sizes across Nigeria, including the 2006 - 2017 Afrobarometer survey, PATHS2 (Baseline, Midline and Endline) Survey, National Crime Victimization survey, NBC Coca-Cola Retail Census where more than 170,400 outlets were enumerated as well as Project Octopus (Nigeria Breweries) Retail Outlet Census where 540,000 outlets across all the states of the federation – urban, semi-urban and rural localities were enumerated.`,
       education: [
         "PhD Statistics, University of Lagos",
         "MSc Economics, London School of Economics",
@@ -81,7 +81,7 @@ const Team = () => {
       position: "Deputy Director of Operations",
       department: "Research",
       image: "/api/placeholder/300/400",
-      bio: "Sarah leads our quantitative research division, specializing in consumer behavior and market segmentation studies. Her expertise spans FMCG, financial services, and telecommunications sectors.",
+      bio: "Alaba has over 18 years research experience in various field of quantitative research. Prior to joining PSI, he was formerly a Research Manager at Research International Market Trend. His research experience span across key research techniques which includes U&A studies, pricing research, trade research, advertising research, Customer satisfaction survey, product testing amongst others. His analytical approach in reporting and project management skill makes him a popular choice in handling complex ad hoc and tracking studies. He has participated in different professional training including NIMRA professional courses. He holds a BA in philosophy. Alaba is also a member of Nigerian Market Research Association (NIMRA).",
       education: [
         "MSc Market Research, University of Manchester",
         "BSc Psychology, University of Ibadan",
@@ -107,41 +107,11 @@ const Team = () => {
     },
     {
       id: "3",
-      name: "Bola Adedoyin",
-      position: "Data Management Consultant",
-      department: "Operations",
-      image: "/api/placeholder/300/400",
-      bio: "Michael oversees our Ghana operations and West African expansion. He brings deep understanding of Francophone and Anglophone markets with expertise in cross-cultural research methodologies.",
-      education: [
-        "MBA, University of Ghana",
-        "BSc Business Administration, KNUST",
-      ],
-      experience: "15+ years",
-      location: "Accra, Ghana",
-      skills: [
-        "Regional Management",
-        "Cross-cultural Research",
-        "Field Operations",
-        "Client Relations",
-      ],
-      achievements: [
-        "Established PSI Ghana office",
-        "Managed 200+ West African projects",
-        "Fluent in English, French, Twi",
-        "Ghana Market Research Association Board Member",
-      ],
-      contact: {
-        email: "michael@practicalsampling.com",
-        linkedin: "linkedin.com/in/michaelasante",
-      },
-    },
-    {
-      id: "4",
       name: "Kehinde Akinremi",
       position: "Field Operations Manager",
       department: "Analytics",
       image: "/api/placeholder/300/400",
-      bio: "Dr. Abdullahi leads our advanced analytics team, specializing in predictive modeling and machine learning applications in market research. She transforms complex data into actionable business insights.",
+      bio: "Kehinde Akinremi is a graduate of mass communication with ample knowledge in computer studies. He started his career in marketing research industry with PSI team as a quality control officer covering south west region, in which he rose to the position of field manager. He has vast experience in various capacities in field operations both in quantitative and qualitative studies. He presently co-ordinates overall PSI field operations. He has attended several trainings on leadership development and Project Management Training.",
       education: [
         "PhD Data Science, University of Edinburgh",
         "MSc Statistics, Ahmadu Bello University",
@@ -166,7 +136,7 @@ const Team = () => {
       },
     },
     {
-      id: "5",
+      id: "4",
       name: "Gbemileke Shodiya",
       position: "Electronic Data Processing Manager",
       department: "Operations",
@@ -196,23 +166,53 @@ const Team = () => {
       },
     },
     {
-      id: "6",
+      id: "5",
       name: "Bola Joseph",
       position: "Research Executive",
       department: "Research",
       image: "/api/placeholder/300/400",
-      bio: "Amina heads our qualitative research division, bringing expertise in focus groups, in-depth interviews, and ethnographic studies across diverse West African cultures and languages.",
+      bio: "Holds an Msc in Information Technology and a Bsc. in Computer Science. She is a Diligent and Versatile Researcher with strong background and working experience in marketing, social and opinion research, project management, monitoring, evaluation and learning. She has several experiences leading projects in Nigeria and outside Nigeria with different categories of respondents including marginalized and displaced respondents across Africa. She has worked and managed projects for several international developmental organizations, international institutions, manufacturing companies starting from - proposal writing , design of questionnaires , facilitating and contributing to client discussion to better understand their business issues, gathering data and coordinating fieldwork execution to final analysis & interpretation of data. She is an excellent researcher who is bright and enthusiastic with a great deal of idea, conscientious, hardworking and committed with a vast experience of leadership. An effective team member who has the ability to meet deadlines. Has a thorough approach to work and will go out of her way to maintain an enjoyable and smooth working environment. With over 6 years in Marketing Research experience, she has gained a wide range of experience from quality control and coordinating several field operations for key clients.",
       education: [
-        "MSc Social Anthropology, Université Cheikh Anta Diop",
-        "BA Sociology, University of Lagos",
+        "Msc in Information Technology, Université Cheikh Anta Diop",
+        "Bsc. in Computer Science, University of Lagos",
       ],
-      experience: "11+ years",
+      experience: "6+ years",
       location: "Lagos, Nigeria",
       skills: [
         "Qualitative Research",
         "Focus Groups",
         "Ethnography",
         "Cultural Analysis",
+      ],
+      achievements: [
+        "Conducted 500+ focus groups",
+        "Multi-language research expert",
+        "Cultural insights specialist",
+        "Qualitative Excellence Award 2022",
+      ],
+      contact: {
+        email: "amina@practicalsampling.com",
+        linkedin: "linkedin.com/in/aminadiallo",
+      },
+    },
+    {
+      id: "6",
+      name: "Leke Shodiya",
+      position: "Data Processing Manager",
+      department: "Operations",
+      image: "/api/placeholder/300/400",
+      bio: "Holds BSc in Computer Science and Economics. Leke has over ten years Data processing experience. He was a supervisor-Data processing with Marketing Research Consultancy Ltd (MRC) before joining PSI as senior Data Processing Officer. He has vast experience in the use of various packages EXCEL SPSS, QPSMR, CSPRO & EPI DATA/EPIINFO for data entry and data editing. Johnson has managed key accounts in the past in the area of data analysis for major clients. Leke successfully coordinated several projects for the company at all levels to several clientele be it local or international. . He is associate member of Nigerian Marketing Research Association (NiMRA). He is experienced in scripting of questionnaire into electronic format for PDAs and smartphones. He will coordinate the uploading of data and downloading from field across the study states.",
+      education: [
+        "BSc in Computer Science and Economics, Université Cheikh Anta Diop",
+        "BA Sociology, University of Lagos",
+      ],
+      experience: "10+ years",
+      location: "Lagos, Nigeria",
+      skills: [
+        "Data Processing Expertise",
+        "Software Proficiency",
+        "Technical Skills",
+        "Project Management",
       ],
       achievements: [
         "Conducted 500+ focus groups",
@@ -480,7 +480,7 @@ const Team = () => {
                         <Badge variant="secondary" className="mb-4">
                           {selectedMember.department}
                         </Badge>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <p className="text-muted-foreground leading-relaxed" style={{whiteSpace:"pre-line"}}>
                           {selectedMember.bio}
                         </p>
                       </div>

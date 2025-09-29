@@ -23,13 +23,13 @@ const Header = () => {
   const services = [
     { name: "Market Research", href: "/services/market-research" },
     { name: "Social & Opinion Research", href: "/services/social-research" },
-    {
-      name: "Customer Satisfaction & NPS",
-      href: "/services/customer-satisfaction",
-    },
-    { name: "FMCG & Retail Audit", href: "/services/fmcg-retail-audit" },
-    { name: "Media & Advertising", href: "/services/media-advertising" },
-    { name: "Mystery Shopping", href: "/services/mystery-shopping" },
+    // {
+    //   name: "Customer Satisfaction & NPS",
+    //   href: "/services/customer-satisfaction",
+    // },
+    // { name: "FMCG & Retail Audit", href: "/services/fmcg-retail-audit" },
+    // { name: "Media & Advertising", href: "/services/media-advertising" },
+    // { name: "Mystery Shopping", href: "/services/mystery-shopping" },
   ];
 
   const sectors = [
@@ -39,14 +39,13 @@ const Header = () => {
     { name: "Automotive", href: "/sectors/automotive" },
     { name: "Telecoms & IT", href: "/sectors/telecoms" },
     { name: "Agriculture", href: "/sectors/agriculture" },
+    { name: "Media & Education", href: "/sectors/#" },
   ];
 
   const methods = [
-    { name: "Household Surveys", href: "/methods/household-surveys" },
-    { name: "Focus Groups & IDIs", href: "/methods/focus-groups" },
-    { name: "Central Location Tests", href: "/methods/clt" },
-    { name: "CATI / CAPI / CAWI", href: "/methods/data-collection" },
-    { name: "Online Panels", href: "/methods/online-panels" },
+    { name: "Quantitative Research", href: "/methods/household-surveys" },
+    { name: "Qualitative Research", href: "/methods/focus-groups" },
+    { name: "Desk Research/Secondary Research", href: "/methods/clt" },
   ];
 
   return (

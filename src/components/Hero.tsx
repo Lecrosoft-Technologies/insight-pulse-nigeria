@@ -70,8 +70,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-                From proposal to insights-ready delivery—quantitative, qualitative, and 
-                advanced analytics you can trust.
+                From proposals to final delivery of insights, we provide accurate and scientifically reliable research services. PSI is the contact you need to obtain the information you require in the Nigerian market and other African Countries.
               </p>
             </div>
 
@@ -79,19 +78,15 @@ const Hero = () => {
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4 text-primary" />
-                <span>10,000+ interviews/year</span>
+                <span>12,000+ interviews/year</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>West Africa coverage</span>
+                <span>Other African Countries Coverage</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="h-4 w-4 text-primary" />
                 <span>ISO certified</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4 text-primary" />
-                <span>24-72h reporting</span>
               </div>
             </div>
 
@@ -102,7 +97,7 @@ const Hero = () => {
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline-primary" size="xl" onClick={handleBookCall}>
-                Book a 15-min Call
+                Book a Call
               </Button>
             </div>
 

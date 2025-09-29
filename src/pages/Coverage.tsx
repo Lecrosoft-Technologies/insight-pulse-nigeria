@@ -23,9 +23,9 @@ const Coverage = () => {
       city: "Lagos",
       flag: "🇳🇬",
       status: "Headquarters",
-      address: "123 Victoria Island, Lagos State, Nigeria",
-      phone: "+234-701-234-5678",
-      email: "lagos@practicalsampling.com",
+      address: "118b, Bisi Obadina Street, Omole Phase1, Lagos, Nigeria.",
+      phone: "+234-1-4543108",
+      email: "infoofpsi@yahoo.co.uk",
       description: "Our headquarters and largest office, serving all Nigerian states with comprehensive research capabilities.",
       capabilities: ["Quantitative Research", "Qualitative Research", "Field Operations", "Data Analytics"],
       languages: ["English", "Yoruba", "Igbo", "Hausa"],
@@ -36,9 +36,9 @@ const Coverage = () => {
       city: "Accra",
       flag: "🇬🇭",
       status: "Regional Office",
-      address: "45 Oxford Street, Osu, Accra, Ghana",
-      phone: "+233-302-123-456",
-      email: "accra@practicalsampling.com",
+      address: "Marilyns Building Loc: 33, Troas Street, Osu. Accra Ghana.",
+      phone: "+233-273717136",
+      email: "infoofpsigh@yahoo.co.uk",
       description: "Covering Ghana and serving as our English-speaking West Africa coordination hub.",
       capabilities: ["Market Research", "Consumer Insights", "Rural Studies", "Cross-border Coordination"],
       languages: ["English", "Twi", "Ewe", "Ga"],
@@ -49,9 +49,9 @@ const Coverage = () => {
       city: "Dakar",
       flag: "🇸🇳",
       status: "Regional Office",
-      address: "78 Avenue Léopold Sédar Senghor, Dakar, Senegal",
-      phone: "+221-338-123-456",
-      email: "dakar@practicalsampling.com",
+      address: "Villa 64, Hlm Grand Yoff, Dakar, Senegal",
+      phone: "+234-1-7911603, +221-775177032",
+      email: "infoofpsi@yahoo.co.uk",
       description: "Our Francophone West Africa hub, specializing in French-speaking markets.",
       capabilities: ["Francophone Research", "Social Studies", "Political Polling", "Cultural Analysis"],
       languages: ["French", "Wolof", "Pulaar", "Serer"],
@@ -62,9 +62,9 @@ const Coverage = () => {
       city: "Monrovia",
       flag: "🇱🇷",
       status: "Field Office",
-      address: "12 Broad Street, Monrovia, Liberia",
-      phone: "+231-555-123-456",
-      email: "monrovia@practicalsampling.com",
+      address: "14th street, sinkor, monrovia, Liberia.",
+      phone: "",
+      email: "infoofpsi@yahoo.co.uk",
       description: "Serving Liberia with focus on post-conflict development and economic research.",
       capabilities: ["Development Studies", "Social Research", "Economic Analysis", "Community Surveys"],
       languages: ["English", "Local Dialects"],
@@ -75,9 +75,9 @@ const Coverage = () => {
       city: "Freetown",
       flag: "🇸🇱",
       status: "Field Office",
-      address: "34 Siaka Stevens Street, Freetown, Sierra Leone",
-      phone: "+232-76-123-456",
-      email: "freetown@practicalsampling.com",
+      address: "Fourah Bay Road by Kennedy Street Junction, Freetown, Sierra Leone.",
+      phone: "",
+      email: "infoofpsi@yahoo.co.uk",
       description: "Comprehensive research services across Sierra Leone's diverse regions.",
       capabilities: ["Health Research", "Education Studies", "Mining Sector Research", "Rural Surveys"],
       languages: ["English", "Krio", "Temne", "Mende"],
@@ -88,9 +88,9 @@ const Coverage = () => {
       city: "Douala",
       flag: "🇨🇲",
       status: "Field Office",
-      address: "56 Boulevard de la Liberté, Douala, Cameroon",
-      phone: "+237-233-123-456",
-      email: "douala@practicalsampling.com",
+      address: "NCC Building, beside Hotel Jouvence, Foulda, Yaounde. Cameroon.",
+      phone: "",
+      email: "infoofpsi@yahoo.co.uk",
       description: "Bilingual research capabilities serving both French and English-speaking regions.",
       capabilities: ["Bilingual Research", "FMCG Studies", "Telecom Research", "Banking Surveys"],
       languages: ["French", "English", "Local Languages"],
@@ -101,9 +101,9 @@ const Coverage = () => {
       city: "Abidjan",
       flag: "🇨🇮",
       status: "Field Office",
-      address: "89 Boulevard de la République, Abidjan, Côte d'Ivoire",
-      phone: "+225-20-123-456",
-      email: "abidjan@practicalsampling.com",
+      address: "08, BD Roume 04, Abidjan",
+      phone: "0022560218764 ",
+      email: "infoofpsicdi@yahoo.co.uk, info@psi-research.net ",
       description: "Strategic location for FMCG and agricultural research across Francophone West Africa.",
       capabilities: ["Agricultural Research", "FMCG Studies", "Financial Services", "Trade Analysis"],
       languages: ["French", "Baoulé", "Dioula", "Bété"],
@@ -114,13 +114,8 @@ const Coverage = () => {
   const capabilities = [
     {
       icon: Users,
-      title: "200+ Field Researchers",
+      title: "3000+ Field Researchers",
       description: "Trained and certified across all locations"
-    },
-    {
-      icon: Globe,
-      title: "15+ Languages",
-      description: "Local language capabilities in every market"
     },
     {
       icon: Building,
@@ -136,8 +131,7 @@ const Coverage = () => {
 
   const stats = [
     { number: "7", label: "Country Offices", description: "Direct operations" },
-    { number: "200M+", label: "Population Reach", description: "Across West Africa" },
-    { number: "15+", label: "Languages", description: "Research capabilities" },
+    { number: "3000+", label: "Population Reach", description: "Across West Africa" },
     { number: "95%", label: "Coverage Rate", description: "Target demographics" }
   ];
 
@@ -170,8 +164,7 @@ const Coverage = () => {
                     Research Network
                   </h1>
                   <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                    PSI has its headquarters in Lagos, Nigeria and operates across Africa having offices 
-                    in 7 West African countries, providing comprehensive market research coverage.
+                    We have established a national network of field force across the six regions of Nigeria which gives us an edge over competition. Our field force currently comprises Three Thousand Two Hundred and Twenty-Three (3,223) interviewers, Six Hundred and Forty-Four (644) supervisors and Two Hundred and Thirteen (213) quality control officers. We also have an affiliation with field agencies in Angola, Democratic Republic of Congo (DRC), Gabon and Tanzania that are fully registered and accredited by the Government in these countries to conduct fieldwork. We have worked with several international development organizations, institutions, conglomerates and research professionals in carrying out fieldwork and data collection on several projects across Africa.
                   </p>
                 </motion.div>
               </div>
@@ -179,7 +172,7 @@ const Coverage = () => {
 
             {/* Stats */}
             <ScrollReveal delay={0.2}>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -217,7 +210,7 @@ const Coverage = () => {
             </ScrollReveal>
 
             <StaggerContainer>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {capabilities.map((capability) => (
                   <StaggerItem key={capability.title}>
                     <Card className="text-center hover-lift border-0 shadow-soft hover:shadow-medium">
@@ -290,7 +283,7 @@ const Coverage = () => {
                         </div>
 
                         {/* Capabilities */}
-                        <div className="mb-6">
+                        {/* <div className="mb-6">
                           <h4 className="font-semibold mb-3">Core Capabilities:</h4>
                           <div className="flex flex-wrap gap-2">
                             {office.capabilities.map((capability) => (
@@ -299,7 +292,7 @@ const Coverage = () => {
                               </Badge>
                             ))}
                           </div>
-                        </div>
+                        </div> */}
 
                         {/* Languages & Team Size */}
                         <div className="grid sm:grid-cols-2 gap-4 mb-6">

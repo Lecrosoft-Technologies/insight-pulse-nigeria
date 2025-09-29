@@ -254,8 +254,8 @@ const Clients = () => {
                       <CardContent className="p-6 text-center">
                         <sector.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                         <h3 className="font-semibold mb-2">{sector.name}</h3>
-                        <p className="text-2xl font-bold text-accent">{sector.count}</p>
-                        <p className="text-sm text-muted-foreground">Active Clients</p>
+                        {/* <p className="text-2xl font-bold text-accent">{sector.count}</p> */}
+                        {/* <p className="text-sm text-muted-foreground">Active Clients</p> */}
                       </CardContent>
                     </Card>
                   </StaggerItem>
