@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, MapPin, Award, Calendar } from "lucide-react";
+import { ArrowRight, Users, MapPin, Award } from "lucide-react";
 import heroImage from "@/assets/hero-research-team.jpg";
-import { useState } from "react";
+import dataCollectionImage from "@/assets/data-collection-urban-rural.jpg";
+import { useState, useEffect } from "react";
 import RequestProposalModal from "./RequestProposalModal";
+import { motion, AnimatePresence } from "framer-motion";
 import { apiService, handleApiError } from "@/lib/api";
 import { analytics } from "@/components/GoogleAnalytics";
 import { useToast } from "@/hooks/use-toast";
@@ -11,7 +13,20 @@ const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [email, setEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const { toast } = useToast()
+
+  const images = [
+    { src: heroImage, alt: "Professional market research team in Nigeria analyzing data and insights" },
+    { src: dataCollectionImage, alt: "Data collection in urban and rural areas across Nigeria and West Africa" }
+  ]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length)
+    }, 5000) // Change image every 5 seconds
+    return () => clearInterval(interval)
+  }, [])
 
   const handleNewsletterSignup = async () => {
     if (!email) {
@@ -121,15 +136,38 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Image */}
+          {/* Image Slider */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-strong animate-scale-in">
-              <img
-                src={heroImage}
-                alt="Professional market research team in Nigeria analyzing data and insights"
-                className="w-full h-[500px] object-cover"
-              />
+            <div className="relative rounded-2xl overflow-hidden shadow-strong">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={currentImageIndex}
+                  src={images[currentImageIndex].src}
+                  alt={images[currentImageIndex].alt}
+                  className="w-full h-[500px] object-cover"
+                  initial={{ opacity: 0, scale: 1.1 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.7, ease: "easeInOut" }}
+                />
+              </AnimatePresence>
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+              
+              {/* Image indicators */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                {images.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      index === currentImageIndex 
+                        ? "bg-white w-8" 
+                        : "bg-white/50 hover:bg-white/75"
+                    }`}
+                    aria-label={`Go to image ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
             
             {/* Floating Stats Cards */}

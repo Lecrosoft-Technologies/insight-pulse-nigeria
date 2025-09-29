@@ -1,5 +1,30 @@
-// API Configuration and Integration for Laravel Backend
-// This provides a clean interface to connect with your Laravel API
+/**
+ * API Configuration and Integration for Backend
+ * 
+ * PLUG-AND-PLAY SETUP INSTRUCTIONS:
+ * ==================================
+ * 
+ * 1. Create a .env file in your project root (if not exists)
+ * 2. Add your backend API URL:
+ *    VITE_API_BASE_URL=https://your-backend-api.com/api
+ * 
+ * 3. Your Laravel backend should have these endpoints:
+ *    POST /api/proposals        - For proposal requests
+ *    POST /api/contact          - For contact form submissions
+ *    POST /api/newsletter/subscribe - For newsletter signups
+ *    GET  /api/blog             - Get all blog posts (with pagination)
+ *    GET  /api/blog/{slug}      - Get single blog post
+ *    GET  /api/team             - Get all team members
+ *    GET  /api/team/{id}        - Get single team member
+ *    GET  /api/clients          - Get all clients
+ * 
+ * 4. All forms in the app use this centralized API service
+ * 5. Data validation is handled both client-side and should be on server-side
+ * 6. All requests include proper JSON headers automatically
+ * 
+ * IMPORTANT: The RequestProposalModal component is used throughout the app,
+ * so all proposal requests go through one centralized form.
+ */
 
 interface ApiConfig {
   baseUrl: string;
@@ -7,9 +32,9 @@ interface ApiConfig {
   headers?: Record<string, string>;
 }
 
-// Default configuration - update with your Laravel API endpoint
+// Default configuration - Set VITE_API_BASE_URL in your .env file
 const defaultConfig: ApiConfig = {
-  baseUrl: import.meta.env.VITE_API_BASE_URL || 'https://your-laravel-api.com/api',
+  baseUrl: import.meta.env.VITE_API_BASE_URL || 'https://your-backend-api.com/api',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',

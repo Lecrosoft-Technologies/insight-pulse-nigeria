@@ -98,12 +98,12 @@ const BrandLogos = () => {
                 <img
                   src={brand.logo}
                   alt={`${brand.name} logo`}
-                  className="h-12 w-auto object-contain group-hover:opacity-0 transition-opacity duration-500 filter grayscale"
+                  className="h-12 w-auto object-contain group-hover:opacity-0 transition-opacity duration-500 filter grayscale group-hover:filter-none"
                 />
 
-                {/* Color logo on hover */}
+                {/* Color logo on hover - same image without grayscale */}
                 <img
-                  src={brand.colorLogo}
+                  src={brand.logo}
                   alt={`${brand.name} logo in color`}
                   className="absolute inset-0 m-auto h-12 w-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 />

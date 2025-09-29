@@ -39,12 +39,28 @@ const Header = () => {
     { name: "Automotive", href: "/sectors/automotive" },
     { name: "Telecoms & IT", href: "/sectors/telecoms" },
     { name: "Agriculture", href: "/sectors/agriculture" },
-    { name: "Media & Education", href: "/sectors/#" },
+    { name: "Media & Education", href: "/sectors/media-education" },
   ];
 
   const methods = [
-    { name: "Quantitative Research", href: "/methods/household-surveys" },
-    { name: "Qualitative Research", href: "/methods/focus-groups" },
+    { 
+      name: "Quantitative Research", 
+      href: "/methods/household-surveys",
+      submenu: [
+        { name: "Survey Research", href: "/methods/survey-research" },
+        { name: "Experimental Surveys", href: "/methods/experimental-surveys" }
+      ]
+    },
+    { 
+      name: "Qualitative Research", 
+      href: "/methods/focus-groups",
+      submenu: [
+        { name: "In-depth Interview (IDI)/Semi Structured Interview (SSI)/Key Informant Interview (KII)", href: "/methods/idi-ssi-kii" },
+        { name: "Focus Group Discussions (FGD)", href: "/methods/focus-groups" },
+        { name: "Ethnography", href: "/methods/ethnography" },
+        { name: "Immersion", href: "/methods/immersion" }
+      ]
+    },
     { name: "Desk Research/Secondary Research", href: "/methods/clt" },
   ];
 
@@ -159,16 +175,30 @@ const Header = () => {
                       Methods
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <div className="w-80 p-4">
-                        <div className="grid gap-3">
+                      <div className="w-[500px] p-4">
+                        <div className="grid gap-4">
                           {methods.map((method) => (
-                            <Link
-                              key={method.name}
-                              to={method.href}
-                              className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth"
-                            >
-                              {method.name}
-                            </Link>
+                            <div key={method.name} className="space-y-2">
+                              <Link
+                                to={method.href}
+                                className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth font-semibold"
+                              >
+                                {method.name}
+                              </Link>
+                              {method.submenu && (
+                                <div className="pl-4 space-y-1 border-l-2 border-border">
+                                  {method.submenu.map((subitem) => (
+                                    <Link
+                                      key={subitem.name}
+                                      to={subitem.href}
+                                      className="block p-2 rounded-lg hover:bg-accent/50 hover:text-accent-foreground transition-smooth text-sm text-muted-foreground hover:text-foreground"
+                                    >
+                                      {subitem.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
                           ))}
                         </div>
                       </div>

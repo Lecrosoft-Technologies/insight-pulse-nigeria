@@ -27,12 +27,18 @@ import Health from "./pages/sectors/Health";
 import Automotive from "./pages/sectors/Automotive";
 import Telecoms from "./pages/sectors/Telecoms";
 import Agriculture from "./pages/sectors/Agriculture";
+import MediaEducation from "./pages/sectors/MediaEducation";
 // Method Pages
 import HouseholdSurveys from "./pages/methods/HouseholdSurveys";
 import FocusGroups from "./pages/methods/FocusGroups";
 import CentralLocationTests from "./pages/methods/CentralLocationTests";
 import DataCollection from "./pages/methods/DataCollection";
 import OnlinePanels from "./pages/methods/OnlinePanels";
+import SurveyResearch from "./pages/methods/SurveyResearch";
+import ExperimentalSurveys from "./pages/methods/ExperimentalSurveys";
+import IDISSIKII from "./pages/methods/IDISSIKII";
+import Ethnography from "./pages/methods/Ethnography";
+import Immersion from "./pages/methods/Immersion";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
@@ -74,6 +80,7 @@ const App = () => (
                 <Route path="/sectors/automotive" element={<Automotive />} />
                 <Route path="/sectors/telecoms" element={<Telecoms />} />
                 <Route path="/sectors/agriculture" element={<Agriculture />} />
+                <Route path="/sectors/media-education" element={<MediaEducation />} />
                 
                 {/* Method Pages */}
                 <Route path="/methods/household-surveys" element={<HouseholdSurveys />} />
@@ -81,6 +88,11 @@ const App = () => (
                 <Route path="/methods/clt" element={<CentralLocationTests />} />
                 <Route path="/methods/data-collection" element={<DataCollection />} />
                 <Route path="/methods/online-panels" element={<OnlinePanels />} />
+                <Route path="/methods/survey-research" element={<SurveyResearch />} />
+                <Route path="/methods/experimental-surveys" element={<ExperimentalSurveys />} />
+                <Route path="/methods/idi-ssi-kii" element={<IDISSIKII />} />
+                <Route path="/methods/ethnography" element={<Ethnography />} />
+                <Route path="/methods/immersion" element={<Immersion />} />
                 
                 <Route path="*" element={<NotFound />} />
               </Routes>
