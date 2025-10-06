@@ -67,7 +67,7 @@ const Hero = () => {
   return (
     <>
       <RequestProposalModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-    <section className="relative overflow-hidden bg-gradient-subtle">
+      <section className="relative overflow-hidden bg-gradient-subtle z-0">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(30deg,transparent_12%,hsl(var(--primary)/0.05)_12.5%,hsl(var(--primary)/0.05)_87%,transparent_87.5%,transparent)]"></div>
       
