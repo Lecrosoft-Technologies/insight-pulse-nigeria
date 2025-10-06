@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import gbengaAdewumi from "@/assets/adewumi.jpg";
 import {
   Linkedin,
   Mail,
@@ -20,6 +21,7 @@ import {
   Phone,
   Globe,
 } from "lucide-react";
+import { url } from "inspector";
 
 interface TeamMember {
   id: string;
@@ -49,7 +51,7 @@ const Team = () => {
       name: "Gbenga Adewumi",
       position: "Director of Operations",
       department: "Executive",
-      image: "/api/placeholder/300/400",
+      image: gbengaAdewumi,
       bio: `A Marketing graduate, Gbenga specializes in the execution and overall co-ordination of quantitative and qualitative studies, from interviews with the general public to special publics, senior executives and professionals. He had gained wide experience from several research agencies, which include Market Surveys of Nigeria (MSN), Public Opinion Poll (POP) and Starealm Research Company (SRC). Prior to joining PSI, Gbenga was the Deputy Field Operations Manager with Research and Marketing Services (RMS) now KANTAR International where he assisted in the management of the agency’s field operations for key clients including – BAT, MTN, Guinness, UNDP, Shell, Coca-Cola, Unilever, Cadbury, US Department of State, Johns Hopkins University, Management System International (MSI) among others. He is a member of Nigerian Marketing Research Association (NiMRA).\nToday, Gbenga heads a pool of professional field force (3,701 across Africa) dedicated to collecting detailed, complete and accurate information on various types of research projects including Surveys, FGDs, KIIs, Census, Mystery Shopping, Usage and Attitude, Monitoring Activities, Education, Health and Opinion Polling. In the last 20 years alone,Gbenga has executed and coordinated more than 495 large respondent surveys ranging from 500 to 540,000 samples sizes across Nigeria, including the 2006 - 2017 Afrobarometer survey, PATHS2 (Baseline, Midline and Endline) Survey, National Crime Victimization survey, NBC Coca-Cola Retail Census where more than 170,400 outlets were enumerated as well as Project Octopus (Nigeria Breweries) Retail Outlet Census where 540,000 outlets across all the states of the federation – urban, semi-urban and rural localities were enumerated.`,
       education: [
         "PhD Statistics, University of Lagos",
@@ -323,7 +325,14 @@ const Team = () => {
                       >
                         <div className="relative">
                           <div className="aspect-[3/4] bg-gradient-primary"></div>
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                          <div
+                            className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                            style={{
+                              backgroundImage: `url(${member.image})`,
+                              backgroundSize: "cover",
+                              backgroundPosition: "center",
+                            }}
+                          ></div>
                           <div className="absolute bottom-4 left-4 right-4 text-white">
                             <h3 className="text-xl font-bold mb-1">
                               {member.name}
@@ -480,7 +489,10 @@ const Team = () => {
                         <Badge variant="secondary" className="mb-4">
                           {selectedMember.department}
                         </Badge>
-                        <p className="text-muted-foreground leading-relaxed" style={{whiteSpace:"pre-line"}}>
+                        <p
+                          className="text-muted-foreground leading-relaxed"
+                          style={{ whiteSpace: "pre-line" }}
+                        >
                           {selectedMember.bio}
                         </p>
                       </div>
