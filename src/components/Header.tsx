@@ -179,27 +179,30 @@ const Header = () => {
                         <div className="grid gap-2">
                           {methods.map((method) => (
                             <div key={method.name} className="group/item relative">
-                              <Link
-                                to={method.href}
-                                className="flex items-center justify-between p-3 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth font-semibold"
-                              >
-                                {method.name}
+                              <div className="flex items-center justify-between p-3 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth font-semibold cursor-pointer">
+                                <Link to={method.href} className="flex-1">
+                                  {method.name}
+                                </Link>
                                 {method.submenu && <ChevronDown className="h-4 w-4 -rotate-90" />}
-                              </Link>
+                              </div>
                               {method.submenu && (
-                                <div className="absolute left-full top-0 ml-2 w-[400px] hidden group-hover/item:block bg-popover border border-border rounded-lg shadow-lg p-3 z-[110]">
-                                  <div className="space-y-1">
-                                    {method.submenu.map((subitem) => (
-                                      <Link
-                                        key={subitem.name}
-                                        to={subitem.href}
-                                        className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth text-sm"
-                                      >
-                                        {subitem.name}
-                                      </Link>
-                                    ))}
+                                <>
+                                  {/* Invisible bridge to prevent dropdown from closing */}
+                                  <div className="absolute left-full top-0 w-4 h-full hidden group-hover/item:block" />
+                                  <div className="absolute left-full top-0 ml-4 w-[400px] invisible group-hover/item:visible opacity-0 group-hover/item:opacity-100 bg-popover border border-border rounded-lg shadow-lg p-3 z-[110] transition-all duration-200">
+                                    <div className="space-y-1">
+                                      {method.submenu.map((subitem) => (
+                                        <Link
+                                          key={subitem.name}
+                                          to={subitem.href}
+                                          className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth text-sm"
+                                        >
+                                          {subitem.name}
+                                        </Link>
+                                      ))}
+                                    </div>
                                   </div>
-                                </div>
+                                </>
                               )}
                             </div>
                           ))}
