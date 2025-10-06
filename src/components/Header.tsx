@@ -178,34 +178,38 @@ const Header = () => {
                       <div className="w-[500px] p-4">
                         <div className="grid gap-2">
                           {methods.map((method) => (
-                            <div key={method.name} className="relative">
-                              <div className="group/item">
-                                <div className="flex items-center justify-between p-3 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth font-semibold cursor-pointer">
-                                  <Link to={method.href} className="flex-1">
-                                    {method.name}
-                                  </Link>
-                                  {method.submenu && <ChevronDown className="h-4 w-4 -rotate-90" />}
-                                </div>
-                                {method.submenu && (
-                                  <>
-                                    {/* Invisible bridge to prevent dropdown from closing */}
-                                    <div className="absolute left-full top-0 w-8 h-full opacity-0 group-hover/item:opacity-100 pointer-events-auto" />
-                                    <div className="absolute left-full top-0 ml-2 w-[450px] opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible bg-popover border border-border rounded-lg shadow-lg p-3 z-[120] transition-all duration-150 pointer-events-auto">
-                                      <div className="space-y-1">
-                                        {method.submenu.map((subitem) => (
-                                          <Link
-                                            key={subitem.name}
-                                            to={subitem.href}
-                                            className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth text-sm"
-                                          >
-                                            {subitem.name}
-                                          </Link>
-                                        ))}
-                                      </div>
+                            <div key={method.name} className="relative group/item">
+                              {method.submenu ? (
+                                <>
+                                  <div className="flex items-center justify-between p-3 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth font-semibold cursor-pointer">
+                                    <span className="flex-1">{method.name}</span>
+                                    <ChevronDown className="h-4 w-4 -rotate-90" />
+                                  </div>
+                                  {/* Hover bridge - must stay visible */}
+                                  <div className="absolute left-full top-0 w-4 h-full pointer-events-auto" />
+                                  {/* Nested dropdown */}
+                                  <div className="absolute left-full top-0 ml-1 w-[450px] bg-popover border border-border rounded-lg shadow-lg p-3 opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-200 pointer-events-auto z-[150]">
+                                    <div className="space-y-1">
+                                      {method.submenu.map((subitem) => (
+                                        <Link
+                                          key={subitem.name}
+                                          to={subitem.href}
+                                          className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth text-sm"
+                                        >
+                                          {subitem.name}
+                                        </Link>
+                                      ))}
                                     </div>
-                                  </>
-                                )}
-                              </div>
+                                  </div>
+                                </>
+                              ) : (
+                                <Link
+                                  to={method.href}
+                                  className="block p-3 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth font-semibold"
+                                >
+                                  {method.name}
+                                </Link>
+                              )}
                             </div>
                           ))}
                         </div>

@@ -171,12 +171,12 @@ const Hero = () => {
             </div>
             
             {/* Floating Stats Cards */}
-            <div className="absolute -top-6 -left-6 bg-white rounded-xl p-4 shadow-medium animate-pin-drop">
+            <div className="absolute -top-6 -left-6 bg-white rounded-xl p-4 shadow-medium animate-pin-drop pointer-events-none">
               <div className="text-2xl font-bold text-primary">500+</div>
               <div className="text-sm text-muted-foreground">Studies Completed</div>
             </div>
             
-            <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-4 shadow-medium animate-pin-drop" style={{animationDelay: '0.2s'}}>
+            <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-4 shadow-medium animate-pin-drop pointer-events-none" style={{animationDelay: '0.2s'}}>
               <div className="text-2xl font-bold text-accent">15</div>
               <div className="text-sm text-muted-foreground">Countries Covered</div>
             </div>
