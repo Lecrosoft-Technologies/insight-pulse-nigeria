@@ -176,26 +176,29 @@ const Header = () => {
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <div className="w-[500px] p-4">
-                        <div className="grid gap-4">
+                        <div className="grid gap-2">
                           {methods.map((method) => (
-                            <div key={method.name} className="space-y-2">
+                            <div key={method.name} className="group/item relative">
                               <Link
                                 to={method.href}
-                                className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth font-semibold"
+                                className="flex items-center justify-between p-3 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth font-semibold"
                               >
                                 {method.name}
+                                {method.submenu && <ChevronDown className="h-4 w-4 -rotate-90" />}
                               </Link>
                               {method.submenu && (
-                                <div className="pl-4 space-y-1 border-l-2 border-border">
-                                  {method.submenu.map((subitem) => (
-                                    <Link
-                                      key={subitem.name}
-                                      to={subitem.href}
-                                      className="block p-2 rounded-lg hover:bg-accent/50 hover:text-accent-foreground transition-smooth text-sm text-muted-foreground hover:text-foreground"
-                                    >
-                                      {subitem.name}
-                                    </Link>
-                                  ))}
+                                <div className="absolute left-full top-0 ml-2 w-[400px] hidden group-hover/item:block bg-popover border border-border rounded-lg shadow-lg p-3 z-[110]">
+                                  <div className="space-y-1">
+                                    {method.submenu.map((subitem) => (
+                                      <Link
+                                        key={subitem.name}
+                                        to={subitem.href}
+                                        className="block p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth text-sm"
+                                      >
+                                        {subitem.name}
+                                      </Link>
+                                    ))}
+                                  </div>
                                 </div>
                               )}
                             </div>
