@@ -9,7 +9,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import gbengaAdewumi from "@/assets/adewumi.jpg";
+import gbengaAdewumi from "@/assets/gbengaAdewumi.jpg";
+import alaba from "@/assets/alaba.jpg";
+import kehinde from "@/assets/kehinde.jpg";
+import leke from "@/assets/leke.jpg";
+import bola from "@/assets/bola.jpg";
 import {
   Linkedin,
   Mail,
@@ -82,7 +86,7 @@ const Team = () => {
       name: "Alaba Uthman",
       position: "Deputy Director of Operations",
       department: "Research",
-      image: "/api/placeholder/300/400",
+      image: alaba,
       bio: "Alaba has over 18 years research experience in various field of quantitative research. Prior to joining PSI, he was formerly a Research Manager at Research International Market Trend. His research experience span across key research techniques which includes U&A studies, pricing research, trade research, advertising research, Customer satisfaction survey, product testing amongst others. His analytical approach in reporting and project management skill makes him a popular choice in handling complex ad hoc and tracking studies. He has participated in different professional training including NIMRA professional courses. He holds a BA in philosophy. Alaba is also a member of Nigerian Market Research Association (NIMRA).",
       education: [
         "MSc Market Research, University of Manchester",
@@ -103,7 +107,7 @@ const Team = () => {
         "Speaker at 10+ industry conferences",
       ],
       contact: {
-        email: "sarah@practicalsampling.com",
+        email: "alaba@psi-reseach.net",
         linkedin: "linkedin.com/in/sarahokafor",
       },
     },
@@ -112,7 +116,7 @@ const Team = () => {
       name: "Kehinde Akinremi",
       position: "Field Operations Manager",
       department: "Analytics",
-      image: "/api/placeholder/300/400",
+      image: kehinde,
       bio: "Kehinde Akinremi is a graduate of mass communication with ample knowledge in computer studies. He started his career in marketing research industry with PSI team as a quality control officer covering south west region, in which he rose to the position of field manager. He has vast experience in various capacities in field operations both in quantitative and qualitative studies. He presently co-ordinates overall PSI field operations. He has attended several trainings on leadership development and Project Management Training.",
       education: [
         "PhD Data Science, University of Edinburgh",
@@ -133,17 +137,17 @@ const Team = () => {
         "Led digital transformation at PSI",
       ],
       contact: {
-        email: "fatima@practicalsampling.com",
+        email: "kehinde@psi-reseach.net",
         linkedin: "linkedin.com/in/fatimaabdullahi",
       },
     },
     {
       id: "4",
       name: "Gbemileke Shodiya",
-      position: "Electronic Data Processing Manager",
+      position: "Data Processing Manager",
       department: "Operations",
-      image: "/api/placeholder/300/400",
-      bio: "James manages our extensive field network across Nigeria, ensuring quality data collection and maintaining our high standards of fieldwork excellence in both urban and rural areas.",
+      image: leke,
+      bio: "Holds BSc in Computer Science and Economics. Leke has over ten years Data processing experience. He was a supervisor-Data processing with Marketing Research Consultancy Ltd (MRC) before joining PSI as senior Data Processing Officer. He has vast experience in the use of various packages EXCEL SPSS, QPSMR, CSPRO & EPI DATA/EPIINFO for data entry and data editing. Johnson has managed key accounts in the past in the area of data analysis for major clients. Leke successfully coordinated several projects for the company at all levels to several clientele be it local or international. . He is associate member of Nigerian Marketing Research Association (NiMRA). He is experienced in scripting of questionnaire into electronic format for PDAs and smartphones. He will coordinate the uploading of data and downloading from field across the study states.",
       education: [
         "MSc Sociology, University of Nigeria",
         "BSc Mass Communication, Unn",
@@ -163,7 +167,7 @@ const Team = () => {
         "Field Excellence Award 2023",
       ],
       contact: {
-        email: "james@practicalsampling.com",
+        email: "leke@psi-reseach.net",
         phone: "+234-XXX-XXXXX",
       },
     },
@@ -172,7 +176,7 @@ const Team = () => {
       name: "Bola Joseph",
       position: "Research Executive",
       department: "Research",
-      image: "/api/placeholder/300/400",
+      image: bola,
       bio: "Holds an Msc in Information Technology and a Bsc. in Computer Science. She is a Diligent and Versatile Researcher with strong background and working experience in marketing, social and opinion research, project management, monitoring, evaluation and learning. She has several experiences leading projects in Nigeria and outside Nigeria with different categories of respondents including marginalized and displaced respondents across Africa. She has worked and managed projects for several international developmental organizations, international institutions, manufacturing companies starting from - proposal writing , design of questionnaires , facilitating and contributing to client discussion to better understand their business issues, gathering data and coordinating fieldwork execution to final analysis & interpretation of data. She is an excellent researcher who is bright and enthusiastic with a great deal of idea, conscientious, hardworking and committed with a vast experience of leadership. An effective team member who has the ability to meet deadlines. Has a thorough approach to work and will go out of her way to maintain an enjoyable and smooth working environment. With over 6 years in Marketing Research experience, she has gained a wide range of experience from quality control and coordinating several field operations for key clients.",
       education: [
         "Msc in Information Technology, Université Cheikh Anta Diop",
@@ -193,37 +197,7 @@ const Team = () => {
         "Qualitative Excellence Award 2022",
       ],
       contact: {
-        email: "amina@practicalsampling.com",
-        linkedin: "linkedin.com/in/aminadiallo",
-      },
-    },
-    {
-      id: "6",
-      name: "Leke Shodiya",
-      position: "Data Processing Manager",
-      department: "Operations",
-      image: "/api/placeholder/300/400",
-      bio: "Holds BSc in Computer Science and Economics. Leke has over ten years Data processing experience. He was a supervisor-Data processing with Marketing Research Consultancy Ltd (MRC) before joining PSI as senior Data Processing Officer. He has vast experience in the use of various packages EXCEL SPSS, QPSMR, CSPRO & EPI DATA/EPIINFO for data entry and data editing. Johnson has managed key accounts in the past in the area of data analysis for major clients. Leke successfully coordinated several projects for the company at all levels to several clientele be it local or international. . He is associate member of Nigerian Marketing Research Association (NiMRA). He is experienced in scripting of questionnaire into electronic format for PDAs and smartphones. He will coordinate the uploading of data and downloading from field across the study states.",
-      education: [
-        "BSc in Computer Science and Economics, Université Cheikh Anta Diop",
-        "BA Sociology, University of Lagos",
-      ],
-      experience: "10+ years",
-      location: "Lagos, Nigeria",
-      skills: [
-        "Data Processing Expertise",
-        "Software Proficiency",
-        "Technical Skills",
-        "Project Management",
-      ],
-      achievements: [
-        "Conducted 500+ focus groups",
-        "Multi-language research expert",
-        "Cultural insights specialist",
-        "Qualitative Excellence Award 2022",
-      ],
-      contact: {
-        email: "amina@practicalsampling.com",
+        email: "bola@psi-reseach.net",
         linkedin: "linkedin.com/in/aminadiallo",
       },
     },
@@ -426,7 +400,8 @@ const Team = () => {
                   <div className="grid lg:grid-cols-3 gap-8">
                     {/* Profile Image & Basic Info */}
                     <div className="space-y-6">
-                      <div className="aspect-[3/4] bg-gradient-primary rounded-xl"></div>
+                      <img className="aspect-[3/4] bg-gradient-primary rounded-xl" src={selectedMember.image} />
+
 
                       <div className="space-y-4">
                         <div>
@@ -497,7 +472,7 @@ const Team = () => {
                         </p>
                       </div>
 
-                      <div>
+                      {/* <div>
                         <h3 className="font-semibold mb-3 flex items-center gap-2">
                           <GraduationCap className="h-5 w-5 text-primary" />
                           Education
@@ -512,9 +487,9 @@ const Team = () => {
                             </li>
                           ))}
                         </ul>
-                      </div>
+                      </div> */}
 
-                      <div>
+                      {/* <div>
                         <h3 className="font-semibold mb-3">Core Skills</h3>
                         <div className="flex flex-wrap gap-2">
                           {selectedMember.skills.map((skill) => (
@@ -523,9 +498,9 @@ const Team = () => {
                             </Badge>
                           ))}
                         </div>
-                      </div>
+                      </div> */}
 
-                      <div>
+                      {/* <div>
                         <h3 className="font-semibold mb-3 flex items-center gap-2">
                           <Award className="h-5 w-5 text-primary" />
                           Key Achievements
@@ -542,7 +517,7 @@ const Team = () => {
                             )
                           )}
                         </ul>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
