@@ -107,7 +107,7 @@ const Header = () => {
                 </span>
               </div> */}
               <div>
-                <img src={logo} className=" h-12" />
+                <img src={logo} className=" h-16" />
 
                 {/* <p className="text-xs text-muted-foreground">
                   Market Research Excellence
