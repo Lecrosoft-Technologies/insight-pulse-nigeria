@@ -67,9 +67,9 @@ const Hero = () => {
   return (
     <>
       <RequestProposalModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      <section className="relative overflow-hidden bg-gradient-subtle z-0">
+      <section className="relative overflow-hidden bg-gradient-subtle">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(30deg,transparent_12%,hsl(var(--primary)/0.05)_12.5%,hsl(var(--primary)/0.05)_87%,transparent_87.5%,transparent)]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(30deg,transparent_12%,hsl(var(--primary)/0.05)_12.5%,hsl(var(--primary)/0.05)_87%,transparent_87.5%,transparent)] pointer-events-none"></div>
       
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -151,7 +151,7 @@ const Hero = () => {
                   transition={{ duration: 0.7, ease: "easeInOut" }}
                 />
               </AnimatePresence>
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none"></div>
               
               {/* Image indicators */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
