@@ -174,11 +174,11 @@ const Header = () => {
                     <NavigationMenuTrigger className="font-medium">
                       Methods
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="w-[500px] p-4">
-                        <div className="grid gap-2">
+                    <NavigationMenuContent className="overflow-visible">
+                      <div className="w-[500px] p-4 overflow-visible">
+                        <div className="grid gap-2 overflow-visible">
                           {methods.map((method) => (
-                            <div key={method.name} className="relative group/item">
+                            <div key={method.name} className="relative group/item overflow-visible">
                               {method.submenu ? (
                                 <>
                                   <div className="flex items-center justify-between p-3 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth font-semibold cursor-pointer">
@@ -186,9 +186,9 @@ const Header = () => {
                                     <ChevronDown className="h-4 w-4 -rotate-90" />
                                   </div>
                                   {/* Hover bridge - must stay visible */}
-                                  <div className="absolute left-full top-0 w-4 h-full pointer-events-auto" />
+                                  <div className="absolute left-full top-0 w-4 h-full pointer-events-auto z-[200]" />
                                   {/* Nested dropdown */}
-                                  <div className="absolute left-full top-0 ml-1 w-[450px] bg-popover border border-border rounded-lg shadow-lg p-3 opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-200 pointer-events-auto z-[150]">
+                                  <div className="absolute left-full top-0 ml-1 w-[450px] bg-popover border border-border rounded-lg shadow-lg p-3 opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-200 pointer-events-auto z-[200]">
                                     <div className="space-y-1">
                                       {method.submenu.map((subitem) => (
                                         <Link
