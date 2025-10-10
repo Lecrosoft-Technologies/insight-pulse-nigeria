@@ -1,10 +1,22 @@
-import SEOHead from "@/components/SEOHead"
-import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollEffects"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { motion } from "framer-motion"
-import { Users, Target, Award, Globe, CheckCircle, ArrowRight } from "lucide-react"
+import SEOHead from "@/components/SEOHead";
+import {
+  ScrollReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ScrollEffects";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
+import {
+  Users,
+  Target,
+  Award,
+  Globe,
+  CheckCircle,
+  ArrowRight,
+} from "lucide-react";
+import team from "@/assets/psi-team.png";
 
 const About = () => {
   const stats = [
@@ -12,41 +24,45 @@ const About = () => {
     { number: "500+", label: "Projects Completed" },
     { number: "12", label: "West African Countries" },
     { number: "50,000+", label: "Interviews Conducted" },
-  ]
+  ];
 
   const values = [
     {
       icon: <Target className="h-8 w-8 text-primary" />,
       title: "Precision & Accuracy",
-      description: "Rigorous methodologies and quality controls ensure reliable, actionable insights."
+      description:
+        "Rigorous methodologies and quality controls ensure reliable, actionable insights.",
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
       title: "Local Expertise",
-      description: "Deep understanding of Nigerian and West African markets, cultures, and business environments."
+      description:
+        "Deep understanding of Nigerian and West African markets, cultures, and business environments.",
     },
     {
       icon: <Award className="h-8 w-8 text-primary" />,
       title: "Professional Excellence",
-      description: "Certified researchers, industry best practices, and commitment to ethical standards."
+      description:
+        "Certified researchers, industry best practices, and commitment to ethical standards.",
     },
     {
       icon: <Globe className="h-8 w-8 text-primary" />,
       title: "Regional Coverage",
-      description: "Extensive network across Nigeria and West Africa for comprehensive market intelligence."
-    }
-  ]
+      description:
+        "Extensive network across Nigeria and West Africa for comprehensive market intelligence.",
+    },
+  ];
 
   const certifications = [
     "ESOMAR Member",
     "Nigeria Marketing Research Association (NMRA)",
     "ISO 20252 Certified",
-    "Data Protection Compliant"
-  ]
+    "Data Protection Compliant",
+  ];
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="About PSI — Leading Market Research Agency in Nigeria & West Africa"
         description="Learn about Practical Sampling International (PSI), Nigeria's trusted market research partner. 15+ years experience, 500+ projects, comprehensive West Africa coverage."
         keywords="about PSI, market research Nigeria history, research agency Nigeria, West Africa research company, Nigerian research experts"
@@ -65,7 +81,10 @@ const About = () => {
                   transition={{ duration: 0.8 }}
                   className="mb-8"
                 >
-                  <Badge variant="outline" className="mb-4 text-primary border-primary">
+                  <Badge
+                    variant="outline"
+                    className="mb-4 text-primary border-primary"
+                  >
                     About PSI
                   </Badge>
                   <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
@@ -74,10 +93,31 @@ const About = () => {
                     Since 2009
                   </h1>
                   <p className="text-xl text-muted-foreground leading-relaxed">
-                    Practical Sampling International is a full-service research and data collection agency with headquarters in Nigeria and offices in other Eight (8) West African Countries. PSI specializes in marketing, social and opinion researches. We have the capability to manage projects from proposal to delivery of final report/data.
+                    Practical Sampling International is a full-service research
+                    and data collection agency with headquarters in Nigeria and
+                    offices in other Eight (8) West African Countries. PSI
+                    specializes in marketing, social and opinion researches. We
+                    have the capability to manage projects from proposal to
+                    delivery of final report/data.
                   </p>
                   <p className="text-xl text-muted-foreground leading-relaxed">
-                    PSI is a leading research organization in conducting social research and opinion polls in Nigeria and other West African Countries. Our services cover both qualitative and quantitative studies. We have experience in carrying out research in several sectors including Media, Automotive, Agriculture, Pharmaceutical, Telecommunication, Health, Education, Financial, FMCG etc. We are also experienced in various types of research approach for data collection such as usage, habit and attitude studies, Monitoring and Evaluation Studies, Monitoring, Evaluation and Learning, Diary Placement, Retail Audit, Customer Satisfaction study, Segmentation studies, Mystery Shopping, Opinion Poll, Desk Research, Sponsorship Tracking, Social research, Participatory Methods (River of Life) amongst others. Our Services also covers Executive functions, translations, data processing, moderation, media functions, direct marketing, GIS mapping, transcription, data migration, data portals.
+                    PSI is a leading research organization in conducting social
+                    research and opinion polls in Nigeria and other West African
+                    Countries. Our services cover both qualitative and
+                    quantitative studies. We have experience in carrying out
+                    research in several sectors including Media, Automotive,
+                    Agriculture, Pharmaceutical, Telecommunication, Health,
+                    Education, Financial, FMCG etc. We are also experienced in
+                    various types of research approach for data collection such
+                    as usage, habit and attitude studies, Monitoring and
+                    Evaluation Studies, Monitoring, Evaluation and Learning,
+                    Diary Placement, Retail Audit, Customer Satisfaction study,
+                    Segmentation studies, Mystery Shopping, Opinion Poll, Desk
+                    Research, Sponsorship Tracking, Social research,
+                    Participatory Methods (River of Life) amongst others. Our
+                    Services also covers Executive functions, translations, data
+                    processing, moderation, media functions, direct marketing,
+                    GIS mapping, transcription, data migration, data portals.
                   </p>
                 </motion.div>
               </div>
@@ -117,12 +157,31 @@ const About = () => {
                     Our Mission
                   </h2>
                   <ul className="list-disc text-lg text-muted-foreground mb-8 leading-relaxed">
-                    <li>To provide accurate and scientifically reliable research services</li>
-                    <li>To give professional advice based on research findings</li>
-                    <li>To make sense out of empirical and statistically gathered information.</li>
-                    <li>To collect quality and reliable information that will assist organizations in decision making process.</li>
-                    <li>To provide information relating to solving any marketing, social and opinion research.</li>
-                    <li>To empower businesses and organizations across Nigeria and West Africa with precise, actionable market intelligence that drives informed decision-making and sustainable growth.</li>
+                    <li>
+                      To provide accurate and scientifically reliable research
+                      services
+                    </li>
+                    <li>
+                      To give professional advice based on research findings
+                    </li>
+                    <li>
+                      To make sense out of empirical and statistically gathered
+                      information.
+                    </li>
+                    <li>
+                      To collect quality and reliable information that will
+                      assist organizations in decision making process.
+                    </li>
+                    <li>
+                      To provide information relating to solving any marketing,
+                      social and opinion research.
+                    </li>
+                    <li>
+                      To empower businesses and organizations across Nigeria and
+                      West Africa with precise, actionable market intelligence
+                      that drives informed decision-making and sustainable
+                      growth.
+                    </li>
                   </ul>
                   <Button variant="outline-primary" size="lg">
                     Our Story <ArrowRight className="ml-2 h-4 w-4" />
@@ -133,8 +192,8 @@ const About = () => {
               <ScrollReveal delay={0.2}>
                 <div className="relative">
                   <div className="absolute inset-0 gradient-primary rounded-2xl transform rotate-3"></div>
-                  <img 
-                    src="/assets/about-team.jpg" 
+                  <img
+                    src={team}
                     alt="PSI research team in Nigeria"
                     className="relative rounded-2xl shadow-strong w-full h-96 object-cover"
                   />
@@ -153,7 +212,8 @@ const About = () => {
                   Our Core Values
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  The principles that guide our work and define our commitment to excellence.
+                  The principles that guide our work and define our commitment
+                  to excellence.
                 </p>
               </div>
             </ScrollReveal>
@@ -164,9 +224,7 @@ const About = () => {
                   <StaggerItem key={value.title}>
                     <Card className="h-full hover-lift">
                       <CardContent className="p-8">
-                        <div className="mb-4">
-                          {value.icon}
-                        </div>
+                        <div className="mb-4">{value.icon}</div>
                         <h3 className="text-xl font-semibold text-foreground mb-4">
                           {value.title}
                         </h3>
@@ -192,7 +250,8 @@ const About = () => {
                     Certifications & Memberships
                   </h2>
                   <p className="text-lg text-muted-foreground">
-                    Our commitment to professional standards and ethical research practices.
+                    Our commitment to professional standards and ethical
+                    research practices.
                   </p>
                 </div>
               </ScrollReveal>
@@ -208,7 +267,9 @@ const About = () => {
                       transition={{ delay: 0.1 * index, duration: 0.5 }}
                     >
                       <CheckCircle className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
-                      <span className="font-medium text-foreground">{cert}</span>
+                      <span className="font-medium text-foreground">
+                        {cert}
+                      </span>
                     </motion.div>
                   ))}
                 </div>
@@ -226,13 +287,18 @@ const About = () => {
                   Ready to Partner with PSI?
                 </h2>
                 <p className="text-xl mb-8 opacity-90">
-                  Let's discuss how our market research expertise can drive your business forward.
+                  Let's discuss how our market research expertise can drive your
+                  business forward.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button variant="glass" size="xl">
                     Request Proposal
                   </Button>
-                  <Button variant="outline" size="xl" className="text-white border-white hover:bg-white hover:text-primary">
+                  <Button
+                    variant="outline"
+                    size="xl"
+                    className="text-white border-white hover:bg-white hover:text-primary"
+                  >
                     Schedule Consultation
                   </Button>
                 </div>
@@ -242,7 +308,7 @@ const About = () => {
         </section>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

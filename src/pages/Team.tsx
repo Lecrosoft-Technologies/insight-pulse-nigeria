@@ -9,11 +9,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import gbengaAdewumi from "@/assets/gbengaAdewumi.jpg";
-import alaba from "@/assets/alaba.jpg";
-import kehinde from "@/assets/kehinde.jpg";
-import leke from "@/assets/leke.jpg";
-import bola from "@/assets/bola.jpg";
+import gbengaAdewumi from "@/assets/adewumi2-cropped.jpg";
+import alaba from "@/assets/alaba-cropped.jpg";
+import kehinde from "@/assets/kenny-croppped.jpg";
+import leke from "@/assets/leke-cropped.jpg";
+import bola from "@/assets/bola-cropped.jpg";
 import {
   Linkedin,
   Mail,
@@ -400,8 +400,10 @@ const Team = () => {
                   <div className="grid lg:grid-cols-3 gap-8">
                     {/* Profile Image & Basic Info */}
                     <div className="space-y-6">
-                      <img className="aspect-[3/4] bg-gradient-primary rounded-xl" src={selectedMember.image} />
-
+                      <img
+                        className="aspect-[3/4] bg-gradient-primary rounded-xl"
+                        src={selectedMember.image}
+                      />
 
                       <div className="space-y-4">
                         <div>
