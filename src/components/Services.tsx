@@ -20,19 +20,19 @@ const Services = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const services = [
     {
+      icon: Users,
+      title: "Social & Opinion Research",
+      description: "National & state-level polls, social attitudes, public opinion measurement.",
+      features: ["Pre & Post Election Survey (Political Polling)", "Public Opinion Poll", "Public Perception Surveys (Social Attitudes)","Monitoring & Evaluation Study (M&E)"],
+      href: "/services/social-research"
+    },
+    {
       icon: BarChart3,
       title: "Consumer Research",
       description: "Comprehensive quantitative and qualitative studies – Brand Penetration & Market Share, Brand Loyalty, Brand Image, Brand Awareness.",
       features: ["Customer Satisfaction Study", "Product Testing", "Brand Perception Study"],
       href: "/services/market-research"
     },
-    {
-      icon: Users,
-      title: "Social & Opinion Research",
-      description: "National & state-level polls, social attitudes, public opinion measurement.",
-      features: ["Pre & Post Election Survey (Political Polling)", "Public Opinion Poll", "Public Perception Surveys (Social Attitudes)","Monitoring & Evaluation Study (M&E)"],
-      href: "/services/social-research"
-    }
   ];
 
   const advantages = [
