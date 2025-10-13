@@ -31,42 +31,42 @@ const ServiceDetail = () => {
       },
       services: [
         {
-          title: "Customer satisfaction surveys",
+          title: "Customer Satisfaction Surveys",
           description: "Assessing the level of satisfaction and loyalty among current customers.",
           deliverables: ["Survey Questionnaire", "Survey distribution plan", "Response data set", "Insights & Key Findings"]
         },
         {
-          title: "Product testing",
+          title: "Product Testing",
           description: "Assessing consumer preferences and perceptions of products, including packaging, pricing, and features to optimize product offerings.",
           deliverables: ["Consumer feedback summary", "Perception analysis", "Preference ranking", "Competitive benchmarking"]
         },
         {
-          title: "Brand perception research",
+          title: "Brand Perception Research",
           description: "Evaluating how consumers view a brand, its attributes, and its positioning in the market.",
           deliverables: ["Consumer perception report", "Brand attribute evaluation", "Market positioning analysis", "Audience segmentation insights"]
         },
         {
-          title: "Market segmentation studies",
+          title: "Market Segmentation Studies",
           description: "Understanding how different consumer groups perceive and use a product or service.",
           deliverables: ["Segmentation framework", "Consumer Profiles/Personas", "Market potential assessment", "Targeting recommendations"]
         },
         {
-          title: "Pricing research",
+          title: "Pricing Research",
           description: "Examining how price affects customer attitudes and behaviors.",
           deliverables: ["Price sensitivity analysis", "Willingness-to-Pay Insights", "Competitive pricing benchmark", "Strategic pricing recommendations"]
         },
         {
-          title: "Product usage studies",
+          title: "Product Usage Studies",
           description: "Tracking how customers use a product, as well as their motivations and preferences.",
           deliverables: ["Usage bnehavior analysis", "Motivation & preference insights", "Pain points & improvement areas", "Actionable recommendations"]
         },
         {
-          title: "Competitor analysis",
+          title: "Competitor Analysis",
           description: "Comparing the usage and attitudes towards competing brands or products.",
           deliverables: ["Competitive landscape overview", "Usage & attitude comparison", "Strengths & weaknesses assessment", "Differentiation strategies"]
         },
         {
-          title: "Purchase behavior research",
+          title: "Purchase Behavior Research",
           description: "Investigating the factors that influence consumers' decision-making process when buying a product or service.",
           deliverables: ["Decision-Making analysis", "Influencing factors assessment", "Barriers to Purchase", "Strategic recommendations"]
         },
@@ -539,7 +539,7 @@ const ServiceDetail = () => {
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16">
-                What We Deliver
+                What We Offer
               </h2>
             </ScrollReveal>
 

@@ -5,14 +5,14 @@ import mapImage from "@/assets/west-africa-map.jpg";
 
 const Coverage = () => {
   const countries = [
-    { name: "Nigeria", status: "HQ", details: "Complete nationwide coverage" },
-    { name: "Ghana", status: "", details: "Urban & rural fieldwork" },
-    { name: "Senegal", status: "", details: "Francophone expertise" },
-    { name: "Liberia", status: "", details: "FMCG & retail focus" },
-    { name: "Cameroon", status: "", details: "Through local network" },
-    { name: "Sierra Leone", status: "", details: "Social research specialty" },
-    { name: "Togo", status: "", details: "Cross-border studies" },
-    { name: "Benin", status: "", details: "Regional insights" }
+    { name: "Nigeria", status: "HQ", details: "" },
+    { name: "Ghana", status: "", details: "" },
+    { name: "Senegal", status: "", details: "" },
+    { name: "Liberia", status: "", details: "" },
+    { name: "Cameroon", status: "", details: "" },
+    { name: "Sierra Leone", status: "", details: "" },
+    { name: "Togo", status: "", details: "" },
+    { name: "Benin", status: "", details: "" }
   ];
 
   const capabilities = [

@@ -13,12 +13,8 @@ import {
 import logo from "@/assets/psi-logo-white.png";
 const Footer = () => {
   const services = [
-    { name: "Market Research", href: "/services/market-research" },
     { name: "Social & Opinion Research", href: "/services/social-research" },
-    { name: "Customer Satisfaction", href: "/services/customer-satisfaction" },
-    { name: "FMCG & Retail Audit", href: "/services/retail-audit" },
-    { name: "Mystery Shopping", href: "/services/mystery-shopping" },
-    { name: "Product Testing & CLT", href: "/services/product-testing" },
+    { name: "Consumer Research", href: "/services/market-research" },
   ];
 
   const sectors = [
@@ -28,14 +24,14 @@ const Footer = () => {
     { name: "Automotive", href: "/sectors/automotive" },
     { name: "Telecoms & IT", href: "/sectors/telecoms" },
     { name: "Agriculture", href: "/sectors/agriculture" },
-    { name: "Media & Education", href: "/sectors/#" }
+    { name: "Media & Education", href: "/sectors/media-education" }
   ];
 
   const company = [
     { name: "About PSI", href: "/about" },
     { name: "Our Team", href: "/about#team" },
-    { name: "Careers", href: "/careers" },
-    { name: "Case Studies", href: "/case-studies" },
+    // { name: "Careers", href: "/careers" },
+    // { name: "Case Studies", href: "/case-studies" },
     { name: "Insights & Blog", href: "/insights" },
     { name: "Contact Us", href: "/contact" },
   ];

@@ -21,8 +21,8 @@ const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const services = [
-    { name: "Market Research", href: "/services/market-research" },
     { name: "Social & Opinion Research", href: "/services/social-research" },
+    { name: "Consumer Research", href: "/services/market-research" },
     // {
     //   name: "Customer Satisfaction & NPS",
     //   href: "/services/customer-satisfaction",
