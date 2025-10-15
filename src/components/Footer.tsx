@@ -18,13 +18,14 @@ const Footer = () => {
   ];
 
   const sectors = [
+    { name: "Political & Conflict Resolution", href: "/sectors/political" },
+    { name: "Media & Education", href: "/sectors/media-education" },
     { name: "FMCG", href: "/sectors/fmcg" },
     { name: "Financial Services", href: "/sectors/financial" },
     { name: "Health & Pharma", href: "/sectors/health" },
     { name: "Automotive", href: "/sectors/automotive" },
     { name: "Telecoms & IT", href: "/sectors/telecoms" },
     { name: "Agriculture", href: "/sectors/agriculture" },
-    { name: "Media & Education", href: "/sectors/media-education" }
   ];
 
   const company = [
