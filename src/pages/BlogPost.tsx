@@ -13,6 +13,11 @@ import { ArrowLeft, Calendar, Clock, User, Share2, BookmarkPlus, ArrowRight } fr
 import consumerBehaviorImage from "@/assets/blog/nigeria-consumer-behavior-trends-2024.jpg"
 import fmcgInsightsImage from "@/assets/blog/west-africa-fmcg-insights-2024.jpg"
 import digitalBankingImage from "@/assets/blog/digital-banking-adoption-nigeria.jpg"
+import questionsAgencyImage from "@/assets/blog/questions-research-agency-nigeria.jpg"
+import youthDemographicsImage from "@/assets/blog/youth-demographics-west-africa.jpg"
+import electionPollingImage from "@/assets/blog/election-polling-methodology-nigeria.jpg"
+import ruralSurveysImage from "@/assets/blog/rural-household-surveys-africa.jpg"
+import focusGroupImage from "@/assets/blog/focus-group-best-practices.jpg"
 
 // This would typically come from your Laravel API
 const mockBlogPosts = {
@@ -120,6 +125,76 @@ const mockBlogPosts = {
     tags: ["Digital Banking", "Nigeria", "Fintech", "Consumer Behavior"],
     metaDescription: "Analysis of digital banking adoption trends in Nigeria, revealing consumer preferences and usage patterns for financial service providers.",
     keywords: "Nigeria digital banking adoption, mobile banking Nigeria, fintech adoption Nigeria"
+  },
+  "questions-research-agency-nigeria": {
+    title: "Top 10 Questions to Ask a Market Research Agency in Nigeria",
+    slug: "questions-research-agency-nigeria",
+    excerpt: "Essential questions to evaluate research agencies and ensure quality insights for your business decisions.",
+    image: questionsAgencyImage,
+    content: `<p>Choosing the right market research agency in Nigeria requires asking the right questions. Here are 10 essential questions to ask before making your decision.</p><h2>1. What is Your Industry Experience?</h2><p>Look for proven track record in your specific sector with relevant case studies and client references.</p><h2>2. What Quality Control Measures Do You Use?</h2><p>Professional agencies have multiple layers: real-time validation, back-checks, GPS verification, and statistical quality checks.</p>`,
+    category: "Research Tips",
+    readTime: "8 min read",
+    publishedDate: "2024-09-15",
+    author: { name: "PSI Research Team", role: "Quality Assurance", avatar: "" },
+    tags: ["Research Tips", "Quality Control"],
+    metaDescription: "Essential questions for selecting a market research agency in Nigeria.",
+    keywords: "market research agency Nigeria, research partner selection"
+  },
+  "youth-demographics-west-africa": {
+    title: "Understanding Youth Demographics in West Africa: A 2024 Analysis",
+    slug: "youth-demographics-west-africa",
+    excerpt: "Deep dive into the growing youth population across Ghana, Nigeria, and Senegal.",
+    image: youthDemographicsImage,
+    content: `<p>West Africa's youth population represents the largest demographic opportunity in global markets today.</p><h2>Youth Population Statistics</h2><p>65% of West Africa's population is under 25, creating unprecedented market opportunities.</p>`,
+    category: "Market Trends",
+    readTime: "7 min read",
+    publishedDate: "2024-09-10",
+    author: { name: "Dr. Amina Kone", role: "Demographic Analyst", avatar: "" },
+    tags: ["Demographics", "Youth Market"],
+    metaDescription: "Analysis of youth demographics across West Africa.",
+    keywords: "West Africa youth demographics, youth market Nigeria Ghana"
+  },
+  "election-polling-methodology-nigeria": {
+    title: "Election Polling Methodology: Best Practices from Nigeria's 2023 Elections",
+    slug: "election-polling-methodology-nigeria",
+    excerpt: "Lessons learned from political polling in Nigeria's recent elections.",
+    image: electionPollingImage,
+    content: `<p>Nigeria's 2023 elections provided valuable insights into effective polling methodologies in complex electoral environments.</p><h2>Key Methodology Improvements</h2><p>Multi-stage stratified sampling with enhanced quality controls delivered accurate predictions within 2.1% margin.</p>`,
+    category: "Opinion Research",
+    readTime: "10 min read",
+    publishedDate: "2024-09-05",
+    author: { name: "Samuel Adebayo", role: "Political Research Lead", avatar: "" },
+    tags: ["Political Research", "Methodology"],
+    metaDescription: "Best practices in election polling from Nigeria's 2023 elections.",
+    keywords: "Nigeria election polling, political research methodology"
+  },
+  "rural-household-surveys-africa": {
+    title: "Rural Household Surveys: Overcoming Challenges in Remote African Communities",
+    slug: "rural-household-surveys-africa",
+    excerpt: "Practical strategies for high-quality household surveys in rural West Africa.",
+    image: ruralSurveysImage,
+    content: `<p>Conducting household surveys in rural West Africa requires specialized approaches and local expertise.</p><h2>Key Challenges and Solutions</h2><p>Access, language diversity, and data quality require tailored methodologies and trained local teams.</p>`,
+    category: "Research Methods",
+    readTime: "9 min read",
+    publishedDate: "2024-08-28",
+    author: { name: "Field Operations Team", role: "Rural Research Specialists", avatar: "" },
+    tags: ["Rural Research", "Methodology"],
+    metaDescription: "Best practices for rural household surveys in West Africa.",
+    keywords: "rural surveys Africa, household research methodology"
+  },
+  "focus-group-best-practices": {
+    title: "Focus Group Best Practices: Conducting Effective Sessions in West Africa",
+    slug: "focus-group-best-practices",
+    excerpt: "Cultural considerations and tips for successful focus groups across West African markets.",
+    image: focusGroupImage,
+    content: `<p>Effective focus groups in West Africa require cultural sensitivity and specialized moderation techniques.</p><h2>Cultural Considerations</h2><p>Understanding local customs, language nuances, and social dynamics is essential for productive discussions.</p>`,
+    category: "Research Methods",
+    readTime: "6 min read",
+    publishedDate: "2024-08-20",
+    author: { name: "Qualitative Research Team", role: "Focus Group Specialists", avatar: "" },
+    tags: ["Focus Groups", "Qualitative Research"],
+    metaDescription: "Best practices for focus group research in West Africa.",
+    keywords: "focus groups West Africa, qualitative research Nigeria"
   }
 }
 
