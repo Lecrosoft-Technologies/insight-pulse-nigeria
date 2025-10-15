@@ -36,8 +36,8 @@ const Political = () => {
     },
     {
       icon: Globe,
-      title: "Policy Impact Assessment",
-      description: "Evaluate public perception and impact of government policies and political initiatives."
+      title: "Conflict Resolution & Peacebuilding Research",
+      description: "Evidence-based research for conflict analysis, peacebuilding programs, and community dialogue facilitation."
     }
   ];
 
@@ -47,7 +47,9 @@ const Political = () => {
     "Party Primaries & Candidate Selection",
     "Referendum & Constitutional Issues",
     "Policy Perception & Government Rating",
-    "Political Communication Testing"
+    "Political Communication Testing",
+    "Conflict Resolution & Peacebuilding",
+    "Community Dialogue & Reconciliation"
   ];
 
   const caseStudies = [
@@ -96,13 +98,13 @@ const Political = () => {
 
       <div className="min-h-screen bg-gradient-subtle">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-hero text-primary-foreground">
+        <section className="py-20 bg-gradient-hero">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6 animate-text-reveal">
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 animate-text-reveal text-white">
                 Political Research & Election Polling
               </h1>
-              <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90">
+              <p className="text-xl lg:text-2xl mb-8 text-white/90">
                 Accurate, independent political research and voter insights across Nigeria and West Africa
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -110,7 +112,7 @@ const Political = () => {
                   Start Your Political Research
                   <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button variant="outline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary">
                   View Polling Methodology
                 </Button>
               </div>
@@ -237,19 +239,19 @@ const Political = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-primary text-primary-foreground">
+        <section className="py-20 bg-gradient-primary">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-white">
               Need Reliable Political Research?
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Partner with Nigeria's trusted political research specialists. Get accurate polling and voter insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" onClick={() => setIsModalOpen(true)}>
                 Request Political Research Proposal
               </Button>
-              <Button variant="outline" size="xl" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary">
                 Schedule Consultation
               </Button>
             </div>

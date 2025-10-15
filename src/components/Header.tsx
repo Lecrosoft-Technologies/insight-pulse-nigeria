@@ -40,6 +40,7 @@ const Header = () => {
     { name: "Telecoms & IT", href: "/sectors/telecoms" },
     { name: "Agriculture", href: "/sectors/agriculture" },
     { name: "Media & Education", href: "/sectors/media-education" },
+    { name: "Political & Conflict Resolution", href: "/sectors/political" },
   ];
 
   const methods = [

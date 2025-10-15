@@ -73,38 +73,62 @@ const Coverage = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent"></div>
               
-              {/* Map Pins for all countries */}
+              {/* Map Pins for all countries with labels */}
               {/* Nigeria - HQ */}
-              <div className="absolute top-[45%] left-[58%] transform -translate-x-1/2 -translate-y-1/2">
+              <div className="absolute top-[45%] left-[58%] transform -translate-x-1/2 -translate-y-1/2 group">
                 <div className="w-4 h-4 bg-accent rounded-full animate-pin-drop shadow-glow"></div>
+                <div className="absolute top-6 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-2 py-1 rounded text-xs font-medium whitespace-nowrap shadow-soft">
+                  Nigeria
+                </div>
               </div>
               {/* Ghana */}
-              <div className="absolute top-[48%] left-[45%] transform -translate-x-1/2 -translate-y-1/2">
+              <div className="absolute top-[48%] left-[45%] transform -translate-x-1/2 -translate-y-1/2 group">
                 <div className="w-3 h-3 bg-primary rounded-full animate-pin-drop shadow-soft" style={{animationDelay: '0.1s'}}></div>
+                <div className="absolute top-5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium whitespace-nowrap shadow-soft">
+                  Ghana
+                </div>
               </div>
               {/* Senegal */}
-              <div className="absolute top-[35%] left-[25%] transform -translate-x-1/2 -translate-y-1/2">
+              <div className="absolute top-[35%] left-[25%] transform -translate-x-1/2 -translate-y-1/2 group">
                 <div className="w-3 h-3 bg-primary rounded-full animate-pin-drop shadow-soft" style={{animationDelay: '0.2s'}}></div>
+                <div className="absolute top-5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium whitespace-nowrap shadow-soft">
+                  Senegal
+                </div>
               </div>
               {/* Liberia */}
-              <div className="absolute top-[55%] left-[38%] transform -translate-x-1/2 -translate-y-1/2">
+              <div className="absolute top-[55%] left-[38%] transform -translate-x-1/2 -translate-y-1/2 group">
                 <div className="w-3 h-3 bg-primary rounded-full animate-pin-drop shadow-soft" style={{animationDelay: '0.3s'}}></div>
+                <div className="absolute top-5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium whitespace-nowrap shadow-soft">
+                  Liberia
+                </div>
               </div>
               {/* Cameroon */}
-              <div className="absolute top-[50%] left-[70%] transform -translate-x-1/2 -translate-y-1/2">
+              <div className="absolute top-[50%] left-[70%] transform -translate-x-1/2 -translate-y-1/2 group">
                 <div className="w-3 h-3 bg-primary rounded-full animate-pin-drop shadow-soft" style={{animationDelay: '0.4s'}}></div>
+                <div className="absolute top-5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium whitespace-nowrap shadow-soft">
+                  Cameroon
+                </div>
               </div>
               {/* Sierra Leone */}
-              <div className="absolute top-[52%] left-[35%] transform -translate-x-1/2 -translate-y-1/2">
+              <div className="absolute top-[52%] left-[35%] transform -translate-x-1/2 -translate-y-1/2 group">
                 <div className="w-3 h-3 bg-primary rounded-full animate-pin-drop shadow-soft" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute top-5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium whitespace-nowrap shadow-soft">
+                  Sierra Leone
+                </div>
               </div>
               {/* Togo */}
-              <div className="absolute top-[50%] left-[48%] transform -translate-x-1/2 -translate-y-1/2">
+              <div className="absolute top-[50%] left-[48%] transform -translate-x-1/2 -translate-y-1/2 group">
                 <div className="w-3 h-3 bg-primary rounded-full animate-pin-drop shadow-soft" style={{animationDelay: '0.6s'}}></div>
+                <div className="absolute top-5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium whitespace-nowrap shadow-soft">
+                  Togo
+                </div>
               </div>
               {/* Benin */}
-              <div className="absolute top-[48%] left-[52%] transform -translate-x-1/2 -translate-y-1/2">
+              <div className="absolute top-[48%] left-[52%] transform -translate-x-1/2 -translate-y-1/2 group">
                 <div className="w-3 h-3 bg-primary rounded-full animate-pin-drop shadow-soft" style={{animationDelay: '0.7s'}}></div>
+                <div className="absolute top-5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-medium whitespace-nowrap shadow-soft">
+                  Benin
+                </div>
               </div>
             </div>
 
