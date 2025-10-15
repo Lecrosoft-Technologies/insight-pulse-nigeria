@@ -28,6 +28,7 @@ import Automotive from "./pages/sectors/Automotive";
 import Telecoms from "./pages/sectors/Telecoms";
 import Agriculture from "./pages/sectors/Agriculture";
 import MediaEducation from "./pages/sectors/MediaEducation";
+import Political from "./pages/sectors/Political";
 // Method Pages
 import HouseholdSurveys from "./pages/methods/HouseholdSurveys";
 import FocusGroups from "./pages/methods/FocusGroups";
@@ -81,6 +82,7 @@ const App = () => (
                 <Route path="/sectors/telecoms" element={<Telecoms />} />
                 <Route path="/sectors/agriculture" element={<Agriculture />} />
                 <Route path="/sectors/media-education" element={<MediaEducation />} />
+                <Route path="/sectors/political" element={<Political />} />
                 
                 {/* Method Pages */}
                 <Route path="/methods/household-surveys" element={<HouseholdSurveys />} />
