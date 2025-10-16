@@ -98,13 +98,13 @@ const Immersion = () => {
 
       <div className="min-h-screen bg-gradient-subtle">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-hero text-primary-foreground">
+        <section className="py-20 bg-gradient-hero text-foreground">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 animate-text-reveal">
                 Immersion Research
               </h1>
-              <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90">
+              <p className="text-xl lg:text-2xl mb-8 text-muted-foreground leading-relaxed">
                 Experience your consumers' world first-hand through deep experiential immersion
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -248,12 +248,12 @@ const Immersion = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-primary text-primary-foreground">
+        <section className="py-20 bg-gradient-primary text-foreground">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Ready to Transform Your Understanding?
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Experience the power of immersion research for breakthrough consumer insights
             </p>
             <Button variant="hero" size="xl" onClick={() => setIsModalOpen(true)}>

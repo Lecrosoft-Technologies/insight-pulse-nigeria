@@ -17,8 +17,11 @@ import {
   ArrowRight,
 } from "lucide-react";
 import team from "@/assets/psi-team.png";
+import RequestProposalModal from "@/components/RequestProposalModal";
+import { useState } from "react";
 
 const About = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const stats = [
     { number: "15+", label: "Years Experience" },
     { number: "500+", label: "Projects Completed" },
@@ -68,7 +71,10 @@ const About = () => {
         keywords="about PSI, market research Nigeria history, research agency Nigeria, West Africa research company, Nigerian research experts"
         canonicalUrl="/about"
       />
-
+      <RequestProposalModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
       <div className="min-h-screen bg-gradient-subtle">
         {/* Hero Section */}
         <section className="py-20 lg:py-32">
@@ -291,13 +297,17 @@ const About = () => {
                   business forward.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="glass" size="xl">
+                  <Button
+                    variant="glass"
+                    size="xl"
+                    onClick={() => setIsModalOpen(true)}
+                  >
                     Request Proposal
                   </Button>
                   <Button
                     variant="outline"
                     size="xl"
-                    className="text-white border-white hover:bg-white hover:text-primary"
+                    className="text-foreground border-white hover:bg-white hover:text-primary"
                   >
                     Schedule Consultation
                   </Button>

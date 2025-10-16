@@ -1,77 +1,121 @@
 import SEOHead from "@/components/SEOHead";
-import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollEffects";
+import {
+  ScrollReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ScrollEffects";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Building, Star, Users, TrendingUp, Globe, ArrowRight } from "lucide-react";
+import {
+  Building,
+  Star,
+  Users,
+  TrendingUp,
+  Globe,
+  ArrowRight,
+} from "lucide-react";
+import RequestProposalModal from "@/components/RequestProposalModal";
+import { useState } from "react";
 
 const Clients = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const featuredClients = [
     {
       name: "MTN Nigeria",
       logo: "🟡",
       sector: "Telecommunications",
       projects: "25+ projects",
-      description: "Consumer satisfaction surveys, brand tracking, and market penetration studies across Nigeria.",
-      testimonial: "PSI's insights have been instrumental in our customer retention strategies.",
-      services: ["Brand Tracking", "Customer Satisfaction", "Market Penetration"]
+      description:
+        "Consumer satisfaction surveys, brand tracking, and market penetration studies across Nigeria.",
+      testimonial:
+        "PSI's insights have been instrumental in our customer retention strategies.",
+      services: [
+        "Brand Tracking",
+        "Customer Satisfaction",
+        "Market Penetration",
+      ],
     },
     {
       name: "Dangote Group",
       logo: "🟢",
       sector: "FMCG & Manufacturing",
       projects: "30+ projects",
-      description: "Market research for cement, sugar, and consumer goods across West Africa.",
-      testimonial: "Reliable data and actionable insights that drive our expansion decisions.",
-      services: ["Market Analysis", "Consumer Behavior", "Distribution Studies"]
+      description:
+        "Market research for cement, sugar, and consumer goods across West Africa.",
+      testimonial:
+        "Reliable data and actionable insights that drive our expansion decisions.",
+      services: [
+        "Market Analysis",
+        "Consumer Behavior",
+        "Distribution Studies",
+      ],
     },
     {
       name: "First Bank Nigeria",
       logo: "🔵",
       sector: "Financial Services",
       projects: "20+ projects",
-      description: "Customer experience studies, digital banking research, and SME market analysis.",
-      testimonial: "PSI helps us understand our customers better than any other research partner.",
-      services: ["Customer Experience", "Digital Banking", "SME Research"]
+      description:
+        "Customer experience studies, digital banking research, and SME market analysis.",
+      testimonial:
+        "PSI helps us understand our customers better than any other research partner.",
+      services: ["Customer Experience", "Digital Banking", "SME Research"],
     },
     {
       name: "Unilever Nigeria",
       logo: "🔸",
       sector: "FMCG",
       projects: "35+ projects",
-      description: "Product testing, brand positioning, and consumer insights for personal care and home care brands.",
-      testimonial: "Their deep local knowledge combined with international standards is unmatched.",
-      services: ["Product Testing", "Brand Positioning", "Consumer Insights"]
+      description:
+        "Product testing, brand positioning, and consumer insights for personal care and home care brands.",
+      testimonial:
+        "Their deep local knowledge combined with international standards is unmatched.",
+      services: ["Product Testing", "Brand Positioning", "Consumer Insights"],
     },
     {
       name: "Nigerian Breweries",
       logo: "🟤",
       sector: "Beverages",
       projects: "18+ projects",
-      description: "Market share analysis, advertising effectiveness, and consumer preference studies.",
-      testimonial: "PSI's research has guided our most successful product launches.",
-      services: ["Market Share", "Advertising Research", "Consumer Preferences"]
+      description:
+        "Market share analysis, advertising effectiveness, and consumer preference studies.",
+      testimonial:
+        "PSI's research has guided our most successful product launches.",
+      services: [
+        "Market Share",
+        "Advertising Research",
+        "Consumer Preferences",
+      ],
     },
     {
       name: "Access Bank",
       logo: "🟠",
       sector: "Banking",
       projects: "15+ projects",
-      description: "Digital transformation research, customer journey mapping, and financial inclusion studies.",
-      testimonial: "Their insights shaped our digital banking strategy across West Africa.",
-      services: ["Digital Banking", "Customer Journey", "Financial Inclusion"]
-    }
+      description:
+        "Digital transformation research, customer journey mapping, and financial inclusion studies.",
+      testimonial:
+        "Their insights shaped our digital banking strategy across West Africa.",
+      services: ["Digital Banking", "Customer Journey", "Financial Inclusion"],
+    },
   ];
 
   const otherClients = [
     { name: "British Council", sector: "Public" },
     { name: "Cleen Foundation", sector: "Civil Society" },
     { name: "Clinton Health Access Initiative", sector: "Health" },
-    { name: "United Nation Office of Drug Control (UNODC)", sector: "Drug Control" },
+    {
+      name: "United Nation Office of Drug Control (UNODC)",
+      sector: "Drug Control",
+    },
     { name: "Mo Ibraheem Foundation", sector: "Civil Society" },
     { name: "World Education Services (WES)", sector: "Education" },
-    { name: "Tetra Tech Development Limited", sector: "International Development" },
+    {
+      name: "Tetra Tech Development Limited",
+      sector: "International Development",
+    },
     { name: "Mac Arthur Foundation", sector: "Human Rights" },
     { name: "World Bank", sector: "Financial" },
     { name: "Michigan State University", sector: "Education" },
@@ -81,26 +125,47 @@ const Clients = () => {
     { name: "Centre for Democratic Development", sector: "Human Rights" },
     { name: "US Department of State", sector: "Foreign Policy" },
     { name: "ORB International", sector: "Public Opinion Polling" },
-    { name: "International Food Policy Research Institute (IFPRI)", sector: "Food Policy" },
-    { name: "International Foundation for Electoral Systems (IFES)", sector: "Civic Education" },
+    {
+      name: "International Food Policy Research Institute (IFPRI)",
+      sector: "Food Policy",
+    },
+    {
+      name: "International Foundation for Electoral Systems (IFES)",
+      sector: "Civic Education",
+    },
     { name: "Uppsalla University", sector: "Education" },
     { name: "University of Michigan", sector: "Education" },
     { name: "Afrobarometer Network", sector: "Public Opinion Research" },
-    { name: "Nigeria Governor’s Forum (NGF)", sector: "Intergovernmental Relations" },
+    {
+      name: "Nigeria Governor’s Forum (NGF)",
+      sector: "Intergovernmental Relations",
+    },
     { name: "Society for Family Health", sector: "Health" },
-    { name: "Princeton Survey Research Associates Int’l", sector: "Public Opinion" },
+    {
+      name: "Princeton Survey Research Associates Int’l",
+      sector: "Public Opinion",
+    },
     { name: "Alliance For Credible Election", sector: "Civil Society" },
     { name: "NB & Heineken International", sector: "FMCG" },
     { name: "Nigerian Breweries", sector: "FMCG" },
     { name: "Haystack International", sector: "Consumer Insights" },
     { name: "Research Triangle International (RTI)", sector: "Scientific" },
-    { name: "International Fertilizer Development Centre (IFDC)", sector: "Agricultural" },
-    { name: "International Food Policy Research Institute (IFPRI)", sector: "Agricultural" },
-    { name: "International Institute for Tropical Agriculture (IITA)", sector: "Agricultural" },
+    {
+      name: "International Fertilizer Development Centre (IFDC)",
+      sector: "Agricultural",
+    },
+    {
+      name: "International Food Policy Research Institute (IFPRI)",
+      sector: "Agricultural",
+    },
+    {
+      name: "International Institute for Tropical Agriculture (IITA)",
+      sector: "Agricultural",
+    },
     { name: "Coca Cola International", sector: "FMCG" },
     { name: "National Food Reserve Agency (NFRA)", sector: "Agricultural" },
     { name: "Flamingo Research International UK", sector: "Market Research" },
-    { name: "Sonder Collective", sector: "Health" }
+    { name: "Sonder Collective", sector: "Health" },
   ];
 
   const sectors = [
@@ -109,18 +174,21 @@ const Clients = () => {
     { name: "FMCG & Consumer Goods", count: 15, icon: Star },
     { name: "Oil & Gas", count: 6, icon: TrendingUp },
     { name: "Food & Beverages", count: 10, icon: Users },
-    { name: "Technology & Fintech", count: 7, icon: TrendingUp }
+    { name: "Technology & Fintech", count: 7, icon: TrendingUp },
   ];
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Our Clients — Trusted by Nigeria's Leading Brands | PSI Market Research"
         description="See why MTN, Dangote, First Bank, Unilever and 500+ companies trust PSI for market research insights across Nigeria and West Africa. Client testimonials and case studies."
         keywords="PSI clients, MTN Nigeria research, Dangote market research, First Bank insights, Unilever Nigeria, Nigerian companies research partner, client testimonials"
         canonicalUrl="/clients"
       />
-
+      <RequestProposalModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
       <div className="min-h-screen bg-gradient-subtle">
         {/* Hero Section */}
         <section className="py-20 lg:py-32">
@@ -132,7 +200,10 @@ const Clients = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8 }}
                 >
-                  <Badge variant="outline" className="mb-4 text-primary border-primary">
+                  <Badge
+                    variant="outline"
+                    className="mb-4 text-primary border-primary"
+                  >
                     Our Clients
                   </Badge>
                   <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
@@ -141,8 +212,9 @@ const Clients = () => {
                     Leading Brands
                   </h1>
                   <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                    From Fortune 500 companies to innovative startups, we've helped over 500 organizations 
-                    make smarter decisions with reliable market insights.
+                    From Fortune 500 companies to innovative startups, we've
+                    helped over 500 organizations make smarter decisions with
+                    reliable market insights.
                   </p>
                 </motion.div>
               </div>
@@ -152,20 +224,36 @@ const Clients = () => {
             <ScrollReveal delay={0.2}>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
                 <motion.div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">500+</div>
-                  <div className="text-muted-foreground font-medium">Clients Served</div>
+                  <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
+                    500+
+                  </div>
+                  <div className="text-muted-foreground font-medium">
+                    Clients Served
+                  </div>
                 </motion.div>
                 <motion.div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-bold text-accent mb-2">15</div>
-                  <div className="text-muted-foreground font-medium">Countries</div>
+                  <div className="text-4xl lg:text-5xl font-bold text-accent mb-2">
+                    15
+                  </div>
+                  <div className="text-muted-foreground font-medium">
+                    Countries
+                  </div>
                 </motion.div>
                 <motion.div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">95%</div>
-                  <div className="text-muted-foreground font-medium">Client Retention</div>
+                  <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
+                    95%
+                  </div>
+                  <div className="text-muted-foreground font-medium">
+                    Client Retention
+                  </div>
                 </motion.div>
                 <motion.div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-bold text-accent mb-2">1000+</div>
-                  <div className="text-muted-foreground font-medium">Projects Delivered</div>
+                  <div className="text-4xl lg:text-5xl font-bold text-accent mb-2">
+                    1000+
+                  </div>
+                  <div className="text-muted-foreground font-medium">
+                    Projects Delivered
+                  </div>
                 </motion.div>
               </div>
             </ScrollReveal>
@@ -173,7 +261,7 @@ const Clients = () => {
         </section>
 
         {/* Featured Clients */}
-        <section className="py-20 bg-background">
+        {/* <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="text-center mb-16">
@@ -231,14 +319,16 @@ const Clients = () => {
               </div>
             </StaggerContainer>
           </div>
-        </section>
+        </section> */}
 
         {/* Industry Breakdown */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl lg:text-4xl font-bold mb-6">Industries We Serve</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+                  Industries We Serve
+                </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                   Our expertise spans across Nigeria's key economic sectors.
                 </p>
@@ -269,9 +359,12 @@ const Clients = () => {
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl lg:text-4xl font-bold mb-6">All Our Valued Clients</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+                  All Our Valued Clients
+                </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  A comprehensive list of organizations that trust PSI for their market research needs.
+                  A comprehensive list of organizations that trust PSI for their
+                  market research needs.
                 </p>
               </div>
             </ScrollReveal>
@@ -287,8 +380,12 @@ const Clients = () => {
                     transition={{ delay: index * 0.02, duration: 0.5 }}
                   >
                     <div>
-                      <h4 className="font-medium text-foreground text-sm">{client.name}</h4>
-                      <p className="text-xs text-muted-foreground">{client.sector}</p>
+                      <h4 className="font-medium text-foreground text-sm">
+                        {client.name}
+                      </h4>
+                      <p className="text-xs text-muted-foreground">
+                        {client.sector}
+                      </p>
                     </div>
                   </motion.div>
                 ))}
@@ -306,15 +403,20 @@ const Clients = () => {
                   Ready to Join Our Success Stories?
                 </h2>
                 <p className="text-xl mb-8 opacity-90">
-                  Let's discuss how PSI can help your organization gain competitive advantage through market insights.
+                  Let's discuss how PSI can help your organization gain
+                  competitive advantage through market insights.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="glass" size="xl">
+                  <Button
+                    variant="glass"
+                    size="xl"
+                    onClick={() => setIsModalOpen(true)}
+                  >
                     Start Your Project
                   </Button>
-                  <Button variant="outline" size="xl" className="text-white border-white hover:bg-white hover:text-primary">
+                  {/* <Button variant="outline" size="xl" className="text-white border-white hover:bg-white hover:text-primary">
                     Download Client Success Stories
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </ScrollReveal>

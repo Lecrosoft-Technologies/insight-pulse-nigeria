@@ -1,124 +1,246 @@
-import { useParams, Link, Navigate } from "react-router-dom"
-import SEOHead from "@/components/SEOHead"
-import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollEffects"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { ArrowRight, Clock, Users, BarChart3, CheckCircle, Download, Phone } from "lucide-react"
-import { useState } from "react"
-import RequestProposalModal from "@/components/RequestProposalModal"
+import { useParams, Link, Navigate } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
+import {
+  ScrollReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ScrollEffects";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+  ArrowRight,
+  Clock,
+  Users,
+  BarChart3,
+  CheckCircle,
+  Download,
+  Phone,
+} from "lucide-react";
+import { useState } from "react";
+import RequestProposalModal from "@/components/RequestProposalModal";
+import catiBrochure from "@/assets/brochures/psi-cati-brochure.pdf";
 
 const ServiceDetail = () => {
-  const { serviceSlug } = useParams()
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const { serviceSlug } = useParams();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const services = {
     "market-research": {
       title: "Consumer Research Services in Nigeria & West Africa",
-      description: "Comprehensive quantitative and qualitative studies to understand your market, customers, and opportunities across Nigeria and West Africa",
-      keywords: "Nigeria market research, West Africa consumer insights, quantitative surveys Nigeria, qualitative research Nigeria, market analysis West Africa",
+      description:
+        "Comprehensive quantitative and qualitative studies to understand your market, customers, and opportunities across Nigeria and West Africa",
+      keywords:
+        "Nigeria market research, West Africa consumer insights, quantitative surveys Nigeria, qualitative research Nigeria, market analysis West Africa",
       hero: {
         subtitle: "Quantitative & Qualitative Studies",
-        description: "Deep market insights through rigorous research methodologies, from consumer behavior to competitive analysis across Nigeria and West Africa.",
-        features: ["CAPI/CATI/CAWI Surveys", "Focus Groups & IDIs", "U&A Studies", "Brand Tracking", "Segmentation Research"]
+        description:
+          "Deep market insights through rigorous research methodologies, from consumer behavior to competitive analysis across Nigeria and West Africa.",
+        features: [
+          "CAPI/CATI/CAWI Surveys",
+          "Focus Groups & IDIs",
+          "U&A Studies",
+          "Brand Tracking",
+          "Segmentation Research",
+        ],
       },
       overview: {
-        description: "Our consumer research services provide the actionable insights you need to make informed business decisions. We combine international best practices with deep local knowledge to deliver research that truly understands your market.",
+        description:
+          "Our consumer research services provide the actionable insights you need to make informed business decisions. We combine international best practices with deep local knowledge to deliver research that truly understands your market.",
         timeline: "2-8 weeks",
         sampleSize: "100-3,000+ respondents",
-        methodology: "Mixed methods approach"
+        methodology: "Mixed methods approach",
       },
       services: [
         {
           title: "Customer Satisfaction Surveys",
-          description: "Assessing the level of satisfaction and loyalty among current customers.",
-          deliverables: ["Survey Questionnaire", "Survey distribution plan", "Response data set", "Insights & Key Findings"]
+          description:
+            "Assessing the level of satisfaction and loyalty among current customers.",
+          deliverables: [
+            "Survey Questionnaire",
+            "Survey distribution plan",
+            "Response data set",
+            "Insights & Key Findings",
+          ],
         },
         {
           title: "Product Testing",
-          description: "Assessing consumer preferences and perceptions of products, including packaging, pricing, and features to optimize product offerings.",
-          deliverables: ["Consumer feedback summary", "Perception analysis", "Preference ranking", "Competitive benchmarking"]
+          description:
+            "Assessing consumer preferences and perceptions of products, including packaging, pricing, and features to optimize product offerings.",
+          deliverables: [
+            "Consumer feedback summary",
+            "Perception analysis",
+            "Preference ranking",
+            "Competitive benchmarking",
+          ],
         },
         {
           title: "Brand Perception Research",
-          description: "Evaluating how consumers view a brand, its attributes, and its positioning in the market.",
-          deliverables: ["Consumer perception report", "Brand attribute evaluation", "Market positioning analysis", "Audience segmentation insights"]
+          description:
+            "Evaluating how consumers view a brand, its attributes, and its positioning in the market.",
+          deliverables: [
+            "Consumer perception report",
+            "Brand attribute evaluation",
+            "Market positioning analysis",
+            "Audience segmentation insights",
+          ],
         },
         {
           title: "Market Segmentation Studies",
-          description: "Understanding how different consumer groups perceive and use a product or service.",
-          deliverables: ["Segmentation framework", "Consumer Profiles/Personas", "Market potential assessment", "Targeting recommendations"]
+          description:
+            "Understanding how different consumer groups perceive and use a product or service.",
+          deliverables: [
+            "Segmentation framework",
+            "Consumer Profiles/Personas",
+            "Market potential assessment",
+            "Targeting recommendations",
+          ],
         },
         {
           title: "Pricing Research",
-          description: "Examining how price affects customer attitudes and behaviors.",
-          deliverables: ["Price sensitivity analysis", "Willingness-to-Pay Insights", "Competitive pricing benchmark", "Strategic pricing recommendations"]
+          description:
+            "Examining how price affects customer attitudes and behaviors.",
+          deliverables: [
+            "Price sensitivity analysis",
+            "Willingness-to-Pay Insights",
+            "Competitive pricing benchmark",
+            "Strategic pricing recommendations",
+          ],
         },
         {
           title: "Product Usage Studies",
-          description: "Tracking how customers use a product, as well as their motivations and preferences.",
-          deliverables: ["Usage bnehavior analysis", "Motivation & preference insights", "Pain points & improvement areas", "Actionable recommendations"]
+          description:
+            "Tracking how customers use a product, as well as their motivations and preferences.",
+          deliverables: [
+            "Usage bnehavior analysis",
+            "Motivation & preference insights",
+            "Pain points & improvement areas",
+            "Actionable recommendations",
+          ],
         },
         {
           title: "Competitor Analysis",
-          description: "Comparing the usage and attitudes towards competing brands or products.",
-          deliverables: ["Competitive landscape overview", "Usage & attitude comparison", "Strengths & weaknesses assessment", "Differentiation strategies"]
+          description:
+            "Comparing the usage and attitudes towards competing brands or products.",
+          deliverables: [
+            "Competitive landscape overview",
+            "Usage & attitude comparison",
+            "Strengths & weaknesses assessment",
+            "Differentiation strategies",
+          ],
         },
         {
           title: "Purchase Behavior Research",
-          description: "Investigating the factors that influence consumers' decision-making process when buying a product or service.",
-          deliverables: ["Decision-Making analysis", "Influencing factors assessment", "Barriers to Purchase", "Strategic recommendations"]
+          description:
+            "Investigating the factors that influence consumers' decision-making process when buying a product or service.",
+          deliverables: [
+            "Decision-Making analysis",
+            "Influencing factors assessment",
+            "Barriers to Purchase",
+            "Strategic recommendations",
+          ],
         },
         {
           title: "Mystery Shopping",
-          description: "Service quality audits, compliance checks, customer experience evaluation.",
-          deliverables: ["Service quality assessment", "Compliance report", "Customer experience insights", "Actionable recommendations"]
+          description:
+            "Service quality audits, compliance checks, customer experience evaluation.",
+          deliverables: [
+            "Service quality assessment",
+            "Compliance report",
+            "Customer experience insights",
+            "Actionable recommendations",
+          ],
         },
         {
           title: "FMCG & Retail Audit",
-          description: "Track availability, share, pricing, and shelf dynamics nationwide.",
-          deliverables: ["Product availability report", "Pricing & share analysis", "Shelf dynamics assessment", "Strategic recommendations"]
-        }
+          description:
+            "Track availability, share, pricing, and shelf dynamics nationwide.",
+          deliverables: [
+            "Product availability report",
+            "Pricing & share analysis",
+            "Shelf dynamics assessment",
+            "Strategic recommendations",
+          ],
+        },
       ],
       process: [
-        { step: "Research Design", description: "Methodology selection and questionnaire development" },
-        { step: "Sampling", description: "Representative sample selection across target markets" },
-        { step: "Data Collection", description: "CAPI/CATI/CAWI execution with quality controls" },
-        { step: "Analysis", description: "Statistical analysis and insight generation" },
-        { step: "Reporting", description: "Actionable insights with strategic recommendations" },
-        { step: "Delivery of reports", description: "Supplying clear, evidence-based reports with key insights and recommendations for decision-making." }
+        {
+          step: "Research Design",
+          description: "Methodology selection and questionnaire development",
+        },
+        {
+          step: "Sampling",
+          description: "Representative sample selection across target markets",
+        },
+        {
+          step: "Data Collection",
+          description: "CAPI/CATI/CAWI execution with quality controls",
+        },
+        {
+          step: "Analysis",
+          description: "Statistical analysis and insight generation",
+        },
+        {
+          step: "Reporting",
+          description: "Actionable insights with strategic recommendations",
+        },
+        {
+          step: "Delivery of reports",
+          description:
+            "Supplying clear, evidence-based reports with key insights and recommendations for decision-making.",
+        },
       ],
       faqs: [
         {
-          question: "What's the typical timeline for a market research study in Nigeria?",
-          answer: "Most studies take 2-8 weeks depending on sample size, methodology, and geographic coverage. We provide detailed timelines during the proposal stage."
+          question:
+            "What's the typical timeline for a market research study in Nigeria?",
+          answer:
+            "Most studies take 2-8 weeks depending on sample size, methodology, and geographic coverage. We provide detailed timelines during the proposal stage.",
         },
         {
           question: "Do you cover rural areas in Nigeria?",
-          answer: "Yes, we have extensive rural coverage across all 36 states in Nigeria, with trained field teams and quality assurance protocols."
+          answer:
+            "Yes, we have extensive rural coverage across all 36 states in Nigeria, with trained field teams and quality assurance protocols.",
         },
         {
           question: "Can you conduct multi-country studies across West Africa?",
-          answer: "Absolutely. We coordinate multi-country studies across West Africa through our regional network of partners and field teams."
+          answer:
+            "Absolutely. We coordinate multi-country studies across West Africa through our regional network of partners and field teams.",
         },
         {
           question: "What quality controls do you have in place?",
-          answer: "We employ multiple quality control measures including GPS tracking, audio recording (with consent), back-checks, and statistical validation of all data."
-        }
-      ]
+          answer:
+            "We employ multiple quality control measures including GPS tracking, audio recording (with consent), back-checks, and statistical validation of all data.",
+        },
+      ],
     },
     "social-research": {
       title: "Social & Opinion Research in Nigeria & West Africa",
-      description: "Accurate political polling, social attitudes research, and public opinion measurement across Nigeria and West Africa with representative sampling",
-      keywords: "Nigeria opinion polls, political polling Nigeria, social research West Africa, public opinion Nigeria, election polling Nigeria",
+      description:
+        "Accurate political polling, social attitudes research, and public opinion measurement across Nigeria and West Africa with representative sampling",
+      keywords:
+        "Nigeria opinion polls, political polling Nigeria, social research West Africa, public opinion Nigeria, election polling Nigeria",
       hero: {
         subtitle: "Political Polling & Social Attitudes",
-        description: "Accurate measurement of public opinion, political preferences, and social attitudes through representative sampling and rigorous methodology.",
-        features: ["Political Polling", "Social Attitude Studies", "Public Opinion Research", "Exit Polls", "Referendum Research"]
+        description:
+          "Accurate measurement of public opinion, political preferences, and social attitudes through representative sampling and rigorous methodology.",
+        features: [
+          "Political Polling",
+          "Social Attitude Studies",
+          "Public Opinion Research",
+          "Exit Polls",
+          "Referendum Research",
+        ],
       },
       overview: {
-        description: "Our social and opinion research provides accurate insights into public sentiment, political preferences, and social attitudes. We use scientifically rigorous sampling methods to ensure representative results.",
+        description:
+          "Our social and opinion research provides accurate insights into public sentiment, political preferences, and social attitudes. We use scientifically rigorous sampling methods to ensure representative results.",
         timeline: "1-6 weeks",
         sampleSize: "100-3,000+ respondents",
         // methodology: "Probability sampling"
@@ -126,56 +248,110 @@ const ServiceDetail = () => {
       services: [
         {
           title: "Pre & Post Election Survey (Political Polling)",
-          description: "Pre-election polls, candidate approval ratings, and political preference tracking",
-          deliverables: ["Voting intention analysis", "Candidate performance metrics", "Issue importance ranking", "Demographic breakdowns"]
+          description:
+            "Pre-election polls, candidate approval ratings, and political preference tracking",
+          deliverables: [
+            "Voting intention analysis",
+            "Candidate performance metrics",
+            "Issue importance ranking",
+            "Demographic breakdowns",
+          ],
         },
         {
           title: "Public Perception Surveys (Social Attitudes)",
-          description: "Public opinion on social issues, policy preferences, and cultural trends",
-          deliverables: ["Attitude measurement", "Social trend analysis", "Policy support assessment", "Cultural insight reports"]
+          description:
+            "Public opinion on social issues, policy preferences, and cultural trends",
+          deliverables: [
+            "Attitude measurement",
+            "Social trend analysis",
+            "Policy support assessment",
+            "Cultural insight reports",
+          ],
         },
         {
           title: "Public Opinion Poll",
-          description: "Measuring public attitudes, opinions, and sentiment on social, political, or market issues.",
-          deliverables: ["Opinion trend analysis", "Sentiment tracking", "Issue perception studies", "Public mood assessment"]
+          description:
+            "Measuring public attitudes, opinions, and sentiment on social, political, or market issues.",
+          deliverables: [
+            "Opinion trend analysis",
+            "Sentiment tracking",
+            "Issue perception studies",
+            "Public mood assessment",
+          ],
         },
         {
           title: "Monitoring & Evaluation Study (M&E)",
-          description: "Assessing the performance, outcomes, and impact of programs or initiatives against defined objectives.",
-          deliverables: ["Performance tracking report", "Outcome & impact assessment", "Gap & challenge analysis", "Strategic recommendations"]
+          description:
+            "Assessing the performance, outcomes, and impact of programs or initiatives against defined objectives.",
+          deliverables: [
+            "Performance tracking report",
+            "Outcome & impact assessment",
+            "Gap & challenge analysis",
+            "Strategic recommendations",
+          ],
         },
         {
           title: "Monitoring, Evaluation & Learning Study (MERL)",
-          description: "Measuring program performance and outcomes while capturing lessons learned to inform continuous improvement and decision-making.",
-          deliverables: ["Performance & outcome report", "Learning insights", "Evaluation Report", "Actionable recommendations"]
-        }
+          description:
+            "Measuring program performance and outcomes while capturing lessons learned to inform continuous improvement and decision-making.",
+          deliverables: [
+            "Performance & outcome report",
+            "Learning insights",
+            "Evaluation Report",
+            "Actionable recommendations",
+          ],
+        },
       ],
       process: [
-        { step: "Sample Design", description: "Probability-based sampling across demographics and geography" },
-        { step: "Questionnaire", description: "Unbiased question development and pre-testing" },
-        { step: "Field Training", description: "Specialized training for political and social research" },
-        { step: "Data Collection", description: "Careful monitoring and quality assurance" },
-        { step: "Analysis", description: "Statistical weighting and margin of error calculation" },
-        { step: "Delivery of reports", description: "Supplying clear, evidence-based reports with key insights and recommendations for decision-making." }
+        {
+          step: "Sample Design",
+          description:
+            "Probability-based sampling across demographics and geography",
+        },
+        {
+          step: "Questionnaire",
+          description: "Unbiased question development and pre-testing",
+        },
+        {
+          step: "Field Training",
+          description: "Specialized training for political and social research",
+        },
+        {
+          step: "Data Collection",
+          description: "Careful monitoring and quality assurance",
+        },
+        {
+          step: "Analysis",
+          description: "Statistical weighting and margin of error calculation",
+        },
+        {
+          step: "Delivery of reports",
+          description:
+            "Supplying clear, evidence-based reports with key insights and recommendations for decision-making.",
+        },
       ],
       faqs: [
         {
           question: "How accurate are your political polls?",
-          answer: "Our polls typically have a margin of error of ±3-4% at 95% confidence level. We use probability sampling and proper weighting to ensure accuracy."
+          answer:
+            "Our polls typically have a margin of error of ±3-4% at 95% confidence level. We use probability sampling and proper weighting to ensure accuracy.",
         },
         {
           question: "Do you conduct exit polls on election day?",
-          answer: "Yes, we provide exit polling services for media organizations and election monitoring groups, with real-time reporting capabilities."
+          answer:
+            "Yes, we provide exit polling services for media organizations and election monitoring groups, with real-time reporting capabilities.",
         },
         {
           question: "Can you poll at state and local levels?",
-          answer: "Yes, we conduct polls at national, state, and local government area levels, adjusting sample sizes to ensure statistical significance."
+          answer:
+            "Yes, we conduct polls at national, state, and local government area levels, adjusting sample sizes to ensure statistical significance.",
         },
         {
           question: "How do you ensure unbiased polling?",
-          answer: "We use neutral question wording, random sampling, proper weighting, and transparent methodology to minimize bias in all our polling work."
-        }
-      ]
+          answer:
+            "We use neutral question wording, random sampling, proper weighting, and transparent methodology to minimize bias in all our polling work.",
+        },
+      ],
     },
     // "customer-satisfaction": {
     //   title: "Customer Satisfaction & NPS Research in Nigeria",
@@ -429,24 +605,27 @@ const ServiceDetail = () => {
     //     }
     //   ]
     // }
-  }
+  };
 
-  const service = services[serviceSlug as keyof typeof services]
-  
+  const service = services[serviceSlug as keyof typeof services];
+
   if (!service) {
-    return <Navigate to="/404" replace />
+    return <Navigate to="/404" replace />;
   }
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title={service.title}
         description={service.description}
         keywords={service.keywords}
         canonicalUrl={`/services/${serviceSlug}`}
       />
 
-      <RequestProposalModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <RequestProposalModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
 
       <div className="min-h-screen bg-gradient-subtle">
         {/* Hero Section */}
@@ -454,13 +633,16 @@ const ServiceDetail = () => {
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="max-w-4xl mx-auto text-center">
-                <Badge variant="outline" className="mb-4 text-primary border-primary">
+                <Badge
+                  variant="outline"
+                  className="mb-4 text-primary border-primary"
+                >
                   {service.hero.subtitle}
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
-                  {service.title.split(' in ')[0]}
-                  <span className="text-primary"> in Nigeria </span>
-                  & West Africa
+                  {service.title.split(" in ")[0]}
+                  <span className="text-primary"> in Nigeria </span>& West
+                  Africa
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                   {service.hero.description}
@@ -475,7 +657,12 @@ const ServiceDetail = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="cta" size="xl" onClick={() => setIsModalOpen(true)} className="group">
+                  <Button
+                    variant="cta"
+                    size="xl"
+                    onClick={() => setIsModalOpen(true)}
+                    className="group"
+                  >
                     Request Proposal
                     <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -498,21 +685,25 @@ const ServiceDetail = () => {
                   <CardContent className="p-6">
                     <Clock className="h-8 w-8 text-primary mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">Typical Timeline</h3>
-                    <p className="text-muted-foreground">{service.overview.timeline}</p>
+                    <p className="text-muted-foreground">
+                      {service.overview.timeline}
+                    </p>
                   </CardContent>
                 </Card>
               </ScrollReveal>
-              
+
               <ScrollReveal delay={0.1}>
                 <Card className="text-center">
                   <CardContent className="p-6">
                     <Users className="h-8 w-8 text-primary mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">Sample Size</h3>
-                    <p className="text-muted-foreground">{service.overview.sampleSize}</p>
+                    <p className="text-muted-foreground">
+                      {service.overview.sampleSize}
+                    </p>
                   </CardContent>
                 </Card>
               </ScrollReveal>
-              
+
               {/* <ScrollReveal delay={0.2}>
                 <Card className="text-center">
                   <CardContent className="p-6">
@@ -555,12 +746,19 @@ const ServiceDetail = () => {
                         </CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-muted-foreground mb-4">{item.description}</p>
+                        <p className="text-muted-foreground mb-4">
+                          {item.description}
+                        </p>
                         <div className="space-y-2">
-                          <h4 className="font-medium text-sm">Key Deliverables:</h4>
+                          <h4 className="font-medium text-sm">
+                            Key Deliverables:
+                          </h4>
                           <ul className="space-y-1">
                             {item.deliverables.map((deliverable) => (
-                              <li key={deliverable} className="text-sm text-muted-foreground flex items-center">
+                              <li
+                                key={deliverable}
+                                className="text-sm text-muted-foreground flex items-center"
+                              >
                                 <div className="w-1.5 h-1.5 rounded-full bg-primary mr-2"></div>
                                 {deliverable}
                               </li>
@@ -593,8 +791,12 @@ const ServiceDetail = () => {
                       {index + 1}
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-2">{step.step}</h3>
-                      <p className="text-muted-foreground">{step.description}</p>
+                      <h3 className="text-xl font-semibold mb-2">
+                        {step.step}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {step.description}
+                      </p>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -616,7 +818,11 @@ const ServiceDetail = () => {
               <ScrollReveal>
                 <Accordion type="single" collapsible className="space-y-4">
                   {service.faqs.map((faq, index) => (
-                    <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg px-6">
+                    <AccordionItem
+                      key={index}
+                      value={`item-${index}`}
+                      className="border rounded-lg px-6"
+                    >
                       <AccordionTrigger className="text-left hover:no-underline">
                         {faq.question}
                       </AccordionTrigger>
@@ -640,18 +846,35 @@ const ServiceDetail = () => {
                   Ready to Get Started?
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Get a detailed proposal tailored to your specific research needs. 
-                  We typically respond within 24 hours with timeline and pricing.
+                  Get a detailed proposal tailored to your specific research
+                  needs. We typically respond within 24 hours with timeline and
+                  pricing.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="cta" size="xl" onClick={() => setIsModalOpen(true)} className="group">
+                  <Button
+                    variant="cta"
+                    size="xl"
+                    onClick={() => setIsModalOpen(true)}
+                    className="group"
+                  >
                     Request Detailed Proposal
                     <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                  <Button variant="outline-primary" size="xl">
+                  {/* <Button variant="outline-primary" size="xl">
                     <Download className="h-5 w-5 mr-2" />
                     Download Service Guide
-                  </Button>
+                  </Button> */}
+                  {/* Brochure Download Button */}
+                  <a
+                    href={catiBrochure}
+                    download={catiBrochure}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline-primary" size="xl">
+                      Download our CATI Brochure
+                    </Button>
+                  </a>
                 </div>
               </div>
             </ScrollReveal>
@@ -659,7 +882,7 @@ const ServiceDetail = () => {
         </section>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ServiceDetail
+export default ServiceDetail;

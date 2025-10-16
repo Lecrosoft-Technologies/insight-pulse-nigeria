@@ -1,165 +1,220 @@
-import SEOHead from "@/components/SEOHead"
-import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollEffects"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { motion } from "framer-motion"
-import { Search, Calendar, Clock, ArrowRight, TrendingUp, Users, BarChart3 } from "lucide-react"
-import { useState, useMemo } from "react"
-import { Link } from "react-router-dom"
+import SEOHead from "@/components/SEOHead";
+import {
+  ScrollReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ScrollEffects";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { motion } from "framer-motion";
+import {
+  Search,
+  Calendar,
+  Clock,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  BarChart3,
+} from "lucide-react";
+import { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 
 // Article images
-import questionsAgencyImage from "@/assets/blog/questions-research-agency-nigeria.jpg"
-import youthDemographicsImage from "@/assets/blog/youth-demographics-west-africa.jpg"
-import electionPollingImage from "@/assets/blog/election-polling-methodology-nigeria.jpg"
-import ruralSurveysImage from "@/assets/blog/rural-household-surveys-africa.jpg"
-import focusGroupImage from "@/assets/blog/focus-group-best-practices.jpg"
+import questionsAgencyImage from "@/assets/blog/questions-research-agency-nigeria.jpg";
+import youthDemographicsImage from "@/assets/blog/youth-demographics-west-africa.jpg";
+import electionPollingImage from "@/assets/blog/election-polling-methodology-nigeria.jpg";
+import ruralSurveysImage from "@/assets/blog/rural-household-surveys-africa.jpg";
+import focusGroupImage from "@/assets/blog/focus-group-best-practices.jpg";
 
 const Insights = () => {
-  const [searchTerm, setSearchTerm] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState("All Articles")
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All Articles");
 
   const mockArticles = [
     {
       id: 1,
       title: "Top 10 Questions to Ask a Market Research Agency in Nigeria",
-      excerpt: "Essential questions to evaluate research agencies and ensure quality insights for your business decisions.",
+      excerpt:
+        "Essential questions to evaluate research agencies and ensure quality insights for your business decisions.",
       category: "Research Tips",
       readTime: "5 min read",
       date: "2024-01-15",
       author: "PSI Research Team",
       slug: "questions-research-agency-nigeria",
       image: questionsAgencyImage,
-      featured: true
+      featured: true,
     },
     {
       id: 2,
       title: "Understanding Youth Demographics in West Africa: A 2024 Analysis",
-      excerpt: "Deep dive into the growing youth population across Ghana, Nigeria, and Senegal and their market implications.",
+      excerpt:
+        "Deep dive into the growing youth population across Ghana, Nigeria, and Senegal and their market implications.",
       category: "Market Trends",
       readTime: "7 min read",
       date: "2024-01-10",
       author: "Dr. Amina Kone",
       slug: "youth-demographics-west-africa",
       image: youthDemographicsImage,
-      featured: false
+      featured: false,
     },
     {
       id: 3,
-      title: "Election Polling Methodology: Best Practices from Nigeria's 2023 Elections",
-      excerpt: "Lessons learned from political polling in Nigeria's recent elections and methodology improvements.",
+      title:
+        "Election Polling Methodology: Best Practices from Nigeria's 2023 Elections",
+      excerpt:
+        "Lessons learned from political polling in Nigeria's recent elections and methodology improvements.",
       category: "Opinion Research",
       readTime: "6 min read",
       date: "2024-01-05",
       author: "Samuel Adebayo",
       slug: "election-polling-methodology-nigeria",
       image: electionPollingImage,
-      featured: true
-    }
-  ]
+      featured: true,
+    },
+  ];
 
   const recentArticles = [
     {
       id: 4,
-      title: "Rural Household Surveys: Overcoming Challenges in Remote African Communities",
-      excerpt: "Practical strategies for conducting high-quality household surveys in rural West African settings.",
-      category: "Research Methods",
+      title:
+        "Rural Household Surveys: Overcoming Challenges in Remote African Communities",
+      excerpt:
+        "Practical strategies for conducting high-quality household surveys in rural West African settings.",
+      category: "Methodology",
       readTime: "8 min read",
       date: "2024-08-01",
       author: "Field Operations Team",
       slug: "rural-household-surveys-africa",
       image: ruralSurveysImage,
-      featured: false
+      featured: false,
     },
     {
       id: 5,
-      title: "Focus Group Best Practices: Conducting Effective Sessions in West Africa",
-      excerpt: "Cultural considerations and practical tips for running successful focus group discussions across diverse West African markets.",
-      category: "Research Methods",
+      title:
+        "Focus Group Best Practices: Conducting Effective Sessions in West Africa",
+      excerpt:
+        "Cultural considerations and practical tips for running successful focus group discussions across diverse West African markets.",
+      category: "Methodology",
       readTime: "6 min read",
       date: "2024-07-28",
       author: "Qualitative Research Team",
       slug: "focus-group-best-practices",
       image: focusGroupImage,
-      featured: false
+      featured: false,
     },
     {
       id: 6,
       title: "Retail Audit Best Practices: Lessons from 500+ Store Visits",
-      excerpt: "Key insights and common pitfalls in retail audit execution across Nigerian markets.",
+      excerpt:
+        "Key insights and common pitfalls in retail audit execution across Nigerian markets.",
       category: "Retail Research",
       readTime: "9 min read",
       date: "2024-07-25",
       author: "PSI Field Operations",
       slug: "retail-audit-best-practices-nigeria-500-store-visits",
-      featured: false
+      featured: false,
     },
     {
       id: 7,
       title: "Opinion Polling in Nigeria: Ensuring Representative Samples",
-      excerpt: "Technical deep-dive into sampling methodologies for accurate political and social opinion research.",
+      excerpt:
+        "Technical deep-dive into sampling methodologies for accurate political and social opinion research.",
       category: "Opinion Research",
       readTime: "11 min read",
       date: "2024-07-20",
       author: "Dr. Funmi Adeyemi",
       slug: "opinion-polling-nigeria-representative-samples",
-      featured: false
+      featured: false,
     },
     {
       id: 8,
-      title: "Customer Satisfaction Benchmarks: What 'Good' Looks Like in West Africa",
-      excerpt: "Industry benchmarks and NPS standards across different sectors in West African markets.",
+      title:
+        "Customer Satisfaction Benchmarks: What 'Good' Looks Like in West Africa",
+      excerpt:
+        "Industry benchmarks and NPS standards across different sectors in West African markets.",
       category: "Customer Experience",
       readTime: "8 min read",
       date: "2024-07-15",
       author: "PSI CX Team",
       slug: "customer-satisfaction-benchmarks-west-africa",
-      featured: false
-    }
-  ]
+      featured: false,
+    },
+  ];
 
   const categories = [
-    { name: "All Articles", count: 45, icon: <BarChart3 className="h-4 w-4" /> },
-    { name: "Consumer Insights", count: 12, icon: <Users className="h-4 w-4" /> },
-    { name: "Methodology", count: 8, icon: <TrendingUp className="h-4 w-4" /> },
-    { name: "Industry Guide", count: 15, icon: <BarChart3 className="h-4 w-4" /> },
-    { name: "Market Trends", count: 10, icon: <TrendingUp className="h-4 w-4" /> },
-    { name: "Financial Services", count: 6, icon: <BarChart3 className="h-4 w-4" /> },
-    { name: "Urban Studies", count: 4, icon: <Users className="h-4 w-4" /> },
-    { name: "Retail Research", count: 7, icon: <TrendingUp className="h-4 w-4" /> },
-    { name: "Opinion Research", count: 5, icon: <Users className="h-4 w-4" /> },
-    { name: "Customer Experience", count: 9, icon: <BarChart3 className="h-4 w-4" /> }
-  ]
+    {
+      name: "All Articles",
+      count: 8,
+      icon: <BarChart3 className="h-4 w-4" />,
+    },
+    {
+      name: "Consumer Insights",
+      count: 0,
+      icon: <Users className="h-4 w-4" />,
+    },
+    { name: "Methodology", count: 2, icon: <TrendingUp className="h-4 w-4" /> },
+    {
+      name: "Industry Guide",
+      count: 0,
+      icon: <BarChart3 className="h-4 w-4" />,
+    },
+    {
+      name: "Market Trends",
+      count: 1,
+      icon: <TrendingUp className="h-4 w-4" />,
+    },
+    {
+      name: "Financial Services",
+      count: 0,
+      icon: <BarChart3 className="h-4 w-4" />,
+    },
+    { name: "Urban Studies", count: 0, icon: <Users className="h-4 w-4" /> },
+    {
+      name: "Retail Research",
+      count: 1,
+      icon: <TrendingUp className="h-4 w-4" />,
+    },
+    { name: "Opinion Research", count: 2, icon: <Users className="h-4 w-4" /> },
+    {
+      name: "Customer Experience",
+      count: 1,
+      icon: <BarChart3 className="h-4 w-4" />,
+    },
+  ];
 
   // Combine all articles for filtering
-  const allArticles = [...mockArticles, ...recentArticles]
+  const allArticles = [...mockArticles, ...recentArticles];
 
   // Filter articles based on search term and category
   const filteredArticles = useMemo(() => {
-    let filtered = allArticles
+    let filtered = allArticles;
 
     // Filter by category
     if (selectedCategory !== "All Articles") {
-      filtered = filtered.filter(article => article.category === selectedCategory)
+      filtered = filtered.filter(
+        (article) => article.category === selectedCategory
+      );
     }
 
     // Filter by search term
     if (searchTerm) {
-      filtered = filtered.filter(article =>
-        article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        article.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        article.author.toLowerCase().includes(searchTerm.toLowerCase())
-      )
+      filtered = filtered.filter(
+        (article) =>
+          article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          article.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          article.author.toLowerCase().includes(searchTerm.toLowerCase())
+      );
     }
 
-    return filtered
-  }, [searchTerm, selectedCategory, allArticles])
+    return filtered;
+  }, [searchTerm, selectedCategory, allArticles]);
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Market Research Insights & Reports — PSI Nigeria & West Africa"
         description="Latest market research insights, consumer trends, and industry reports from Nigeria and West Africa. Expert analysis on FMCG, fintech, retail, and more."
         keywords="Nigeria market insights, West Africa consumer trends, market research reports Nigeria, consumer behavior Nigeria, market analysis West Africa"
@@ -172,17 +227,19 @@ const Insights = () => {
           <div className="container mx-auto px-4">
             <ScrollReveal>
               <div className="max-w-4xl mx-auto text-center">
-                <Badge variant="outline" className="mb-4 text-primary border-primary">
+                <Badge
+                  variant="outline"
+                  className="mb-4 text-primary border-primary"
+                >
                   Market Intelligence
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
                   Research
-                  <span className="text-primary"> Insights </span>
-                  & Reports
+                  <span className="text-primary"> Insights </span>& Reports
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                  Stay ahead with our latest market research findings, consumer trends, 
-                  and industry analysis from Nigeria and West Africa.
+                  Stay ahead with our latest market research findings, consumer
+                  trends, and industry analysis from Nigeria and West Africa.
                 </p>
 
                 {/* Search Bar */}
@@ -208,8 +265,8 @@ const Insights = () => {
                     onClick={() => setSelectedCategory(category.name)}
                     className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-smooth ${
                       selectedCategory === category.name
-                        ? 'bg-primary text-primary-foreground border-primary'
-                        : 'bg-background border-border hover:border-primary hover:text-primary'
+                        ? "bg-primary text-primary-foreground border-primary"
+                        : "bg-background border-border hover:border-primary hover:text-primary"
                     }`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -217,7 +274,14 @@ const Insights = () => {
                   >
                     {category.icon}
                     <span className="font-medium">{category.name}</span>
-                    <Badge variant={selectedCategory === category.name ? "secondary" : "secondary"} className="text-xs">
+                    <Badge
+                      variant={
+                        selectedCategory === category.name
+                          ? "secondary"
+                          : "secondary"
+                      }
+                      className="text-xs"
+                    >
                       {category.count}
                     </Badge>
                   </motion.button>
@@ -234,12 +298,12 @@ const Insights = () => {
               <ScrollReveal>
                 <div className="text-center mb-8">
                   <p className="text-muted-foreground">
-                    {searchTerm && selectedCategory !== "All Articles" 
+                    {searchTerm && selectedCategory !== "All Articles"
                       ? `Showing results for "${searchTerm}" in ${selectedCategory}`
-                      : searchTerm 
+                      : searchTerm
                       ? `Search results for "${searchTerm}"`
-                      : `Articles in ${selectedCategory}`
-                    } • {filteredArticles.length} articles found
+                      : `Articles in ${selectedCategory}`}{" "}
+                    • {filteredArticles.length} articles found
                   </p>
                 </div>
               </ScrollReveal>
@@ -252,11 +316,11 @@ const Insights = () => {
                   <p className="text-muted-foreground mb-8">
                     Try adjusting your search or browse all articles
                   </p>
-                  <Button 
-                    variant="outline-primary" 
+                  <Button
+                    variant="outline-primary"
                     onClick={() => {
-                      setSearchTerm("")
-                      setSelectedCategory("All Articles")
+                      setSearchTerm("");
+                      setSelectedCategory("All Articles");
                     }}
                   >
                     Clear Filters
@@ -270,27 +334,32 @@ const Insights = () => {
                     <StaggerItem key={article.id || article.slug}>
                       <Link to={`/insights/${article.slug}`}>
                         <Card className="h-full hover-lift group cursor-pointer">
-                           <div className="relative overflow-hidden rounded-t-lg">
-                             {article.image ? (
-                               <img 
-                                 src={article.image} 
-                                 alt={article.title}
-                                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                               />
-                             ) : (
-                               <div className="h-48 bg-gradient-primary flex items-center justify-center">
-                                 <span className="text-white font-bold text-xl">PSI Research</span>
-                               </div>
-                             )}
-                            {article.featured !== undefined && article.featured && (
-                              <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
-                                Featured
-                              </Badge>
+                          <div className="relative overflow-hidden rounded-t-lg">
+                            {article.image ? (
+                              <img
+                                src={article.image}
+                                alt={article.title}
+                                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                              />
+                            ) : (
+                              <div className="h-48 bg-gradient-primary flex items-center justify-center">
+                                <span className="text-white font-bold text-xl">
+                                  PSI Research
+                                </span>
+                              </div>
                             )}
+                            {article.featured !== undefined &&
+                              article.featured && (
+                                <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
+                                  Featured
+                                </Badge>
+                              )}
                           </div>
                           <CardContent className="p-6">
                             <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                              <Badge variant="outline">{article.category}</Badge>
+                              <Badge variant="outline">
+                                {article.category}
+                              </Badge>
                               <div className="flex items-center gap-1">
                                 <Clock className="h-4 w-4" />
                                 {article.readTime}
@@ -310,8 +379,13 @@ const Insights = () => {
                               <span className="text-sm text-muted-foreground font-medium">
                                 {article.author}
                               </span>
-                              <Button variant="ghost" size="sm" className="group-hover:text-primary">
-                                Read More <ArrowRight className="ml-2 h-4 w-4" />
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                className="group-hover:text-primary"
+                              >
+                                Read More{" "}
+                                <ArrowRight className="ml-2 h-4 w-4" />
                               </Button>
                             </div>
                           </CardContent>
@@ -334,7 +408,8 @@ const Insights = () => {
                   Stay Updated with Market Intelligence
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Get our latest research findings and industry insights delivered to your inbox.
+                  Get our latest research findings and industry insights
+                  delivered to your inbox.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                   <Input
@@ -355,7 +430,7 @@ const Insights = () => {
         </section>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Insights
+export default Insights;
