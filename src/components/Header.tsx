@@ -62,7 +62,7 @@ const Header = () => {
         { name: "Immersion", href: "/methods/immersion" }
       ]
     },
-    { name: "Desk Research/Secondary Research", href: "/methods/clt" },
+    { name: "Desk Research/Secondary Research", href: "/methods/desk-research" },
   ];
 
   return (

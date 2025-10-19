@@ -40,6 +40,7 @@ import ExperimentalSurveys from "./pages/methods/ExperimentalSurveys";
 import IDISSIKII from "./pages/methods/IDISSIKII";
 import Ethnography from "./pages/methods/Ethnography";
 import Immersion from "./pages/methods/Immersion";
+import DeskResearch from "./pages/methods/DeskResearch";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
@@ -95,6 +96,7 @@ const App = () => (
                 <Route path="/methods/idi-ssi-kii" element={<IDISSIKII />} />
                 <Route path="/methods/ethnography" element={<Ethnography />} />
                 <Route path="/methods/immersion" element={<Immersion />} />
+                <Route path="/methods/desk-research" element={<DeskResearch />} />
                 
                 <Route path="*" element={<NotFound />} />
               </Routes>
